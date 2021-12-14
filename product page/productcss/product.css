@@ -53,6 +53,7 @@
     width: 100%;
     position: relative;
     font-family:'Source Sans Pro', sans-serif;
+    padding-left: 10%;
 
 }
 .scbreadcumb>a{
@@ -65,8 +66,13 @@
 .scsubdiv1{
     border: 1px solid red;
     width: 19%;
+    width: 20%;
+    min-height: 1000px;
+    float: left;
+    padding: 10px;
 }
 .scsubdiv2{
     border: 1px solid red;
     width: 79%;
 }
+
