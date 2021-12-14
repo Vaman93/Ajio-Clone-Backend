@@ -120,9 +120,9 @@
 }
 
 
-/* .Fous_img_inDiv > div{
+.Fous_img_inDiv > div{
     width: 24%;
-} */
+}
 
 
 
@@ -146,11 +146,11 @@
     margin-top: 5px;
 }
 
-
+/* 
 .section_21{
     display: flex;
 }
 
 .section_21 > div{
     width: 40%;
-}
+} */
