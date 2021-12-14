@@ -110,8 +110,8 @@
 
 /*  11 section css end*/
 
-
-
+/* 
+.Fous_img_inDiv{} */
 
 .Fous_img_inDiv{
     display: flex;
@@ -120,9 +120,9 @@
 }
 
 
-.Fous_img_inDiv > div{
-    width: 25%;
-}
+/* .Fous_img_inDiv > div{
+    width: 24%;
+} */
 
 
 
@@ -144,4 +144,13 @@
 
 .arrowsSilder {
     margin-top: 5px;
+}
+
+
+.section_21{
+    display: flex;
+}
+
+.section_21 > div{
+    width: 40%;
 }
