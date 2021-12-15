@@ -142,9 +142,49 @@ font-family: "Helvetica Neue",Helvetica,Arial;
 
 
 
+.drow_down_nav {
+    font-family: sans-serif;
+    width: 82%;
+    z-index: 1;
+    padding: 20px;
+    background-color: white;
+    position: absolute;
+    left: 9%;
+}
 
 
+.first_drop_section {
+    margin-top: 10px;
+    display: flex;
+}
 
+.sort {
+    margin-left: 5px;
+    padding: 12px;
+    background-color: #cfcfcf;
+}
+
+.sort > p{
+    font-size: 14px;
+    font-weight: 100;
+    color: #444444;
+}
+
+
+.first_div_car > ul{
+    list-style: none;
+    margin-top: 15px;
+    font-size: 13px;
+    color: black;
+    font-weight: 600;
+}
+
+.first_div_car >  ul > li{
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight:400 ;
+    color: #414141;
+}
 
 
 
