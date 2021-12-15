@@ -1,3 +1,12 @@
+import {navbarCom , footershow} from "/Home/components/navbar_footer.js"
+
+let mainnavbar = document.getElementById("Nav_bar_main")
+    mainnavbar.innerHTML = navbarCom()
+
+let footershowinhtml = document.querySelector("footer")
+    footershowinhtml.innerHTML = footershow()
+ 
+    
 $('.single-item').slick({
     arrows: false,
     autoplay:true,
@@ -27,34 +36,6 @@ $('.responsive').slick({
   speed: 300,
   slidesToShow: 4,
   slidesToScroll: 1,
- 
-  // responsive: [
-  //   {
-  //     breakpoint: 1024,
-  //     settings: {        slidesToShow: 3,
-  //       slidesToScroll: 3,
-  //       infinite: true,
-  //       dots: true
-  //     }
-  //   },
-  //   {
-  //     breakpoint: 600,
-  //     settings: {
-  //       slidesToShow: 2,
-  //       slidesToScroll: 2
-  //     }
-  //   },
-  //   {
-  //     breakpoint: 480,
-  //     settings: {
-  //       slidesToShow: 1,
-  //       slidesToScroll: 1
-  //     }
-  //   }
-  //   // You can unslick at a given breakpoint now by adding:
-  //   // settings: "unslick"
-  //   // instead of a settings object
-  // ]
 });
 
 
@@ -84,8 +65,17 @@ let hidethenavbar = document.querySelector(".input_serach_div_secon_nav")
 
 let navbar = document.querySelector("#hovermain")
 
+let showthesuggestion = document.querySelector(".input_suggestion_div")
+
+document.querySelector("body").addEventListener("wheel", hidediv)
+
 hidethenavbar.addEventListener("click", hide)
 
 function hide() {
-  navbar.style.display = "none"
+  showthesuggestion.style.display = "block"
+}
+
+
+function hidediv(){
+  showthesuggestion.style.display = "none"
 }

@@ -22,7 +22,7 @@
 /* Arrows */
 
 .slick-next , .slick-prev{
-    background-image: url("./rightleftarrwos/right-arrow.png");
+    background-image: url("/Home/Images/right-arrow-1438234-1216195.webp");
     background-color: rgba(255, 255, 255, 0.623);
     background-size: cover;
     background-size:30px 30px;
@@ -33,9 +33,7 @@
     z-index: 1;
 }
 .slick-prev{
-    background-image: url("./rightleftarrwos/leftarrows.png");
-    background-size:50px 35px;
-    padding:25px;
+    background-image: url("/Home/Images/left.png");
 }
 
 .slick-prev,
@@ -98,10 +96,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.slick-prev
-{
-    left: -40px;
-}
+
 [dir='rtl'] .slick-prev
 {
     right: -15px;
@@ -218,35 +213,8 @@
 }
 
 .single-item  > .slick-prev{
-   margin-left: 120px;
+   /* margin-left: 120px; */
 }
 .single-item  >  .slick-next {
-    margin-right:100px;
-}
-
-
-
-
-@media screen and (min-width: 0px) and (max-width: 499px){
-    .slick-next , .slick-prev{
-        background-image: none;
-        background-color:transparent;
-    }
-
-    .slick-dots{
-        opacity: -2;
-    }
-}
-
-
-@media screen and (min-width: 431px) and (max-width: 768px){
-    .slick-next , .slick-prev{
-        background-image: none;
-        background-color:transparent;
-    }
-
-    .slick-dots{
-        opacity: -2;
-    }
-
+    /* margin-right:100px; */
 }
