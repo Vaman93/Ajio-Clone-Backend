@@ -201,10 +201,23 @@
         position: absolute;
         left: 67%;
         width: 18%;
-        height: 100px;
+        padding: 18px;
     }
 
 
+    #hanger-button-sign{
+        margin: 2%;
+        width: 60%;
+        background-color: transparent;
+        padding: 10px;
+        border: 2px solid rgb(231,189,104);
+    }
+
+
+    .showthehangerdiv > p{
+        margin-top: 3%;
+        font-size: 15px;
+    }
 
     
     

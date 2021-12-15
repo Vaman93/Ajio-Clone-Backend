@@ -142,7 +142,10 @@ return `   <div class="nav_bar_all">
     </div>
       <div class="icon_hanger icon-bag-hang">
         <img width="6%" src="../Home/Images/svg logo/imgonline-com-ua-ReplaceColor-GtXPguqsY2C-removebg-preview.png" alt="">
-        <div class="showthehangerdiv"></div>
+        <div class="showthehangerdiv">
+         <a href=""><button id="hanger-button-sign">SIGN IN</button></a> 
+          <p>To add or view item(s) part of your closet</p>
+        </div>
       </div>
       <div class="icon_bag_div icon-bag-hang">
        <a href=""><i class="fas fa-shopping-bag"></i></a> 
