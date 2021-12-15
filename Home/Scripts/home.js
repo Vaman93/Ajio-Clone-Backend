@@ -76,3 +76,16 @@ heding_img_arr.forEach((d)=>{
     d.innerHTML =  `<img  class="slider_down_img" src=${arr[headingimgnum]} alt="">`
     headingimgnum++
 })
+
+
+
+
+let hidethenavbar = document.querySelector(".input_serach_div_secon_nav")
+
+let navbar = document.querySelector("#hovermain")
+
+hidethenavbar.addEventListener("click", hide)
+
+function hide() {
+  navbar.style.display = "none"
+}
