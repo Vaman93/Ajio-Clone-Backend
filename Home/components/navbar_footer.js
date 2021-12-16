@@ -66,14 +66,11 @@ return `   <div class="nav_bar_all">
         
       </div>
       <div class="second_div_ul derop_ul_li_same">
-        <ul> FEATURED
-         <a href=""> <li>  Cushion Covers Under 499</li></a>
-         <a href=""> <li> Bedsheet Under 999</li></a>
-         <a href=""> <li>  Wall Painting Under 499</li></a>
-         <a href=""> <li> Curtains Under 1499</li></a>
-         <a href=""> <li> Mats Under 499</li></a>
+        <ul>MEN
+         <a href=""> <li> Jacket & Coats </li></a>
+         <a href=""> <li> Jeans</li></a>
         </ul>
-        <ul> FEATURED STORIES
+        <ul> WOMEN
          <a href=""> <li>GIFT For Everyone Under 999</li></a>
          <a href=""> <li> Winter Carnival Upto 60</li></a>
          <a href=""> <li>Kids Room Min 40</li></a>

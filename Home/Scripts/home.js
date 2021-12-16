@@ -60,7 +60,7 @@ heding_img_arr.forEach((d)=>{
 
 
 
-
+// Navbar Js 
 let hidethenavbar = document.querySelector(".input_serach_div_secon_nav")
 
 let navbar = document.querySelector("#hovermain")
