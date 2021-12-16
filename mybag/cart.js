@@ -2,7 +2,7 @@ data=[{
     
         brand:"TOMMY HILFIGER",
         type:"Cotton V-neck T-shirt",
-        img:"\women t-shirts\wtshirts15.jpg",
+        img:"./women jeans/jeans.jpg",
         price:927,
         op:1599,
         discount:"(42% off)",
@@ -11,7 +11,7 @@ data=[{
      {
         brand:"TOMMY HILFIGER",
         type:"Round-Neck T-shirt with Full Sleeves",
-        img:"\women t-shirts\wtshirts19.jpg",
+        img:"./women jeans/jeans.jpg",
         price:1097,
         op:1799,
         discount:"(39% off)",

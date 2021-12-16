@@ -1,7 +1,7 @@
 data=[{
     brand:"LEVIS",
     type:"Mid-Wash Bootcut Jeans",
-    imgsrc:"mybag\women jeans\jeans.jpg",
+    imgsrc:"./mybag/women jeans/jeans.jpg",
     price: 2015,
     op: 3599,
     discount:"(44% off)",
@@ -11,7 +11,7 @@ data=[{
  {
     brand:"LEVIS",
     type:"Venom Bootcut Jeans",
-    imgsrc:"mybag\women jeans\jeans1.jpg",
+    imgsrc:"./mybag/women jeans/jeans1.jpg",
     price:1559 ,
     op: 2999,
     discount:"(48% off)",
@@ -20,7 +20,7 @@ data=[{
  {
     brand:"LEVIS",
     type:"Washed Distressed Skinny Jeans",
-    imgsrc:"mybag\women jeans\jeans2.jpg",
+    imgsrc:"./mybag/women jeans/jeans2.jpg",
     price: 1748,
     op: 3299,
     discount:"(47% off)",
@@ -29,7 +29,7 @@ data=[{
  {
     brand:"LEVIS",
     type:"Lightly Washed Bootcut Jeans",
-    imgsrc:"mybag\women jeans\jeans3.jpg",
+    imgsrc:"./mybag/women jeans/jeans3.jpg",
     price: 1880,
     op: 3299,
     discount:"(43% off)",
@@ -39,7 +39,7 @@ data=[{
  {
     brand:"Outryt",
     type:"Women Washed Wide-Leg Jeans",
-    imgsrc:"mybag\women jeans\jeans4.jpg",
+    imgsrc:"./mybag/women jeans/jeans4.jpg",
     price:  1279,
     op: 1599,
     discount:"(20% off)",
@@ -48,7 +48,7 @@ data=[{
  {
     brand:"LEVIS",
     type:"Washed Skinny Jeans with Button Closure",
-    imgsrc:"mybag\women jeans\jeans5.jpg",
+    imgsrc:"./mybag/women jeans/jeans5.jpg",
     price:  1299,
     op: 1999,
     discount:"(35% off)",
@@ -57,7 +57,7 @@ data=[{
  {
     brand:"LEVIS",
     type:"Lightly Washed Straight Fit Jeans",
-    imgsrc:"mybag\women jeans\jeans6.jpg",
+    imgsrc:"./mybag/women jeans/jeans6.jpg",
     price:2027 ,
     op: 3899,
     discount:"(48% off)",
@@ -66,7 +66,7 @@ data=[{
  {
     brand:"DNMX",
     type:"Washed Slim Fit Jeans",
-    imgsrc:"mybag\women jeans\jeans7.jpg",
+    imgsrc:"./mybag/women jeans/jeans7.jpg",
     price: 899,
     op: 999,
     discount:"(10% off)",
@@ -75,7 +75,7 @@ data=[{
  {
     brand:"LEVIS",
     type:"311 Washed Skinny Jeans",
-    imgsrc:"mybag\women jeans\jeans8.jpg",
+    imgsrc:"./mybag/women jeans/jeans8.jpg",
     price:  1890,
     op: 4199,
     discount:"(55% off)",
@@ -85,7 +85,7 @@ data=[{
  {
     brand:"DNMX",
     type:"Washed Slim Fit Jeans",
-    imgsrc:"mybag\women jeans\jeans9.jpg",
+    imgsrc:"./mybag/women jeans/jeans9.jpg",
     price:899 ,
     op: 999,
     discount:"(10% off)",
@@ -95,7 +95,7 @@ data=[{
  {
     brand:"ORCHID BLUES",
     type:"Abstract Print Mid-Calf Length Jeans",
-    imgsrc:"mybag\women jeans\jeans10.jpg",
+    imgsrc:"./mybag/women jeans/jeans10.jpg",
     price: 780,
     op:  2599,
     discount:"(70% off)",
@@ -105,7 +105,7 @@ data=[{
  {
     brand:"LEVIS",
     type:"Washed Skinny Jeans",
-    imgsrc:"mybag\women jeans\jeans11.jpg",
+    imgsrc:"./mybag/women jeans/jeans11.jpg",
     price: 2596,
     op:4899 ,
     discount:"(47% off)",
@@ -114,7 +114,7 @@ data=[{
  {
     brand:"DNMX",
     type:"Jeggings with Elasticated Waist",
-    imgsrc:"mybag\women jeans\jeans12.jpg",
+    imgsrc:"./mybag/women jeans/jeans12.jpg",
     price:699 ,
     op: 999,
     discount:"(30% off)",
@@ -123,7 +123,7 @@ data=[{
  {
     brand:"DENIZEN WOMENS",
     type:"High-Rise Skinny Jeans",
-    imgsrc:"mybag\women jeans\jeans13.jpg",
+    imgsrc:"./mybag/women jeans/jeans13.jpg",
     price: 680,
     op: 1699,
     discount:"(60% off)",
@@ -132,7 +132,7 @@ data=[{
  {
     brand:"LEVIS",
     type:"720 Lightly Washed Super Skinny Fit Jeans",
-    imgsrc:"mybag\women jeans\jeans14.jpg",
+    imgsrc:"./mybag/women jeans/jeans14.jpg",
     price: 1320,
     op:  3299,
     discount:"(60% off)",
@@ -141,7 +141,7 @@ data=[{
  {
     brand:"LEVIS",
     type:"Mid-Rise Super Skinny Jeans",
-    imgsrc:"mybag\women jeans\jeans15.jpg",
+    imgsrc:"./mybag/women jeans/jeans15.jpg",
     price:  1120,
     op: 2799,
     discount:"(60% off)",
@@ -150,7 +150,7 @@ data=[{
  {
     brand:"LEVIS",
     type:"Washed Skinny Jeans with Button Closure",
-    imgsrc:"mybag\women jeans\jeans16.jpg",
+    imgsrc:"./mybag/women jeans/jeans16.jpg",
     price: 1624,
     op: 2499,
     discount:"(35% off)",
@@ -159,7 +159,7 @@ data=[{
  {
     brand:"ONLY",
     type:"Washed Pleat-Front Relaxed Fit Jeans",
-    imgsrc:"mybag\women jeans\jeans17.jpg",
+    imgsrc:"./mybag/women jeans/jeans17.jpg",
     price: 875,
     op: 3499,
     discount:"(75% off)",
@@ -168,7 +168,7 @@ data=[{
  {
     brand:"Dolce Crudo",
     type:"Skinny Jeans with Frayed Hems",
-    imgsrc:"mybag\women jeans\jeans18.jpg",
+    imgsrc:"./mybag/women jeans/jeans18.jpg",
     price: 975,
     op: 2499,
     discount:"(61% off)",
@@ -177,7 +177,7 @@ data=[{
  {
     brand:"LEVIS",
     type:"Washed Wide Fit Jeans with Fabric Belt",
-    imgsrc:"mybag\women jeans\jeans19.jpg",
+    imgsrc:"./mybag/women jeans/jeans19.jpg",
     price:  1907,
     op:  3599,
     discount:"(47% off)",
