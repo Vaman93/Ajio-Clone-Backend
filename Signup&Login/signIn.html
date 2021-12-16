@@ -71,13 +71,11 @@
 
 async function logIn(){
 
+    let user = document.getElementById("username").value
 
 let detail = {
-
     username: document.getElementById("username").value,
     password: document.getElementById("password").value,
-    
-    
 }
 detail = JSON.stringify(detail);
 
@@ -93,8 +91,18 @@ let response = await fetch(url, {
 });
 
 let data = await response.json();
-console.log("data:", data);
 
+
+        goinghomepag(user)
 
 }
+
+
+function goinghomepag(username) {
+
+    localStorage.setItem("username", username)
+    window.location.href = "../Home/index.html"
+
+}
+
 </script>

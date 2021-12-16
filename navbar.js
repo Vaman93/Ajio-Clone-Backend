@@ -30,3 +30,28 @@ function hide() {
 function hidediv(){
     showthesuggestion.style.display = "none"
   }
+
+
+
+
+
+let username = localStorage.getItem("username")  
+
+let change_user = document.getElementById("user_name")
+
+
+let logOut = document.querySelector(".Log_out")
+
+logOut.addEventListener("click", ()=>{
+  localStorage.removeItem("username")
+})
+
+if(username === null){
+  change_user.innerHTML = "Sign In / Join AJIO"
+  logOut.style.display = "none"
+} else{
+  change_user.innerHTML = `Hi ${username}`
+}
+
+
+

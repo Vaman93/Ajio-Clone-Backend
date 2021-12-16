@@ -52,7 +52,7 @@
             <input class="input" id="email" type="text" placeholder="Enter Email"><br><br>
 
             <!-- <label>Enter Password</label><br> -->
-            <input class="input" id="password" type="text" placeholder="Enter Password"><br><br>
+            <input class="input" id="password" type="password" placeholder="Enter Password"><br><br>
 
             <!-- <label>Enter UserName</label><br> -->
             <input class="input" id="username" type="text" placeholder="Enter Username"><br><br>
@@ -107,10 +107,9 @@ async function signUp(){
     });
 
     let data = await response.json();
-    console.log("data:", data);
-
+    
     localStorage.setItem("Identification", data);
-    window.open("login.html");
+    window.location.href = "./signIn.html"
 
 }
 </script>
