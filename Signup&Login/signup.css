@@ -34,7 +34,7 @@
   display: flex;
   color: rgb(13, 13, 189);
   line-height: 5px;
-  margin-left: 5px;
+  margin-left: 2px;
 }
 #fb > img {
   height: 30px;
@@ -118,3 +118,4 @@ span {
 #in {
   color: rgb(83, 83, 83);
 }
+
