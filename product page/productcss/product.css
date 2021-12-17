@@ -1,4 +1,4 @@
-#main, :after, :before {
+#main,:after, :before {
     box-sizing: border-box;
 }
 #main{
@@ -6,12 +6,13 @@
     padding: 0px;
     box-sizing: border-box;
     margin-top: 6%;
+   
 }
 .scprodhead{
     position:fixed;
     background-color: #e8f8ff;
-    width: 100%;
     height: 50px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,7 +173,7 @@
     padding: 3px;
     width: 30px;
     display: flex;
-    height: 23px;
+    height: 17px;
     border: 1px solid silver;
 }
 .scsortgridbackground3>div{
@@ -188,7 +189,7 @@
     padding: 3px;
     width: 47px;
     display: flex;
-    height: 23px;
+    height: 17px;
     border: 1px solid silver;
     border-left: none;
 
