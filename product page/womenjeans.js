@@ -805,33 +805,33 @@ var refine = () => {
 <div id="scbrandcat">
 
     <div>
-    <input type="checkbox" name="JOHN PLAYERS"  onclick="john(data)"  id="">
-    <label for="">JOHN PLAYERS</label>
+    <input type="checkbox" name="LEVIS"  onclick="john(data)"  id="">
+    <label for="">LEVIS</label>
     </div>
 
     <div>
-    <input type="checkbox" name="Campus Sutra"    onclick="campus(data)" id="">
-    <label for="">Campus Sutra</label>
+    <input type="checkbox" name="Outryt"    onclick="campus(data)" id="">
+    <label for="">Outryt</label>
     </div>
 
     <div>
-    <input type="checkbox" name="U.S.Polo Assn."   onclick="us(data)"  id="">
-    <label for="">U.S.Polo Assn.</label>
+    <input type="checkbox" name="DNMX"   onclick="us(data)"  id="">
+    <label for="">DNMX</label>
     </div>
 
     <div>
-    <input type="checkbox" name="T-Base"  onclick="tbase(data)"   id="">
-    <label for="">T-Base</label>
+    <input type="checkbox" name="ORCHID BLUES"  onclick="tbase(data)"   id="">
+    <label for="">ORCHID BLUES</label>
     </div>
 
     <div>
-    <input type="checkbox" name="Columbia"   onclick="columbia(data)"    id="">
-    <label for="">Columbia</label>
+    <input type="checkbox" name="DENIZEN WOMENS"   onclick="columbia(data)"    id="">
+    <label for="">DENIZEN WOMENS</label>
     </div>
 
     <div>
-    <input type="checkbox" name="NIKE" onclick="nike(data)" id="">
-    <label for="">NIKE</label>
+    <input type="checkbox" name="Dolce Crudo" onclick="nike(data)" id="">
+    <label for="">Dolce Crudo</label>
     </div>
 
 </div>
@@ -1257,7 +1257,7 @@ let  john= (data) => {
     john1++;
     let arr1 = [];
     data.forEach((element) => {
-      if (element.brand ==="JOHN PLAYERS" ) {
+      if (element.brand ==="LEVIS") {
          arr1.push(element);
       }
     });
@@ -1277,7 +1277,7 @@ let  campus= (data) => {
     campus1++;
     let arr1 = [];
     data.forEach((element) => {
-      if (element.brand ==="Campus Sutra") {
+      if (element.brand ==="Outryt") {
          arr1.push(element);
       }
     });
@@ -1297,7 +1297,7 @@ let  us= (data) => {
     us1++;
     let arr1 = [];
     data.forEach((element) => {
-      if (element.brand ==="U.S. Polo Assn.") {
+      if (element.brand ==="DNMX" ) {
          arr1.push(element);
       }
     });
@@ -1316,7 +1316,7 @@ let  tbase= (data) => {
     tbase1++;
     let arr1 = [];
     data.forEach((element) => {
-      if (element.brand ==="T-Base") {
+      if (element.brand ==="ORCHID BLUES") {
          arr1.push(element);
       }
     });
@@ -1336,7 +1336,7 @@ let  columbia= (data) => {
     columbia1++;
     let arr1 = [];
     data.forEach((element) => {
-      if (element.brand ==="Columbia") {
+      if (element.brand ==="DENIZEN WOMENS") {
          arr1.push(element);
       }
     });
@@ -1356,7 +1356,7 @@ let  nike= (data) => {
     nike1++;
     let arr1 = [];
     data.forEach((element) => {
-      if (element.brand ==="NIKE") {
+      if (element.brand ==="Dolce Crudo" ) {
          arr1.push(element);
       }
     });

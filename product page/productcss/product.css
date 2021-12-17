@@ -68,7 +68,7 @@
     height: fit-content;
 }
 .scsubdiv1{
-    border: 1px solid red;
+    /* border: 1px solid red; */
    
     width: 20%;
     min-height: 1000px;
@@ -76,7 +76,7 @@
     padding: 10px;
 }
 .scsubdiv2{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 79%;
 }
 .screfine{

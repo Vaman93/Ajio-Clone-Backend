@@ -62,7 +62,6 @@ let data =[
         discount: 30,
         bbs: "BBS Price 629",
     },
-    
     {
         brand: "TOMMY HILFIGER",
         type: "Organic Cotton Crew-Neck T-shirt",
