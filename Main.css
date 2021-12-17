@@ -188,12 +188,14 @@
     
     .icon_bag_div:hover  .addtocartnavbardiv{
         display: block;
-        background-color: white;
+        background-color: #fafafa;
         margin: 10px;
         position: absolute;
-        left: 72%;
-        width: 18%;
-        height: 100px;
+        left: 70%;
+        width: 20%;
+        padding-bottom:20px ;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
     }
 
     .showthehangerdiv{
@@ -382,3 +384,128 @@
         font-size: 38px;
         color: rgb(240, 240, 240);
     }
+
+
+
+
+
+
+    .additemtext {
+        padding: 20px 0px;
+        text-align: center;
+        border-bottom: 1px solid rgba(175, 175, 175, 0.39);
+    }
+    .additemtext > p{
+        font-size: 16px;
+    }
+
+    .showthe_all_produtTo_bag {
+        height: 210px;
+        overflow: scroll;
+        padding: 5px;
+        overflow-x: hidden;
+    }
+
+    .bag_product_div_each {
+        display: flex;
+        gap: 10px;
+        padding: 10px 20px;
+        text-align: left;
+    }
+
+    .bag_product_img{
+        width:25%;
+        height: 50%;
+    }
+    .bag_product_img > img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .bag_produt_info {
+        width: 75%;
+        overflow: hidden;
+    }
+
+
+    .bag_product_pirces > p{
+        color: #333;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+
+    .bag_demo_pisez > span{
+        padding-top: 5px;
+        font-size: 14px;
+        color: #b19975;
+        text-decoration: line-through;
+    }
+
+    .bag_demo_pisez > span + span{
+        text-decoration: none;
+    }
+
+
+    .bag_product_name > p{
+        font-weight: 400;
+        color: #333;
+        text-transform: capitalize;
+        width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-family: Lora;
+        padding: 5px 0;
+    }
+
+
+
+
+    .showthe_all_produtTo_bag::-webkit-scrollbar {
+        width: 5px;
+        border-radius: 50% 10px ;
+      }
+      
+      /* Track*/
+      
+      .showthe_all_produtTo_bag::-webkit-scrollbar-track {
+        border-radius: 50% 10px ;
+      }
+       
+      /* Handle */
+      .showthe_all_produtTo_bag::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+        border-radius: 50% 10px ;
+      }
+      
+      /* Handle on hover */
+      .showthe_all_produtTo_bag::-webkit-scrollbar-thumb:hover {
+
+        border-radius: 50% 10px ;
+      } 
+
+
+
+      .allprodutcs_price_bag {
+          padding: 20px;
+          text-align: right;
+      }
+      .bag_produt_price > p{
+          font-size: 18px;
+      }
+
+
+      .gotobagpage > button{
+        background-color: #d5a249;
+        color: #fff;
+        font-size: 14px;
+        cursor: pointer;
+        display: inline-block;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 10px 0;
+        width: 90%;
+        border: none;
+      }    

@@ -147,7 +147,71 @@ return `   <div class="nav_bar_all">
       </div>
       <div class="icon_bag_div icon-bag-hang">
        <a href=""><i class="fas fa-shopping-bag"></i></a> 
-        <div class="addtocartnavbardiv"></div>
+        <div class="addtocartnavbardiv">
+        <div class="additemtext">
+        <p>Item(s) added to your bag</p>
+    </div>
+    <div class="showthe_all_produtTo_bag">
+        <div class="bag_product_div_each">
+        <div class="bag_product_img">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20210403/AEO0/606935d8aeb269a9e34011b2/-473Wx593H-461642086-navy-MODEL5.jpg" alt="">
+            </div>
+            <div class="bag_produt_info">
+            <div class="bag_product_pirces">
+                <p>Rs. 12,440</p> 
+            </div>
+            <div class="bag_demo_pisez">
+                <span>2,555</span> <span>(57% off)</span>
+            </div>
+            <div class="bag_product_name">
+                <p>Jumpsuit with Insert Pockets</p>
+            </div>
+        </div>
+        </div>
+        <div class="bag_product_div_each">
+            <div class="bag_product_img">
+                    <img src="https://assets.ajio.com/medias/sys_master/root/20210403/AEO0/606935d8aeb269a9e34011b2/-473Wx593H-461642086-navy-MODEL5.jpg" alt="">
+                </div>
+                <div class="bag_produt_info">
+                <div class="bag_product_pirces">
+                    <p>Rs. 12,440</p> 
+                </div>
+                <div class="bag_demo_pisez">
+                    <span>2,555</span> <span>(57% off)</span>
+                </div>
+                <div class="bag_product_name">
+                    <p>Jumpsuit with Insert Pockets</p>
+                </div>
+            </div>
+            </div>
+            <div class="bag_product_div_each">
+                <div class="bag_product_img">
+                        <img src="https://assets.ajio.com/medias/sys_master/root/20210403/AEO0/606935d8aeb269a9e34011b2/-473Wx593H-461642086-navy-MODEL5.jpg" alt="">
+                    </div>
+                    <div class="bag_produt_info">
+                    <div class="bag_product_pirces">
+                        <p>Rs. 12,440</p> 
+                    </div>
+                    <div class="bag_demo_pisez">
+                        <span>2,555</span> <span>(57% off)</span>
+                    </div>
+                    <div class="bag_product_name">
+                        <p>Jumpsuit with Insert Pockets</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="allprodutcs_price_bag">
+        <div class="bag_produt_price">
+            <p>Total <b> $1504</b></p>
+        </div>
+    </div>
+    <div class="gotobagpage">
+        <button>
+           ADD TO BAG
+    </button>
+    </div>
+        </div>
       </div>
     </div>
    
@@ -166,10 +230,10 @@ let footershow = () =>{
   return `<div class="main_footer_div">
   <div class="div_footer">
    <ul> <p>Ajio</p> 
-   <a href=""><li> Who We Are</li></a>
+   <a href="/About US/we.html"><li> Who We Are</li></a>
    <a href=""><li> Join Our Team</li></a>
    <a href=""><li> Terms & Conditions</li></a>
-   <a href=""><li> We Respect Your Privacy</li></a>
+   <a href="/privacy/privacy.html"><li> We Respect Your Privacy</li></a>
    <a href=""><li> Fees & Payments</li></a>
    <a href=""><li> Returns & Refunds Policy</li></a>
    <a href=""><li> Promotions Terms & Conditions</li></a>
