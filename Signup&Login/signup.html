@@ -82,16 +82,24 @@
 
 // api = "https://masai-api-mocker.herokuapp.com"
 
-async function signUp(){
 
+
+async function signUp(){
+        let name= document.getElementById("name").value
+        let email= document.getElementById("email").value
+        let username= document.getElementById("username").value
+        let password= document.getElementById("password").value
+        let mobile= document.getElementById("mobile").value
+        let description= document.getElementById("mobile").value
 
     let detail = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        username: document.getElementById("username").value,
-        password: document.getElementById("password").value,
-        mobile: document.getElementById("mobile").value,
-        description: document.getElementById("mobile").value,
+        name,
+        email,
+        username,
+        password,
+        mobile,
+        description,
+        
     }
     detail = JSON.stringify(detail);
 
@@ -107,9 +115,19 @@ async function signUp(){
     });
 
     let data = await response.json();
+    if(data.error === true){
+        alert("Fill Details");
+    }else{
+        localStorage.setItem("Identification", data);
+     window.location.href = "./signIn.html"
+    }
+    // console.log("data", data);
+
     
-    localStorage.setItem("Identification", data);
-    window.location.href = "./signIn.html"
+    
+   
+
+
 
 }
 </script>

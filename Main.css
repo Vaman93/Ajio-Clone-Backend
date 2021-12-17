@@ -1,6 +1,11 @@
 
 /* Nav Bar Section Css */
+*{
+    padding:0px;
+    margin: 0px;
+}
 #Nav_bar_main{
+    
     font-family: "Helvetica Neue",Helvetica,Arial;
         position: absolute;
         top: 0;
@@ -9,6 +14,7 @@
         width: 100%;
         z-index: 1;
         padding-bottom: 10px;
+    
     }
     
     .nav_bar_all{

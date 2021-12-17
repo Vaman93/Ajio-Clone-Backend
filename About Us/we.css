@@ -1,11 +1,14 @@
 * {
   font-family: "Times New Roman", Times, serif;
+  /* padding: 0px;
+  margin: 0px; */
 }
 #main {
   border: 1px solid white;
   width: 95%;
   margin: auto;
   height: 1600px;
+  margin-top: 50px;
 }
 h1 {
   color: rgb(92, 88, 88);
@@ -38,7 +41,7 @@ h1 {
   color: white;
   text-align: center;
   letter-spacing: 1px;
-  line-height: 9px;
+  /* line-height: 9px; */
 }
 #box1 > div {
   margin-top: 43px;
@@ -68,11 +71,11 @@ h2 {
 }
 #own1 > div {
   margin-top: 35px;
-  line-height: 8px;
+  /* line-height: 8px; */
 }
 #own2 > div {
   margin-top: 35px;
-  line-height: 8px;
+  /* line-height: 8px; */
 }
 #box2 {
   border: 1px solid white;
@@ -84,7 +87,7 @@ h2 {
   color: white;
   text-align: center;
   letter-spacing: 1px;
-  line-height: 7px;
+  /* line-height: 7px; */
   font-size: larger;
 }
 #box2 > div {
