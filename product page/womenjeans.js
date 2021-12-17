@@ -1371,8 +1371,7 @@ let  nike= (data) => {
 
 
 const showSingleProd = (prodData) => {
-    console.log("proddisplay:", prodData);
 
     localStorage.setItem("clickeproduct", JSON.stringify(prodData));
-    window.open("#");
+    window.location.href = "/EachProduct/one_Product.html"
 };

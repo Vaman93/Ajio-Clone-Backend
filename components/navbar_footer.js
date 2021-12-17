@@ -68,12 +68,12 @@ return `   <div class="nav_bar_all">
       </div>
       <div class="second_div_ul derop_ul_li_same">
         <ul>MEN
-         <a href=""> <li> Jacket & Coats </li></a>
-         <a href=""> <li> Jeans</li></a>
+         <a href="/product page/productjackets.html"> <li> Jackets & Coats </li></a>
+         <a href="/product page/productjeans.html"> <li> Jeans</li></a>
         </ul>
         <ul> WOMEN
-         <a href=""> <li>GIFT For Everyone Under 999</li></a>
-         <a href=""> <li> Winter Carnival Upto 60</li></a>
+         <a href="/product page/productwomenjeans.html"> <li>Jeans & Jeggings</li></a>
+         <a href="/product page/productwomentshirt.html"> <li>T-Shirts</li></a>
          <a href=""> <li>Kids Room Min 40</li></a>
          <a href=""> <li> Heritage Of India</li></a>
         </ul>
