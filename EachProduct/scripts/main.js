@@ -15,7 +15,6 @@ $('.responsive').slick({
   
 
 let localstorgeitem = JSON.parse(localStorage.getItem("clickeproduct")) 
-console.log('localstorgeitem:', localstorgeitem.data1)
 
 let product_div = document.querySelector("#first_section_product_and_delites")
 
@@ -23,7 +22,7 @@ let showtheproduct = ({bbs,brand,discount,imgsrc,op,price,type}) =>{
 
     return ` <div class="Main_product_img">
     <div class="Product_img">
-        <img src=${imgsrc} alt="">
+        <img src="${imgsrc}" alt="">
     </div>
     <div class="suggestion_return_dis">
         <div class="return_text">
@@ -123,9 +122,34 @@ bagbutton.addEventListener("click", () => {
 })
 
 
-function addtobagfunction(d) {
-console.log('d:', d)
+let product_arr_p = JSON.parse(localStorage.getItem("All_product_deletes")) || []
+
+function addtobagfunction({bbs,brand,discount,imgsrc,op,price,type}) {
+
+    let product_data = {
+       
+        bbs,
+        brand,
+        discount,
+        imgsrc,
+        op,
+        price,
+        type
+    }
+    
+    product_arr_p.push(product_data)
+
+    localStorage.setItem('All_product_deletes' , JSON.stringify( product_arr_p))
+
+    window.location.href = "";
+
 }
+
+
+
+
+
+
 
 
 
