@@ -99,7 +99,7 @@ function bill(){
                      <div id="odiv2">  Bag total   <span id="s1">Rs.${originalprice}.00</span>   </div>                     
                      <div id="odiv2">  Bag discount<span id="s2"> -Rs.${bagdiscount}.00</span></div>
                      <div id="odiv2">  Delivery    <span id="s3">Free</span>   </div> 
-                     <div id="odiv3">  Total Amount<span id="s4" style="font-size:15px;"> Rs.${totalamount}.00</span>    </div>                                          `;
+                     <div id="odiv3">  Total Amount<span id="s4" style="font-size:15px;"> Rs.${totalamount}.00</span></div>`;
     let bdiv2=document.createElement("div");
     bdiv2.setAttribute("id","bdiv3");
     bdiv2.textContent=`PROCEED TO SHIPPING`;
@@ -113,5 +113,5 @@ bill();
 
 
 function gotopagenextpage(){
-    window.location.href = "./address.html"
+    window.location.href = "./address1.html"
 }
