@@ -21,7 +21,7 @@ let navbarCom = () => {
       <a href=""><p>WOMEN</p></a>
     </div>
     <div class="text_div_secon_nav">
-      <a href=""><p>KIDE</p></a>
+      <a href=""><p>KID</p></a>
     </div>
     <div class="text_div_secon_nav">
       <a href=""><p>INDIE</p></a>
@@ -143,7 +143,7 @@ let navbarCom = () => {
         </div>
       </div>
       <div class="icon_bag_div icon-bag-hang">
-       <a href=""><i class="fas fa-shopping-bag"></i></a> 
+       <a href="/mybag/cart1.html"><i class="fas fa-shopping-bag"></i></a> 
       <div class="addtocartnavbardiv">
       <div id="emptry_bag">
         <img src="https://image.freepik.com/free-vector/man-shopping-supermarket_74855-7612.jpg" alt="">

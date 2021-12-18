@@ -6,20 +6,20 @@
 
 #maindiv {
     display: flex;
-    height: 160px;
+    height: 200px;
     width: 880px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-top: 30px;
     margin-left: 70px;
 }
 
 #div1 {
-    border: 1px solid green;
-    width: 20%;
+    /* border: 1px solid green; */
+    width: 22%;
 }
 
 #div2 {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     padding-top: 20px;
     width: 30%;
     text-align: center;
@@ -28,7 +28,7 @@
 }
 
 #div3 {
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     padding-top: 20px;
     width: 20%;
     text-align: center;
@@ -36,7 +36,7 @@
 }
 
 #div4 {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 27%;
     height: 100%;
     text-align: right;
@@ -68,7 +68,7 @@ img {
 
 #idiv {
     display: flex;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 20px;
 }
 
@@ -88,7 +88,7 @@ img {
     font-size: 17px;
     width: 90px;
     text-align: center;
-    border-left: 5px solid #176C93;
+    /* border-left: 5px solid #176C93; */
     /* text-align: right; */
     position: absolute;
     right: 0px;
@@ -124,7 +124,7 @@ img {
 }
 
 #bag {
-    border: 1px blue solid;
+    /* border: 1px blue solid; */
     width: 880px;
     height: 50px;
     margin-top: 30px;
@@ -163,11 +163,11 @@ img {
     height:300px;
     position:absolute;
     right:67px;
-    top:220px;
+    top:45%;
     background-color: #FAFAFA;
 }
 #bdiv1{
-    border:1px solid red;
+    /* border:1px solid red; */
     width:245px;
     height: 50px;
     margin:auto;
@@ -184,7 +184,7 @@ img {
 #bdiv2{
     width:300px;
     height:175px;
-    border:1px solid blue;
+    /* border:1px solid blue; */
 }
 #bdiv3{
     height:34px;
@@ -207,7 +207,7 @@ img {
 #odiv1{
     height: 25px;
     width:255px;
-    border:1px solid black;
+    /* border:1px solid black; */
     padding-top: 5px;
     font-weight: 600;
     font-size: 15px;
@@ -217,7 +217,7 @@ img {
 #odiv2{
     height: 25px;
     width:255px;
-    border:1px solid black;
+    /* border:1px solid black; */
     margin:auto;
     font-family: sans-serif;
     font-size: 14px;
@@ -225,27 +225,39 @@ img {
 #odiv3{
     height: 25px;
     width:255px;
-    border:1px solid black;
+    /* border:1px solid black; */
     margin:auto;
     font-weight: 700;
     font-family: sans-serif;
     font-size: 12px;
+
 }
+
+#odiv {
+    margin-top: 6%;
+}
+
+
 #s1{
-    border:1px solid red;
+    /* border:1px solid red; */
     margin-left: 122px;
 }
 #s2{
-    border:1px solid red;
+    /* border:1px solid red; */
     margin-left: 91px;
     color:#B09975;
 }
 #s3{
-    border:1px solid red;
+    /* border:1px solid red; */
     margin-left: 169px;
     color:#B09975;
 }
 #s4{
-    border:1px solid red;
+    /* border:1px solid red; */
     margin-left:95px;
+}
+
+
+footer{
+    margin-top: 5%;
 }

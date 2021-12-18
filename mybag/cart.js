@@ -1,23 +1,6 @@
-data=[
-    {
-        brand:"TOMMY HILFIGER",
-        type:"Cotton V-neck T-shirt",
-        img:"./women jeans/jeans.jpg",
-        price:927,
-        op:1599,
-        discount:42,
-        bbs:"BBS Price 800",
-     },
-     {
-        brand:"TOMMY HILFIGER",
-        type:"Round-Neck T-shirt with Full Sleeves",
-        img:"./women jeans/jeans.jpg",
-        price:1097,
-        op:1799,
-        discount:39,
-        bbs:"BBS Price 989",
-     },
-]
+
+
+let data = JSON.parse(localStorage.getItem("All_product_deletes")) 
 
 var body=document.querySelector("body");
 
@@ -33,7 +16,7 @@ let div=document.createElement("div");
 div.setAttribute("id","div1");
 
 let img =document.createElement("img");
-img.src=el.img;
+img.src=el.imgsrc;
 
 
 let div1=document.createElement("div");
@@ -72,18 +55,24 @@ display();
 
 let sum=function(ac,el) //price sum
 {
-    return ac.price+el.price;
+    return ac + el.price;
 }
-let op=function(ac,el) //original price sum
+function ops(ac,el) //original price sum
 {
-    return ac.op+el.op
+    return ac +el.op
 }
 
 let receipt=[];
 
-let originalprice=data.reduce(op);
-let bagdiscount=data.reduce(op)-data.reduce(sum);
-let totalamount=data.reduce(sum);
+let originalprice= data.reduce((a, b)=>{
+        return a + b.price
+} , 0);
+
+let bagdiscount=data.reduce(ops , 0)- data.reduce(sum , 0);
+
+
+let totalamount=data.reduce(sum , 0);
+
 
 let billdetails={
     amount:originalprice,
@@ -114,10 +103,15 @@ function bill(){
     let bdiv2=document.createElement("div");
     bdiv2.setAttribute("id","bdiv3");
     bdiv2.textContent=`PROCEED TO SHIPPING`;
-    
+    bdiv2.addEventListener("click" , gotopagenextpage)
     div.append(bdiv,bdiv1,bdiv2);
 
     body.append(div);
     });
 }
 bill();
+
+
+function gotopagenextpage(){
+    window.location.href = "./address.html"
+}

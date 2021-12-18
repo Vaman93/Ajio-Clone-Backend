@@ -1,5 +1,4 @@
 var data=JSON.parse(localStorage.getItem("bills"));
-console.log(data);
 
 var billdiv=document.getElementById("billdiv");
 
