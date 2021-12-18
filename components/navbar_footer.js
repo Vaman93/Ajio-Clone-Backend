@@ -1,6 +1,5 @@
 let navbarCom = () => {
-
-return `   <div class="nav_bar_all">
+  return ` <div class="nav_bar_all">
 <div class="firstSectionOfNavBar">
   <a href="../Signup&Login/signup.html"><p id="user_name">Sign In / Join AJIO</p></a>
   <a class="Log_out" href=""><p class="Log_out">Log Out</p></a>
@@ -74,8 +73,6 @@ return `   <div class="nav_bar_all">
         <ul> WOMEN
          <a href="/product page/productwomenjeans.html"> <li>Jeans & Jeggings</li></a>
          <a href="/product page/productwomentshirt.html"> <li>T-Shirts</li></a>
-         <a href=""> <li>Kids Room Min 40</li></a>
-         <a href=""> <li> Heritage Of India</li></a>
         </ul>
         <ul>EXCLUSIVE BRANDS
          <a href=""> <li>Indie Picks</li></a>
@@ -126,7 +123,7 @@ return `   <div class="nav_bar_all">
   </div>
     <div class="input_serach_div_secon_nav">
       <div class="input_div_nav_bar">
-      <input type="text" placeholder="Search AJIO"><i class="fas fa-search"></i>
+      <input id="inpu" type="text" placeholder="Search AJIO"><i class="fas fa-search"></i>
       <div class="input_suggestion_div">
         <a href=""><p>Men t-shirt</p></a>
         <a href=""><p>Women t-sMen t-shirt</p></a>
@@ -141,74 +138,31 @@ return `   <div class="nav_bar_all">
       <div class="icon_hanger icon-bag-hang">
         <img width="6%" src="../Home/Images/svg logo/imgonline-com-ua-ReplaceColor-GtXPguqsY2C-removebg-preview.png" alt="">
         <div class="showthehangerdiv">
-         <a href=""><button id="hanger-button-sign">SIGN IN</button></a> 
+         <a href="../Signup&Login/signup.html"><button id="hanger-button-sign">SIGN IN</button></a> 
           <p>To add or view item(s) part of your closet</p>
         </div>
       </div>
       <div class="icon_bag_div icon-bag-hang">
        <a href=""><i class="fas fa-shopping-bag"></i></a> 
-        <div class="addtocartnavbardiv">
-        <div class="additemtext">
+      <div class="addtocartnavbardiv">
+      <div id="emptry_bag">
+        <img src="https://image.freepik.com/free-vector/man-shopping-supermarket_74855-7612.jpg" alt="">
+        <p>Cart is Empty</p>
+    </div>
+        <div class="additemtext hidebag">
         <p>Item(s) added to your bag</p>
+      </div>
+    <div class="showthe_all_produtTo_bag hidebag">
     </div>
-    <div class="showthe_all_produtTo_bag">
-        <div class="bag_product_div_each">
-        <div class="bag_product_img">
-                <img src="https://assets.ajio.com/medias/sys_master/root/20210403/AEO0/606935d8aeb269a9e34011b2/-473Wx593H-461642086-navy-MODEL5.jpg" alt="">
-            </div>
-            <div class="bag_produt_info">
-            <div class="bag_product_pirces">
-                <p>Rs. 12,440</p> 
-            </div>
-            <div class="bag_demo_pisez">
-                <span>2,555</span> <span>(57% off)</span>
-            </div>
-            <div class="bag_product_name">
-                <p>Jumpsuit with Insert Pockets</p>
-            </div>
-        </div>
-        </div>
-        <div class="bag_product_div_each">
-            <div class="bag_product_img">
-                    <img src="https://assets.ajio.com/medias/sys_master/root/20210403/AEO0/606935d8aeb269a9e34011b2/-473Wx593H-461642086-navy-MODEL5.jpg" alt="">
-                </div>
-                <div class="bag_produt_info">
-                <div class="bag_product_pirces">
-                    <p>Rs. 12,440</p> 
-                </div>
-                <div class="bag_demo_pisez">
-                    <span>2,555</span> <span>(57% off)</span>
-                </div>
-                <div class="bag_product_name">
-                    <p>Jumpsuit with Insert Pockets</p>
-                </div>
-            </div>
-            </div>
-            <div class="bag_product_div_each">
-                <div class="bag_product_img">
-                        <img src="https://assets.ajio.com/medias/sys_master/root/20210403/AEO0/606935d8aeb269a9e34011b2/-473Wx593H-461642086-navy-MODEL5.jpg" alt="">
-                    </div>
-                    <div class="bag_produt_info">
-                    <div class="bag_product_pirces">
-                        <p>Rs. 12,440</p> 
-                    </div>
-                    <div class="bag_demo_pisez">
-                        <span>2,555</span> <span>(57% off)</span>
-                    </div>
-                    <div class="bag_product_name">
-                        <p>Jumpsuit with Insert Pockets</p>
-                    </div>
-                </div>
-            </div>
-    </div>
-    <div class="allprodutcs_price_bag">
+
+    <div class="allprodutcs_price_bag hidebag">
         <div class="bag_produt_price">
-            <p>Total <b> $1504</b></p>
+            <p>Total <b id="total"></b></p>
         </div>
     </div>
-    <div class="gotobagpage">
+    <div class="gotobagpage hidebag">
         <button>
-           ADD TO BAG
+        PROCEED TO BAG
     </button>
     </div>
         </div>
@@ -219,14 +173,10 @@ return `   <div class="nav_bar_all">
  
 </div>
 
-</div>
-`
+</div>`;
+};
 
-}
-
-
-
-let footershow = () =>{
+let footershow = () => {
   return `<div class="main_footer_div">
   <div class="div_footer">
    <ul> <p>Ajio</p> 
@@ -289,7 +239,7 @@ let footershow = () =>{
 <div class="third_section_icon_2 third_section_icon_same">
   <i class="fas fa-user-lock"></i>
 </div>
-</div>`
-}
+</div>`;
+};
 
-export {navbarCom , footershow}
+export { navbarCom, footershow };
