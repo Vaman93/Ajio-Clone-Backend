@@ -188,7 +188,7 @@ img {
 }
 #bdiv3{
     height:34px;
-    width:301px;
+    width:300px;
     border:1px solid #D5A249;
     background-color:#D5A249;
     text-align: center;
@@ -200,9 +200,9 @@ img {
     cursor:pointer;
 }
 #bdiv3:hover{
-    height:33px;
-    border: 1px solid white;
-    width:298px;
+   
+    border: 2px solid white;
+   
 }
 #odiv1{
     height: 25px;

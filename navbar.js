@@ -47,7 +47,7 @@ function show_the_produt_in_bag(d){
 
         bag_product_div_each.innerHTML = `
          <div class="bag_product_img">
-              <img src=${imgsrc} alt="">
+              <img src="${imgsrc}" alt="">
              </div>
              <div class="bag_produt_info">
             <div class="bag_product_pirces">
