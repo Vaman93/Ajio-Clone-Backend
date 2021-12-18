@@ -94,7 +94,7 @@ let showtheproduct = ({bbs,brand,discount,imgsrc,op,price,type}) =>{
     </div>
 
     <div class="Save_the_clostes">
-        <button> <i style="margin-right: 10px;" class="fas fa-tshirt"></i>  SAVE TO CLOSET</button>
+        <button id="savetoclotes"> <i style="margin-right: 10px;" class="fas fa-tshirt"></i>  SAVE TO CLOSET</button>
     </div>
 
     <div class="Products_delails">
@@ -145,6 +145,36 @@ function addtobagfunction({bbs,brand,discount,imgsrc,op,price,type}) {
 
 }
 
+
+
+let savetoclotes = document.getElementById("savetoclotes")
+
+let product_arr_closter = JSON.parse(localStorage.getItem("All_product_closte")) || []
+
+savetoclotes.addEventListener("click", ()=>{
+    savetoclotesfunction(localstorgeitem.data1)
+})
+
+ function savetoclotesfunction({bbs,brand,discount,imgsrc,op,price,type}) {
+
+    let product_cloter = {
+       
+        bbs,
+        brand,
+        discount,
+        imgsrc,
+        op,
+        price,
+        type
+    }
+    
+    product_arr_closter.push(product_cloter)
+
+    localStorage.setItem('All_product_closte' , JSON.stringify(product_arr_closter))
+
+    window.location.href = "";
+
+ }
 
 
 

@@ -1,0 +1,131 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif , Arial, Helvetica, sans-serif;
+}
+
+
+
+.about_brand {
+    margin-top: 7%;
+}
+
+.About_Brand_heading {
+    text-align: center;
+    margin-bottom: -30px;
+    font-size: 32px;
+    font-family: Lora;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+.slider_main{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3 , 22%);
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.Slider_div {
+    margin-top: 20%;
+    height: 360px;
+    padding: 5px;
+}
+
+
+.product_sug_div_img {
+    width: 100%;
+    height:100%;
+}
+
+.product_sug_div_img  > img{
+    width: 100%;
+    height: 100%;
+}
+
+.brand_name_sug_s > p{
+    color: #b19975;
+    margin-top:3%;
+}
+
+.Name_of_prod_sug > span{
+    font-family: Lora;
+    font-size: 14px;
+    color: #333;
+    margin-top: 3%;
+    padding-top: 7px;
+    text-transform: capitalize;
+}
+
+.product_price_sug{
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.product_price_sug > span{
+
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.product_price_sug > span + span{
+    font-size: 14px;
+    color: #b19975;
+    padding-left: 5px;
+
+}
+
+#line{
+    text-decoration: line-through;
+}
+
+.BBS_product_price_sug{
+    background: #e8f8ff;
+    padding: 2.5px 4px; 
+    width: 95%;
+    margin: auto;
+    color: #202020;
+}
+
+.BBS_product_price_sug > p{
+    font-weight: 600;
+    font-size: 14px;
+}
+
+
+
+
+#icon_div {
+    margin-top: 8%;
+    font-family: sans-serif;
+    padding: 30px 0;
+    background-color: #FAFAFA;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+
+#icon_div > .icons > i{
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+#icon_div > .icons > p{
+    font-size: 20px;
+    font-weight: 700;
+}
