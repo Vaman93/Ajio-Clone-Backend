@@ -5,7 +5,7 @@ $('.single-item').slick({
     arrows: false,
     autoplay:true,
     infinite: true,
-  speed: 400,
+  speed: 300,
   slidesToShow: 1,
   dots:true,
   fade: true
@@ -30,6 +30,7 @@ $('.responsive').slick({
   speed: 300,
   slidesToShow: 4,
   slidesToScroll: 1,
+  autoplay:true,
 });
 
 
@@ -52,3 +53,13 @@ heding_img_arr.forEach((d)=>{
     headingimgnum++
 })
 
+
+
+function gotowoen() {
+  window.location.href = "../product page/productwomenjeans.html"
+}
+
+
+function gotomen(){
+  window.location.href = "../product page/productjackets.html"
+}

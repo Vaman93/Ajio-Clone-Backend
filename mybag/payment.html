@@ -35,11 +35,11 @@
                             <p>Add New Card</p>
                         </div>
                         <div class="input_card_div">
-                            <form action="">
+                            <form action="" id="form" >
                                 <p class="label">Card Number</p>
-                                <input type="number" placeholder="No" class="card_number" >
+                                <input type="number" placeholder="No" class="card_number" required>
                             <p class="label">Name on Card</p>
-                                <input type="text" class="card_number">
+                                <input type="text" class="card_number" required>
                             <p class="label">Expiration Date</p>
                                 <select name="" id="">
                                     <option value="">Month</option>
@@ -80,11 +80,11 @@
                                     <option value="">2040</option>
                                 </select>
                                 <p class="label">Cvv</p>
-                                <input type="number" placeholder="No" class="card_number">
+                                <input type="number" placeholder="No" class="card_number" required>
         
                                 <div class="checkbox_in"><input type="checkbox" checked> <p>Save this card securely</p>
                                 </div>
-                                <input type="submit" value="PAY ₹17092.00 SECURELY">
+                                <input type="submit" id="payvalue" value="PAY ₹17092.00 SECURELY">
                             </form>
                         </div>
                     </div>
@@ -109,26 +109,25 @@
         </div>
 
         <div class="secondpayment">
+            <div class="earn_money">
+                <p>You earn ₹502 on AJIO wallet</p>
+                <p>More Info</p>
+            </div>
             <div class="pricesAll">
-                <div class="earn_money">
-                    <p>Earn ₹502.00 in your AJIO Wallet on this order</p>
-                    <p>What is AJIO Wallet?</p>
-                </div>
                 <div class="oder_delrails">
                     <p>Order Details</p>
                     <div class="amount_span">
-                        <p>Bag total</p><p>Rs. 25,630.00</p>
+                        <p>Bag total</p><p id="Bag-total">Rs. 25,630.00</p>
                     </div>
                     <div class="amount_span">
-                        <p>Bag discount</p><p>Rs. 25,630.00</p>
+                        <p>Bag discount</p><p id="Bag-discount">Rs. 25,630.00</p>
                     </div>
                     <div class="amount_span">
                         <p>Delivery</p><p>FREE</p>
                     </div>
                     <div class="amount_span">
-                        <p>Total Amount</p><p>Rs. 17,092.00</p>
+                        <p class="amount">Total Amount</p><p class="amount2">Rs. 17,092.00</p>
                     </div>
-                    <button>PROCEED TO PAYMENT</button>
                 </div>
             </div>
         </div>
@@ -140,5 +139,5 @@
     <footer></footer>
   </body>  
   <script type="module" src="../navbar.js"></script>
-  
+  <script src="payment.js"></script>
 </html>

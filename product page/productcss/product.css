@@ -225,6 +225,9 @@ grid-gap:18px;
 padding-top: 2%;
 
 }
+#scjsgrid > div {
+    cursor: pointer;
+}
 #scquickView{
     height: 45px;
     z-index: 5;

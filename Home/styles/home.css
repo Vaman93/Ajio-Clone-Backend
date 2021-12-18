@@ -9,6 +9,7 @@
     width: 100%;
     height: 4px;
     background-color: rgba(51, 51, 51, 0.452);
+    cursor: pointer;
 }
 
 
@@ -28,10 +29,12 @@
 
 #first_section{
     margin-top: 6%;
+    cursor: pointer;
 }
 
 
 .sameimgsamdiv > img{
+    cursor: pointer;
     width: 100%;
     height: 100%;
     transition: 0.6s all ease-in-out;
@@ -54,7 +57,7 @@
 /* First section css */
 
 .frist_section_img{
-
+    cursor: pointer;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -76,6 +79,7 @@
 
 
 .silder_no_hover{
+    cursor: pointer;
     width: 100%;
 }
 
@@ -99,6 +103,7 @@
 .Fous_img_inDiv{} */
 
 .Fous_img_inDiv{
+    cursor: pointer;
     display: flex;
     gap: 5px;
     padding-bottom: 2px;
@@ -116,6 +121,7 @@
 /*  15 section  css */
 
 #section15{
+    cursor: pointer;
     display: flex;
     gap: 5px;
 }
@@ -128,12 +134,14 @@
 
 
 .arrowsSilder {
+    cursor: pointer;
     margin-top: 5px;
 }
 
 
 .section_21{
     display: flex;
+    cursor: pointer;
 }
 
 .section_21 > div{
@@ -148,6 +156,7 @@
  
 
 #icon_div {
+    
     font-family: sans-serif;
     padding: 30px 0;
     background-color: #FAFAFA;

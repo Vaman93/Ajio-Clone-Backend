@@ -23,9 +23,31 @@ function show(){
     let div4=document.createElement("div");
     div4.setAttribute("id","adiv4");
     div4.innerHTML=`PROCEED TO PAYMENT`;
+    div4.addEventListener("click", gotonextpage)
     div1.append(div2,div3,div4);
     billdiv.append(div1);
     
 });
 }
 show();
+
+
+
+
+
+let input_check = document.querySelectorAll(".input")
+
+function gotonextpage(){
+    let v = true;
+    input_check.forEach((e)=>{
+       if( e.value.length === 0 ) v = false;
+       console.log('e:', e.value)
+    })
+
+    if(v === false){
+        alert('Fill the all delaties')
+    } else{
+        window.location.href = "./payment.html"
+    }
+    
+}

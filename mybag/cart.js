@@ -68,10 +68,10 @@ let originalprice= data.reduce((a, b)=>{
         return a + b.price
 } , 0);
 
-let bagdiscount=data.reduce(ops , 0)- data.reduce(sum , 0);
+let bagdiscount=data.reduce(ops , 0) - data.reduce(sum , 0);
+ 
 
-
-let totalamount=data.reduce(sum , 0);
+let totalamount = data.reduce(sum , 0);
 
 
 let billdetails={

@@ -40,7 +40,6 @@ function show_the_produt_in_bag(d){
     bag_div_li.innerHTML = "";
 
   d.forEach(({discount,imgsrc,op,price,type})=>{
-    console.log('price:',price)
 
     let bag_product_div_each = document.createElement("div")
         bag_product_div_each.setAttribute("class" , "bag_product_div_each")
@@ -126,3 +125,9 @@ let closerdiv = document.querySelector(".showthehangerdiv")
 if(username !== null){
   closerdiv.style.display = "none"
 }
+
+
+let bag_page_fu = document.getElementById("bag_page_fu")
+    bag_page_fu.addEventListener("click", ()=>{
+        window.location.href= "/mybag/cart1.html"
+    })

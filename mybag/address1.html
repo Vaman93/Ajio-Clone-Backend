@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://assets.ajio.com/static/img/favicon.ico" type="image/icon type">
+  <link rel="stylesheet" href="../Main.css">
+
+  <script
+  src="https://kit.fontawesome.com/d829865ea3.js"
+  crossorigin="anonymous"
+></script>
+
+<link rel="stylesheet" href="./payment.css" />
   
     <title></title>
     <style>
@@ -9,10 +23,11 @@
 }
 #main {
   border: 1px solid rgb(68, 67, 67);
-  height: 500px;
+  height: 520px;
   width: 30%;
-  margin-left: 50px;
+  margin-left: 9%;
   padding: 20px;
+  margin-top: 8%;
 }
 .head {
   font-weight: normal;
@@ -21,48 +36,14 @@
   margin-top: 0px;
 }
 
-/* #logobox {
-  display: flex;
-  height: 60px;
-  width: 98%;
-  margin: auto;
-  margin-bottom: 20px;
-} */
+
 .boxes {
   height: 70%;
   width: 42%;
   margin: auto;
   margin-right: 40px;
 }
-/* #fb { */
-  /* height: 90%; */
-  /* width: 50%; */
-  /* border: 2px solid rgb(73, 73, 212);
-  display: flex;
-  color: rgb(13, 13, 189);
-  line-height: 5px;
-  margin-left: 2px;
-} */
-/* #fb > img {
-  height: 30px;
-  width: 35px;
-  padding: 5px;
-} */
-/* #google {
-  border: 2px solid rgb(182, 13, 13);
-  display: flex;
-  color: rgb(182, 13, 13); */
-  /* height: 100%; */
-  /* width: 99%;
-  line-height: 5px;
-  margin-top: 7px;
-} */
-/* #google > img {
-  height: 30px;
-  width: 35px;
-  padding: 5px;
-  background-color: white;
-} */
+
 #line {
   display: flex;
   color: rgb(156, 145, 145);
@@ -80,7 +61,7 @@ hr {
   width: 96%;
 
   position: relative;
-  /* margin-top: 12px; */
+  margin-top: 4%;
 }
 
 .input {
@@ -118,7 +99,7 @@ body {
 }
 
 span {
-  color: blue;
+  color: rgb(72, 72, 88);
 }
 .p {
   font-size: 13px;
@@ -139,8 +120,8 @@ span {
     height:300px;
     width:300px;
     position:absolute;
-    right:50px;
-    top:100px;
+    right:150px;
+    top:120px;
     background-color: #FAFAFA;
 }
 #adiv2{
@@ -150,7 +131,7 @@ span {
     margin:auto;
     margin-top: 20px;
     text-align: right;
-    color:#1783B5;
+    color:#2d363a;
     font-family: sans-serif;
     font-size: 12px;
     font-weight: 600;
@@ -184,6 +165,9 @@ background-color: #BB8936;
     padding-top: 5px;
     font-weight: 600;
     color:#333333;
+}
+button{
+  cursor: pointer;
 }
 #num2{
     height:30px;
@@ -219,46 +203,27 @@ background-color: #BB8936;
     margin-left:178px;
     color:#B09975;
 }
+
+
+footer{
+  margin-top:2%;
+}
+
+
     </style>
     
 </head>
 <body>
+  <div id="Nav_bar_main"></div>
     <!-- create main box -->
     <div id = "main">
-
-        <!-- create Main heading -->
         <p class = "head">Add Address</p>
 
-      
-        <!-- social media box -->
-        <div id = "logobox">
-
-            <!-- create fb box -->
-            <!-- <div class = "boxes" id = "fb">
-                <img src = "https://d2v9ipibika81v.cloudfront.net/uploads/sites/261/2017/01/facebook-logo-3.png"/>
-                <h4 id = "social">FACEBOOK</h4>
-            </div> -->
-
-            <div>
-                <!-- create google box -->
-                <!-- <div class = "boxes" id = "google">
-                    <img src = "https://www.teambonding.com/wp-content/uploads/2018/07/google.jpg"/>
-                    <h4 id = "social">GOOGLE</h4>
-                </div> -->
-            </div> 
-        </div>
-
-        <!-- create hr -->
-        <div id = "line">
-            <!-- <div><hr></div>Or
-            <div><hr></div> -->
-            <!-- <hr><p id = >or</p><hr> -->
-        </div>
          
         <!-- Input Feilds -->
         <div class="container">
             <label class = "tex">Enter Name</label><br>
-            <input class="input" id="name" type="text" ><br><br>
+            <input class="input" id="name" type="text" required><br><br>
 
             <label class = "tex">Enter Mobile</label><br>
             <input class="input" id="mob" type="number"><br><br>
@@ -282,44 +247,16 @@ background-color: #BB8936;
             <input class="input" id="state" type="text"/><br><br>
             <span class="border"></span>
         </div>
-
-           <!-- submit Button -->
-           <!-- <div id = "btn1">
-            <button  onclick="signUp()" id = "btn">CONTINUE</button>
-            
-           </div> -->
-           
-           <!-- Terms & Cond. --> 
-           <!-- <p class = "p">By Signing In, I agree to<span id = "color">Terms and Conditions.</span> </p> -->
-         
            
     </div>
     <div id="billdiv">
 
     </div>
+
+    <footer></footer>
 </body>
+<script type="module" src="../navbar.js"></script>
 </html>
 <script src="address.js">
-
-// async function signUp(){
-//         let name= document.getElementById("name").value
-//         let mobile= document.getElementById("mob").value
-//         let pincode= document.getElementById("pin").value
-//         let Locality= document.getElementById("street").value
-//         let FlatNum= document.getElementById("flatnum").value
-//         let District= document.getElementById("city").value
-//         let State= document.getElementById("state").value
-
-//     let detail = {
-//         name,
-//         mobile,
-//         pincode,
-//         Locality,
-//         FlatNum,
-//         District,
-//         State,
-//     }
-//     detail = JSON.stringify(detail);
-
-//}
 </script>
+

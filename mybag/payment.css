@@ -159,12 +159,78 @@ footer{
 .pricesAll{
     border: 1px solid #f0f0f0;
     background-color: #fafafa;
+    padding: 15px;
+}
+
+.secondpayment {
+    width: 25%;
+}
+
+.oder_delrails > p{
+    text-align: left;
+    margin-bottom: 10px;
+    padding: 0;
+    color: #121212;
+    font-family: Lora;
+    font-size: 17px;
+    font-weight: bolder;
 }
 
 
 
 
 .amount_span {
+    font-family: Lora;
     display: flex;
+    gap: 10%;
     justify-content: space-between;
+    margin-top: 3%;
+    color: #333;
+}
+
+.amount_span > p{
+    float: left;
+    text-align: left;
+    font-weight: normal;
+    padding: 0;
+    color: #333;
+    
+}
+
+
+.amount_span > p + p{
+    float: right;
+    text-align: right;
+    color: #333;
+}
+
+
+.amount_span > .amount{
+    font-family: "Source Sans Pro";
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.amount_span > .amount1{
+    font-family: "Source Sans Pro";
+    font-size: 16px;
+    font-weight: 600;
+    color: #121212cc;
+}
+
+
+.earn_money {
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    background-color: #fefbe4;
+    margin-bottom: 4%;
+}
+
+.earn_money > p{
+    font-size: 14px;
+}
+
+.earn_money > p + p {
+    color: blue;
 }

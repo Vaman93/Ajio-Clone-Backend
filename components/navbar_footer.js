@@ -125,10 +125,11 @@ let navbarCom = () => {
       <div class="input_div_nav_bar">
       <input id="inpu" type="text" placeholder="Search AJIO"><i class="fas fa-search"></i>
       <div class="input_suggestion_div">
-        <a href=""><p>Men t-shirt</p></a>
-        <a href=""><p>Women t-sMen t-shirt</p></a>
-        <a href=""><p>Shopes</p></a>
-        <a href=""><p>Jenus</p></a>
+        <a href="/product page/productjackets.html"><p>Men Jackets & Coats </p></a>
+        
+        <a href="/product page/productjeans.html"><p>Men Jeans</p></a>
+        <a href="/product page/productwomenjeans.html"><p>Women Jeans & Jeggings</p></a>
+        <a href="/product page/productwomentshirt.html"><p>Women T-Shirts</p></a>
         <a href=""><p>Jacket</p></a>
         <a href=""><p>Top</p></a>
         <a href=""><p>Heels</p></a>
@@ -161,7 +162,7 @@ let navbarCom = () => {
         </div>
     </div>
     <div class="gotobagpage hidebag">
-        <button>
+        <button id="bag_page_fu">
         PROCEED TO BAG
     </button>
     </div>
