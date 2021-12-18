@@ -1195,8 +1195,6 @@ let  under30to40= (data) => {
          arr1.push(element);
       }
     });
-
-  
     scjsgrid1.innerHTML = "";
     displayProduct(arr1);
   } else {

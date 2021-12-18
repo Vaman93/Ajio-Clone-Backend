@@ -11,8 +11,9 @@
 .scprodhead{
     position:fixed;
     background-color: #e8f8ff;
-    height: 50px;
+   
     width: 100%;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
