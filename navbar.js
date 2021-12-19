@@ -126,7 +126,6 @@ let icon_hanger = document.querySelector(".icon_hanger")
 
 if(username !== null){
   closerdiv.style.display = "none"
-  console.log("afdsgfh")
   icon_hanger.addEventListener("click", ()=>{
     window.location.href = "/Closet/index.html"
   })

@@ -1,7 +1,7 @@
 
 
 let biils = JSON.parse(localStorage.getItem("bills"))
-console.log('biils:', biils)
+
 
 
 let amount = biils[0].amount
