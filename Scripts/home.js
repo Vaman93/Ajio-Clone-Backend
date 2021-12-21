@@ -42,7 +42,7 @@ $('.responsive').slick({
 
 let headingimgnum = 0 ;
 
-let arr = ["../Home/Images/Same_img_heading/1.jpg" , "../Home/Images/Same_img_heading/2.jpg" , "../Home/Images/Same_img_heading/3.jpg" , "../Home/Images/Same_img_heading/4.webp", "../Home/Images/Same_img_heading/5.webp" , "../Home/Images/Same_img_heading/6.webp" , "../Home/Images/Same_img_heading/7.webp", "../Home/Images/Same_img_heading/8.webp", "../Home/Images/Same_img_heading/9.webp", "../Home/Images/Same_img_heading/10.webp", "../Home/Images/Same_img_heading/11.webp","../Home/Images/Same_img_heading/12.webp", "../Home/Images/Same_img_heading/13.webp"]
+let arr = ["/Images/Same_img_heading/1.jpg" , "/Images/Same_img_heading/2.jpg" , "/Images/Same_img_heading/3.jpg" , "/Images/Same_img_heading/4.webp", "/Images/Same_img_heading/5.webp" , "/Images/Same_img_heading/6.webp" , "/Images/Same_img_heading/7.webp", "/Images/Same_img_heading/8.webp", "/Images/Same_img_heading/9.webp", "/Images/Same_img_heading/10.webp", "/Images/Same_img_heading/11.webp","/Images/Same_img_heading/12.webp", "/Images/Same_img_heading/13.webp"]
 
 let heding_img = document.querySelectorAll(".sameimgheading")
 

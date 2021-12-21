@@ -20,7 +20,7 @@ let tag = biils[0].ta
 function paymentsucees(e) {
     e.preventDefault()
    alert("your order was successfully placed")
-   window.location.href = "../Home/index.html"
+   window.location.href = "/index.html"
 }
 
 

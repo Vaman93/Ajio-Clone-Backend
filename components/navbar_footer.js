@@ -9,7 +9,7 @@ let navbarCom = () => {
 <div class="secondsectionnavbar">
   <div class="left_section_img">
     <div class="logo_img_div">
-      <a href="../Home/index.html"><img src="../Home/Images/Ajio-Logo.svg" alt=""></a>
+      <a href="/index.html"><img src="/Images/Ajio-Logo.svg" alt=""></a>
     </div>
   </div>
   <div class="right_side_div">
@@ -137,7 +137,7 @@ let navbarCom = () => {
       </div>
     </div>
       <div class="icon_hanger icon-bag-hang">
-        <img width="6%" src="../Home/Images/svg logo/imgonline-com-ua-ReplaceColor-GtXPguqsY2C-removebg-preview.png" alt="">
+        <img width="6%" src="/Images/svg logo/imgonline-com-ua-ReplaceColor-GtXPguqsY2C-removebg-preview.png" alt="">
         <div class="showthehangerdiv">
          <a href="../Signup&Login/signup.html"><button id="hanger-button-sign">SIGN IN</button></a> 
           <p>To add or view item(s) part of your closet</p>
