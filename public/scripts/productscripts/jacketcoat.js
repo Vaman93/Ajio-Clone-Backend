@@ -451,15 +451,14 @@ let dataherko = async () =>{
   try{
     let datas = await fetch('https://ajio-clone-full.herokuapp.com/productadd')
 
-    let d = await datas.json();
-    return d 
+    let data = await datas.json();
+     displayProduct(data);
   }
   catch(e){
     console.log(e.message);
   }
 }
-
-dataherko()
+dataherko();
 
 
 let count1 = data.length;
@@ -555,7 +554,7 @@ let grid5 = () => {
     scjsgrid1.style.gridTemplateColumns = "auto auto auto auto auto";
     scjsgrid1.style.gridGap = "12px";
     
-    let displayProduct = (data) =>{
+    function displayProduct (data) {
     
         data.forEach((data1) => {
     
@@ -701,7 +700,7 @@ let grid5 = () => {
 
 }
 //main working grid  5 over
-let displayProduct = (data) =>{
+function displayProduct (data) {
     
     data.forEach((data1) => {
 
