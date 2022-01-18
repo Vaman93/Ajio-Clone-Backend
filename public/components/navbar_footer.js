@@ -63,16 +63,16 @@ let navbarCom = () => {
         </ul>
         <ul>STATIONERY</ul>
        
-        
+      
       </div>
       <div class="second_div_ul derop_ul_li_same">
         <ul>MEN
-         <a href="/product page/productjackets.html"> <li> Jackets & Coats </li></a>
-         <a href="/product page/productjeans.html"> <li> Jeans</li></a>
+         <a href="/productjackets"> <li> Jackets & Coats </li></a>
+         <a href="/productjeans"> <li> Jeans</li></a>
         </ul>
         <ul> WOMEN
-         <a href="/product page/productwomenjeans.html"> <li>Jeans & Jeggings</li></a>
-         <a href="/product page/productwomentshirt.html"> <li>T-Shirts</li></a>
+         <a href="/productwomenjeans"> <li>Jeans & Jeggings</li></a>
+         <a href="/productwomentshirt"> <li>T-Shirts</li></a>
         </ul>
         <ul>EXCLUSIVE BRANDS
          <a href=""> <li>Indie Picks</li></a>
@@ -119,7 +119,7 @@ let navbarCom = () => {
         <ul>MORE BRANDS</ul>
       </div>
     </div>
-    </div> 
+    </div>
   </div>
     <div class="input_serach_div_secon_nav">
       <div class="input_div_nav_bar">
