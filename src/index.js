@@ -8,4 +8,8 @@ app.get("/" , (req, res) => {
   res.render("index")
 })
 
+app.get("/productjeans" , (req, res) => {
+  res.render("product page/productjackets");
+})
+
 module.exports = app;
