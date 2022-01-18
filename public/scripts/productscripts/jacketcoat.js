@@ -453,12 +453,7 @@ let dataherko = async () =>{
 
     let data = await datas.json();
      displayProduct(data);
-  }
-  catch(e){
-    console.log(e.message);
-  }
-}
-dataherko();
+
 
 
 let count1 = data.length;
@@ -1455,10 +1450,13 @@ let  nike= (data) => {
     displayProduct(datawhatsnew);
   }
  }
-
-
 const showSingleProd = (prodData) => {
-    
     localStorage.setItem("clickeproduct", JSON.stringify(prodData));
     window.location.href = "/EachProduct/one_Product.html"
-};
+}
+}
+catch(e){
+  console.log(e.message);
+}
+}
+dataherko();

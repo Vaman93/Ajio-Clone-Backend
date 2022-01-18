@@ -17,13 +17,4 @@ router.post("/" ,upload.single("imgsrc") , async (req, res) => {
 })
 
 
-router.get("/" , async (req, res) => {
-    try{
-        const produnct = await ProductSchema.find()
-        res.send(produnct)
-    }catch (err) {
-        console.log(err)
-    }
-})
-
 module.exports = router ;
