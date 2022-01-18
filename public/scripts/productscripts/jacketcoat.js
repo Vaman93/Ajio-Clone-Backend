@@ -450,7 +450,7 @@
 let dataherko = async () =>{
   try{
     let datas = await fetch('https://ajio-clone-full.herokuapp.com/productadd')
-
+    let datawhatsnew = await datas.json();
     let data = await datas.json();
      displayProduct(data);
 
@@ -500,10 +500,11 @@ try {
 };
 
 let grid3 = () => {
-    console.log("grid3 check")
+  console.log("grid3 check")
+  try {
     scjsgrid1.innerHTML = "";
     scjsgrid1.style.gridTemplateColumns = "auto auto auto";
-    try {
+   
         scselect.onchange = () => {
             //console.log("check");
             if (scselect.value === "Relevance") { 

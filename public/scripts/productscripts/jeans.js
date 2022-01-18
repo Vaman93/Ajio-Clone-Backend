@@ -1,450 +1,457 @@
 
-let data = [
-    {
-        "brand": "DNMX",
-        "producttype":"jeans",
-        "type": "Mid-Rise Fitted Jeans",
-        "imgsrc": "upload\\img1.webp",
-        "price": 679,
-        "op": 799,
-        "discount": 15,
-        "bbs": "BBS Price ₹639",
-        "gender":"male"
-    },
-    {
-        "brand": "U.S. Polo Assn.",
-        "producttype":"jeans",
-        "type": "Washed Skinny Jeans",
-        "imgsrc": "upload\\img2.webp",
-        "price": 1000,
-        "op": 1999,
-        "discount": 50,
-        "bbs": "BBS Price ₹960",
-        "gender":"male"
-    },
-    {
-        "brand": "U.S. Polo Assn.",
-        "producttype":"jeans",
-        "type": "Mid-Wash Slim Fit Jeans",
-        "imgsrc": "upload\\img3.webp",
-        "price": 1511,
-        "op": 2399,
-        "discount": 37,
-        "bbs": "BBS Price ₹1200",
-        "gender":"male"
-    },
-    {
-        "brand": "JOHN PLAYERS JEANS",
-        "producttype":"jeans",
-        "type": "Washed Skinny Fit Jeans with Whiskers",
-        "imgsrc": "upload\\img4.webp",
-        "price": 899,
-        "op": 999,
-        "discount": 10,
-        "bbs": "BBS Price ₹849",
-        "gender":"male"
-    },
-    {
-        "brand": "LEVIS",
-        "producttype":"jeans",
-        "type": "Chris-LTHR Branding 511 Slim Fit Jeans",
-        "imgsrc": "upload\\img5.webp",
-        "price": 1665,
-        "op": 3699,
-        "discount": 25,
-        "bbs": "BBS Price ₹1665",
-        "gender":"male"
-    },
-    {
-        "brand": "U.S. Polo Assn.",
-        "producttype":"jeans",
-        "type": "Washed Skinny Jeans",
-        "imgsrc": "upload\\img6.webp",
-        "price": 1259,
-        "op": 1999,
-        "discount": 37,
-        "bbs": "BBS Price ₹1000",
-        "gender":"male"
-    },
-    {
-        "brand": "DNMX",
-        "producttype":"jeans",
-        "type": "Lightly Washed Fitted Jeans",
-        "imgsrc": "upload\\img7.webp",
-        "price": 679,
-        "op": 799,
-        "discount": 15,
-        "bbs": "BBS Price ₹639",
-        "gender":"male"
-    },
-    {
-        "brand": "U.S. Polo Assn.",
-        "producttype":"jeans",
-        "type": "Mid-Wash Skinny Fit Jeans",
-        "imgsrc": "upload\\img8.webp",
-        "price": 1511,
-        "op": 2399,
-        "discount": 37,
-        "bbs": "BBS Price ₹1200",
-        "gender":"male"
-    },
-    {
-        "brand": "The Indian Garage Co",
-        "producttype":"jeans",
-        "type": "Mid-Rise Washed Slim Fit Jeans",
-        "imgsrc": "upload\\img9.webp",
-        "price": 660,
-        "op": 1999,
-        "discount": 67,
-        "bbs": "BBS Price ₹500",
-        "gender":"male"
-    },
-    {
-        "brand": "Lee Cooper",
-        "producttype":"jeans",
-        "type": "Lightly Washed Slim Fit Jeans",
-        "imgsrc": "upload\\img10.webp",
-        "price": 985,
-        "op": 1699,
-        "discount": 42,
-        "bbs": "BBS Price ₹984",
-        "gender":"male"
-    },
-    {
-        "brand": "The Indian Garage Co",
-        "producttype":"jeans",
-        "type": "The men jeans blue 28",
-        "imgsrc": "upload\\img11.webp",
-        "price": 660,
-        "op": 1999,
-        "discount": 67,
-        "bbs": "BBS Price ₹500",
-        "gender":"male"
-    },
-    {
-        "brand": "LEVIS",
-        "producttype":"jeans",
-        "type": "MB 511 Slim Fit Jeans",
-        "imgsrc": "upload\\img12.webp",
-        "price": 1551,
-        "op": 3299,
-        "discount": 53,
-        "bbs": "BBS Price ₹1551",
-        "gender":"male"
-    },
-    {
-        "brand": "Campus Sutra",
-        "producttype":"jeans",
-        "type": "Mid-Wash Distressed Slim Fit Jeans",
-        "imgsrc": "upload\\img13.webp",
-        "price": 950,
-        "op": 1899,
-        "discount": 50,
-        "bbs": "BBS Price ₹589",
-        "gender":"male"
-    },
-    {
-        "brand": "Rare Rabbit",
-        "producttype":"jeans",
-        "type": "Denim Slim Fit Jeans",
-        "imgsrc": "upload\\img14.webp",
-        "price": 3000,
-        "op": 5999,
-        "discount": 50,
-        "bbs": "BBS Price ₹1860",
-        "gender":"male"
-    },
-    {
-        "brand": "LEVIS",
-        "producttype":"jeans",
-        "type": "511 Washed Slim Fit Jeans",
-        "imgsrc": "upload\\img15.webp",
-        "price": 1350,
-        "op": 2999,
-        "discount": 55,
-        "bbs": "BBS Price ₹1350",
-        "gender":"male"
-    },
-    {
-        "brand": "LEVIS",
-        "producttype":"jeans",
-        "type": "511 Mid-Rise Slim Fit Jeans",
-        "imgsrc": "upload\\img16.webp",
-        "price": 1530,
-        "op": 3399,
-        "discount": 55,
-        "bbs": "BBS Price ₹1530",
-        "gender":"male"
-    },
-    {
-        "brand": "Rare Rabbit",
-        "producttype":"jeans",
-        "type": "Lightly-Wash Jeans with 5-Pocket Styling",
-        "imgsrc": "upload\\img17.webp",
-        "price": 3000,
-        "op": 5999,
-        "discount": 50,
-        "bbs": "BBS Price ₹1860",
-        "gender":"male"
-    },
-    {
-        "brand": "LEVIS",
-        "producttype":"jeans",
-        "type": "551 Z Washed Straight Fit Jeans",
-        "imgsrc": "upload\\img18.webp",
-        "price": 1598,
-        "op": 3399,
-        "discount": 53,
-        "bbs": "BBS Price ₹1598",
-        "gender":"male"
-    },
-    {
-        "brand": "U.S. Polo Assn.",
-        "producttype":"jeans",
-        "type": "Stone-Wash Skinny Jeans",
-        "imgsrc": "upload\\img19.webp",
-        "price": 1530,
-        "op": 3399,
-        "discount": 55,
-        "bbs": "BBS Price ₹1530",
-        "gender":"male"
-    },
-    {
-        "brand": "U.S. Polo Assn.",
-        "producttype":"jeans",
-        "type": "Mid-Wash Mid-Rise 5-Pocket Slim Jeans",
-        "imgsrc": "upload\\img20.webp",
-        "price": 1385,
-        "op": 2199,
-        "discount": 37,
-        "bbs": "BBS Price ₹1100",
-        "gender":"male"
-    },
-];
-//data for default display imp
+// let data = [
+//     {
+//         "brand": "DNMX",
+//         "producttype":"jeans",
+//         "type": "Mid-Rise Fitted Jeans",
+//         "imgsrc": "upload\\img1.webp",
+//         "price": 679,
+//         "op": 799,
+//         "discount": 15,
+//         "bbs": "BBS Price ₹639",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "U.S. Polo Assn.",
+//         "producttype":"jeans",
+//         "type": "Washed Skinny Jeans",
+//         "imgsrc": "upload\\img2.webp",
+//         "price": 1000,
+//         "op": 1999,
+//         "discount": 50,
+//         "bbs": "BBS Price ₹960",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "U.S. Polo Assn.",
+//         "producttype":"jeans",
+//         "type": "Mid-Wash Slim Fit Jeans",
+//         "imgsrc": "upload\\img3.webp",
+//         "price": 1511,
+//         "op": 2399,
+//         "discount": 37,
+//         "bbs": "BBS Price ₹1200",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "JOHN PLAYERS JEANS",
+//         "producttype":"jeans",
+//         "type": "Washed Skinny Fit Jeans with Whiskers",
+//         "imgsrc": "upload\\img4.webp",
+//         "price": 899,
+//         "op": 999,
+//         "discount": 10,
+//         "bbs": "BBS Price ₹849",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "LEVIS",
+//         "producttype":"jeans",
+//         "type": "Chris-LTHR Branding 511 Slim Fit Jeans",
+//         "imgsrc": "upload\\img5.webp",
+//         "price": 1665,
+//         "op": 3699,
+//         "discount": 25,
+//         "bbs": "BBS Price ₹1665",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "U.S. Polo Assn.",
+//         "producttype":"jeans",
+//         "type": "Washed Skinny Jeans",
+//         "imgsrc": "upload\\img6.webp",
+//         "price": 1259,
+//         "op": 1999,
+//         "discount": 37,
+//         "bbs": "BBS Price ₹1000",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "DNMX",
+//         "producttype":"jeans",
+//         "type": "Lightly Washed Fitted Jeans",
+//         "imgsrc": "upload\\img7.webp",
+//         "price": 679,
+//         "op": 799,
+//         "discount": 15,
+//         "bbs": "BBS Price ₹639",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "U.S. Polo Assn.",
+//         "producttype":"jeans",
+//         "type": "Mid-Wash Skinny Fit Jeans",
+//         "imgsrc": "upload\\img8.webp",
+//         "price": 1511,
+//         "op": 2399,
+//         "discount": 37,
+//         "bbs": "BBS Price ₹1200",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "The Indian Garage Co",
+//         "producttype":"jeans",
+//         "type": "Mid-Rise Washed Slim Fit Jeans",
+//         "imgsrc": "upload\\img9.webp",
+//         "price": 660,
+//         "op": 1999,
+//         "discount": 67,
+//         "bbs": "BBS Price ₹500",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "Lee Cooper",
+//         "producttype":"jeans",
+//         "type": "Lightly Washed Slim Fit Jeans",
+//         "imgsrc": "upload\\img10.webp",
+//         "price": 985,
+//         "op": 1699,
+//         "discount": 42,
+//         "bbs": "BBS Price ₹984",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "The Indian Garage Co",
+//         "producttype":"jeans",
+//         "type": "The men jeans blue 28",
+//         "imgsrc": "upload\\img11.webp",
+//         "price": 660,
+//         "op": 1999,
+//         "discount": 67,
+//         "bbs": "BBS Price ₹500",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "LEVIS",
+//         "producttype":"jeans",
+//         "type": "MB 511 Slim Fit Jeans",
+//         "imgsrc": "upload\\img12.webp",
+//         "price": 1551,
+//         "op": 3299,
+//         "discount": 53,
+//         "bbs": "BBS Price ₹1551",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "Campus Sutra",
+//         "producttype":"jeans",
+//         "type": "Mid-Wash Distressed Slim Fit Jeans",
+//         "imgsrc": "upload\\img13.webp",
+//         "price": 950,
+//         "op": 1899,
+//         "discount": 50,
+//         "bbs": "BBS Price ₹589",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "Rare Rabbit",
+//         "producttype":"jeans",
+//         "type": "Denim Slim Fit Jeans",
+//         "imgsrc": "upload\\img14.webp",
+//         "price": 3000,
+//         "op": 5999,
+//         "discount": 50,
+//         "bbs": "BBS Price ₹1860",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "LEVIS",
+//         "producttype":"jeans",
+//         "type": "511 Washed Slim Fit Jeans",
+//         "imgsrc": "upload\\img15.webp",
+//         "price": 1350,
+//         "op": 2999,
+//         "discount": 55,
+//         "bbs": "BBS Price ₹1350",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "LEVIS",
+//         "producttype":"jeans",
+//         "type": "511 Mid-Rise Slim Fit Jeans",
+//         "imgsrc": "upload\\img16.webp",
+//         "price": 1530,
+//         "op": 3399,
+//         "discount": 55,
+//         "bbs": "BBS Price ₹1530",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "Rare Rabbit",
+//         "producttype":"jeans",
+//         "type": "Lightly-Wash Jeans with 5-Pocket Styling",
+//         "imgsrc": "upload\\img17.webp",
+//         "price": 3000,
+//         "op": 5999,
+//         "discount": 50,
+//         "bbs": "BBS Price ₹1860",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "LEVIS",
+//         "producttype":"jeans",
+//         "type": "551 Z Washed Straight Fit Jeans",
+//         "imgsrc": "upload\\img18.webp",
+//         "price": 1598,
+//         "op": 3399,
+//         "discount": 53,
+//         "bbs": "BBS Price ₹1598",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "U.S. Polo Assn.",
+//         "producttype":"jeans",
+//         "type": "Stone-Wash Skinny Jeans",
+//         "imgsrc": "upload\\img19.webp",
+//         "price": 1530,
+//         "op": 3399,
+//         "discount": 55,
+//         "bbs": "BBS Price ₹1530",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "U.S. Polo Assn.",
+//         "producttype":"jeans",
+//         "type": "Mid-Wash Mid-Rise 5-Pocket Slim Jeans",
+//         "imgsrc": "upload\\img20.webp",
+//         "price": 1385,
+//         "op": 2199,
+//         "discount": 37,
+//         "bbs": "BBS Price ₹1100",
+//         "gender":"male"
+//     },
+// ];
+// //data for default display imp
 
-let datawhatsnew = [
-    {
-        "brand": "DNMX",
-        "producttype":"jeans",
-        "type": "Mid-Rise Fitted Jeans",
-        "imgsrc": "upload\\img1.webp",
-        "price": 679,
-        "op": 799,
-        "discount": 15,
-        "bbs": "BBS Price ₹639",
-        "gender":"male"
-    },
-    {
-        "brand": "U.S. Polo Assn.",
-        "producttype":"jeans",
-        "type": "Washed Skinny Jeans",
-        "imgsrc": "upload\\img2.webp",
-        "price": 1000,
-        "op": 1999,
-        "discount": 50,
-        "bbs": "BBS Price ₹960",
-        "gender":"male"
-    },
-    {
-        "brand": "U.S. Polo Assn.",
-        "producttype":"jeans",
-        "type": "Mid-Wash Slim Fit Jeans",
-        "imgsrc": "upload\\img3.webp",
-        "price": 1511,
-        "op": 2399,
-        "discount": 37,
-        "bbs": "BBS Price ₹1200",
-        "gender":"male"
-    },
-    {
-        "brand": "JOHN PLAYERS JEANS",
-        "producttype":"jeans",
-        "type": "Washed Skinny Fit Jeans with Whiskers",
-        "imgsrc": "upload\\img4.webp",
-        "price": 899,
-        "op": 999,
-        "discount": 10,
-        "bbs": "BBS Price ₹849",
-        "gender":"male"
-    },
-    {
-        "brand": "LEVIS",
-        "producttype":"jeans",
-        "type": "Chris-LTHR Branding 511 Slim Fit Jeans",
-        "imgsrc": "upload\\img5.webp",
-        "price": 1665,
-        "op": 3699,
-        "discount": 55,
-        "bbs": "BBS Price ₹1665",
-        "gender":"male"
-    },
-    {
-        "brand": "U.S. Polo Assn.",
-        "producttype":"jeans",
-        "type": "Washed Skinny Jeans",
-        "imgsrc": "upload\\img6.webp",
-        "price": 1259,
-        "op": 1999,
-        "discount": 37,
-        "bbs": "BBS Price ₹1000",
-        "gender":"male"
-    },
-    {
-        "brand": "DNMX",
-        "producttype":"jeans",
-        "type": "Lightly Washed Fitted Jeans",
-        "imgsrc": "upload\\img7.webp",
-        "price": 679,
-        "op": 799,
-        "discount": 15,
-        "bbs": "BBS Price ₹639",
-        "gender":"male"
-    },
-    {
-        "brand": "U.S. Polo Assn.",
-        "producttype":"jeans",
-        "type": "Mid-Wash Skinny Fit Jeans",
-        "imgsrc": "upload\\img8.webp",
-        "price": 1511,
-        "op": 2399,
-        "discount": 37,
-        "bbs": "BBS Price ₹1200",
-        "gender":"male"
-    },
-    {
-        "brand": "The Indian Garage Co",
-        "producttype":"jeans",
-        "type": "Mid-Rise Washed Slim Fit Jeans",
-        "imgsrc": "upload\\img9.webp",
-        "price": 660,
-        "op": 1999,
-        "discount": 67,
-        "bbs": "BBS Price ₹500",
-        "gender":"male"
-    },
-    {
-        "brand": "Lee Cooper",
-        "producttype":"jeans",
-        "type": "Lightly Washed Slim Fit Jeans",
-        "imgsrc": "upload\\img10.webp",
-        "price": 985,
-        "op": 1699,
-        "discount": 42,
-        "bbs": "BBS Price ₹984",
-        "gender":"male"
-    },
-    {
-        "brand": "The Indian Garage Co",
-        "producttype":"jeans",
-        "type": "The men jeans blue 28",
-        "imgsrc": "upload\\img11.webp",
-        "price": 660,
-        "op": 1999,
-        "discount": 67,
-        "bbs": "BBS Price ₹500",
-        "gender":"male"
-    },
-    {
-        "brand": "LEVIS",
-        "producttype":"jeans",
-        "type": "MB 511 Slim Fit Jeans",
-        "imgsrc": "upload\\img12.webp",
-        "price": 1551,
-        "op": 3299,
-        "discount": 53,
-        "bbs": "BBS Price ₹1551",
-        "gender":"male"
-    },
-    {
-        "brand": "Campus Sutra",
-        "producttype":"jeans",
-        "type": "Mid-Wash Distressed Slim Fit Jeans",
-        "imgsrc": "upload\\img13.webp",
-        "price": 950,
-        "op": 1899,
-        "discount": 50,
-        "bbs": "BBS Price ₹589",
-        "gender":"male"
-    },
-    {
-        "brand": "Rare Rabbit",
-        "producttype":"jeans",
-        "type": "Denim Slim Fit Jeans",
-        "imgsrc": "upload\\img14.webp",
-        "price": 3000,
-        "op": 5999,
-        "discount": 50,
-        "bbs": "BBS Price ₹1860",
-        "gender":"male"
-    },
-    {
-        "brand": "LEVIS",
-        "producttype":"jeans",
-        "type": "511 Washed Slim Fit Jeans",
-        "imgsrc": "upload\\img15.webp",
-        "price": 1350,
-        "op": 2999,
-        "discount": 55,
-        "bbs": "BBS Price ₹1350",
-        "gender":"male"
-    },
-    {
-        "brand": "LEVIS",
-        "producttype":"jeans",
-        "type": "511 Mid-Rise Slim Fit Jeans",
-        "imgsrc": "upload\\img16.webp",
-        "price": 1530,
-        "op": 3399,
-        "discount": 55,
-        "bbs": "BBS Price ₹1530",
-        "gender":"male"
-    },
-    {
-        "brand": "Rare Rabbit",
-        "producttype":"jeans",
-        "type": "Lightly-Wash Jeans with 5-Pocket Styling",
-        "imgsrc": "upload\\img17.webp",
-        "price": 3000,
-        "op": 5999,
-        "discount": 50,
-        "bbs": "BBS Price ₹1860",
-        "gender":"male"
-    },
-    {
-        "brand": "LEVIS",
-        "producttype":"jeans",
-        "type": "551 Z Washed Straight Fit Jeans",
-        "imgsrc": "upload\\img18.webp",
-        "price": 1598,
-        "op": 3399,
-        "discount": 53,
-        "bbs": "BBS Price ₹1598",
-        "gender":"male"
-    },
-    {
-        "brand": "U.S. Polo Assn.",
-        "producttype":"jeans",
-        "type": "Stone-Wash Skinny Jeans",
-        "imgsrc": "upload\\img19.webp",
-        "price": 1530,
-        "op": 3399,
-        "discount": 55,
-        "bbs": "BBS Price ₹1530",
-        "gender":"male"
-    },
-    {
-        "brand": "U.S. Polo Assn.",
-        "producttype":"jeans",
-        "type": "Mid-Wash Mid-Rise 5-Pocket Slim Jeans",
-        "imgsrc": "upload\\img20.webp",
-        "price": 1385,
-        "op": 2199,
-        "discount": 37,
-        "bbs": "BBS Price ₹1100",
-        "gender":"male"
-    },
-];
+// let datawhatsnew = [
+//     {
+//         "brand": "DNMX",
+//         "producttype":"jeans",
+//         "type": "Mid-Rise Fitted Jeans",
+//         "imgsrc": "upload\\img1.webp",
+//         "price": 679,
+//         "op": 799,
+//         "discount": 15,
+//         "bbs": "BBS Price ₹639",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "U.S. Polo Assn.",
+//         "producttype":"jeans",
+//         "type": "Washed Skinny Jeans",
+//         "imgsrc": "upload\\img2.webp",
+//         "price": 1000,
+//         "op": 1999,
+//         "discount": 50,
+//         "bbs": "BBS Price ₹960",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "U.S. Polo Assn.",
+//         "producttype":"jeans",
+//         "type": "Mid-Wash Slim Fit Jeans",
+//         "imgsrc": "upload\\img3.webp",
+//         "price": 1511,
+//         "op": 2399,
+//         "discount": 37,
+//         "bbs": "BBS Price ₹1200",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "JOHN PLAYERS JEANS",
+//         "producttype":"jeans",
+//         "type": "Washed Skinny Fit Jeans with Whiskers",
+//         "imgsrc": "upload\\img4.webp",
+//         "price": 899,
+//         "op": 999,
+//         "discount": 10,
+//         "bbs": "BBS Price ₹849",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "LEVIS",
+//         "producttype":"jeans",
+//         "type": "Chris-LTHR Branding 511 Slim Fit Jeans",
+//         "imgsrc": "upload\\img5.webp",
+//         "price": 1665,
+//         "op": 3699,
+//         "discount": 55,
+//         "bbs": "BBS Price ₹1665",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "U.S. Polo Assn.",
+//         "producttype":"jeans",
+//         "type": "Washed Skinny Jeans",
+//         "imgsrc": "upload\\img6.webp",
+//         "price": 1259,
+//         "op": 1999,
+//         "discount": 37,
+//         "bbs": "BBS Price ₹1000",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "DNMX",
+//         "producttype":"jeans",
+//         "type": "Lightly Washed Fitted Jeans",
+//         "imgsrc": "upload\\img7.webp",
+//         "price": 679,
+//         "op": 799,
+//         "discount": 15,
+//         "bbs": "BBS Price ₹639",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "U.S. Polo Assn.",
+//         "producttype":"jeans",
+//         "type": "Mid-Wash Skinny Fit Jeans",
+//         "imgsrc": "upload\\img8.webp",
+//         "price": 1511,
+//         "op": 2399,
+//         "discount": 37,
+//         "bbs": "BBS Price ₹1200",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "The Indian Garage Co",
+//         "producttype":"jeans",
+//         "type": "Mid-Rise Washed Slim Fit Jeans",
+//         "imgsrc": "upload\\img9.webp",
+//         "price": 660,
+//         "op": 1999,
+//         "discount": 67,
+//         "bbs": "BBS Price ₹500",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "Lee Cooper",
+//         "producttype":"jeans",
+//         "type": "Lightly Washed Slim Fit Jeans",
+//         "imgsrc": "upload\\img10.webp",
+//         "price": 985,
+//         "op": 1699,
+//         "discount": 42,
+//         "bbs": "BBS Price ₹984",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "The Indian Garage Co",
+//         "producttype":"jeans",
+//         "type": "The men jeans blue 28",
+//         "imgsrc": "upload\\img11.webp",
+//         "price": 660,
+//         "op": 1999,
+//         "discount": 67,
+//         "bbs": "BBS Price ₹500",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "LEVIS",
+//         "producttype":"jeans",
+//         "type": "MB 511 Slim Fit Jeans",
+//         "imgsrc": "upload\\img12.webp",
+//         "price": 1551,
+//         "op": 3299,
+//         "discount": 53,
+//         "bbs": "BBS Price ₹1551",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "Campus Sutra",
+//         "producttype":"jeans",
+//         "type": "Mid-Wash Distressed Slim Fit Jeans",
+//         "imgsrc": "upload\\img13.webp",
+//         "price": 950,
+//         "op": 1899,
+//         "discount": 50,
+//         "bbs": "BBS Price ₹589",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "Rare Rabbit",
+//         "producttype":"jeans",
+//         "type": "Denim Slim Fit Jeans",
+//         "imgsrc": "upload\\img14.webp",
+//         "price": 3000,
+//         "op": 5999,
+//         "discount": 50,
+//         "bbs": "BBS Price ₹1860",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "LEVIS",
+//         "producttype":"jeans",
+//         "type": "511 Washed Slim Fit Jeans",
+//         "imgsrc": "upload\\img15.webp",
+//         "price": 1350,
+//         "op": 2999,
+//         "discount": 55,
+//         "bbs": "BBS Price ₹1350",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "LEVIS",
+//         "producttype":"jeans",
+//         "type": "511 Mid-Rise Slim Fit Jeans",
+//         "imgsrc": "upload\\img16.webp",
+//         "price": 1530,
+//         "op": 3399,
+//         "discount": 55,
+//         "bbs": "BBS Price ₹1530",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "Rare Rabbit",
+//         "producttype":"jeans",
+//         "type": "Lightly-Wash Jeans with 5-Pocket Styling",
+//         "imgsrc": "upload\\img17.webp",
+//         "price": 3000,
+//         "op": 5999,
+//         "discount": 50,
+//         "bbs": "BBS Price ₹1860",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "LEVIS",
+//         "producttype":"jeans",
+//         "type": "551 Z Washed Straight Fit Jeans",
+//         "imgsrc": "upload\\img18.webp",
+//         "price": 1598,
+//         "op": 3399,
+//         "discount": 53,
+//         "bbs": "BBS Price ₹1598",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "U.S. Polo Assn.",
+//         "producttype":"jeans",
+//         "type": "Stone-Wash Skinny Jeans",
+//         "imgsrc": "upload\\img19.webp",
+//         "price": 1530,
+//         "op": 3399,
+//         "discount": 55,
+//         "bbs": "BBS Price ₹1530",
+//         "gender":"male"
+//     },
+//     {
+//         "brand": "U.S. Polo Assn.",
+//         "producttype":"jeans",
+//         "type": "Mid-Wash Mid-Rise 5-Pocket Slim Jeans",
+//         "imgsrc": "upload\\img20.webp",
+//         "price": 1385,
+//         "op": 2199,
+//         "discount": 37,
+//         "bbs": "BBS Price ₹1100",
+//         "gender":"male"
+//     },
+// ];
+
+let dataherko = async () =>{
+  try{
+    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productadd')
+    let datawhatsnew = await datas.json();
+    let data = await datas.json();
+     displayProduct(data);
 
 let count1 = data.length;
 
@@ -1449,3 +1456,9 @@ const showSingleProd = (prodData) => {
     localStorage.setItem("clickeproduct", JSON.stringify(prodData));
     window.location.href = "/EachProduct/one_Product.html"
 };
+}
+catch(e){
+  console.log(e.message);
+}
+}
+dataherko();
