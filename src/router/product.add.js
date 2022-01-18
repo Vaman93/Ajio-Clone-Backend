@@ -17,9 +17,9 @@ router.post("/" ,upload.single("imgsrc") , async (req, res) => {
 })
 
 
-router.get("/:id" , async (req, res) => {
+router.get("/" , async (req, res) => {
     try{
-        const produnct = await ProductSchema.find({_id:req.params.id})
+        const produnct = await ProductSchema.find()
         res.send(produnct)
     }catch (err) {
         console.log(err)
