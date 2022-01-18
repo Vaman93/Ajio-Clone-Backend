@@ -1,12 +1,15 @@
 const express = require('express')
 const app = express()
 
+const Homepage = require('./router/home.router')
+const ProductAddSchema = require('./router/product.add')
 app.set('view engine', 'ejs')
 app.use(express.static("public"))
+app.use(express.json())
 
-app.get("/" , (req, res) => {
-  res.render("index")
-})
+app.use("/" , Homepage)
+
+app.use("/productadd" , ProductAddSchema)
 
 app.get("/productjeans" , (req, res) => {
   res.render("product page/productjackets");
