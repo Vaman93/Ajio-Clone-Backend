@@ -5,6 +5,7 @@ const Homepage = require('./router/home.router')
 const ProductAddSchema = require('./router/product.add')
 app.set('view engine', 'ejs')
 app.use(express.static("public"))
+app.use(express.static("upload"))
 app.use(express.json())
 
 app.use("/" , Homepage)
