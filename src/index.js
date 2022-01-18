@@ -11,7 +11,7 @@ app.use("/" , Homepage)
 
 app.use("/productadd" , ProductAddSchema)
 
-app.get("/productjeans" , (req, res) => {
+app.get("/productjackets" , (req, res) => {
   res.render("product page/productjackets");
 })
 
