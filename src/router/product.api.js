@@ -36,9 +36,9 @@ router.get("/women/producttshirt" , async (req, res) => {
     }
 })
 
-router.get("/men/productjeans", async (req, res) => {
+router.get("/women/productjeans", async (req, res) => {
     try {
-        const product = await ProductSchema.find({ producttype: { $eq: "jeans" }, gender: { $eq: "male" } });
+        const product = await ProductSchema.find({ producttype: { $eq: "jeans" }, gender: { $eq: "women" } });
         res.send(product);
     } catch (err) {
         console.log(err);
