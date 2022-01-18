@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#payemntMain {
+   
+    width: 80%;
+    margin: auto;
+    margin-top: 6%;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#selectedpa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.paymentfirst {
+    margin-top:2%;
+    width: 20%;
+}
+
+.btn-card > button {
+   width: 75%;
+   padding: 15px;
+   text-align: left;
+   cursor: pointer;
+   font-size: 14px;
+   border: solid 1px #e1e1e1;
+    margin-top: -1px;
+    margin-bottom: -1px;
+}
+
+.btn-card.active > button {
+    background-color: transparent;
+    color: #b09975;
+    border-top: solid 1px #e1e1e1;
+    border-bottom: solid 1px #e1e1e1;
+    font-family: "Source Sans Pro";
+    background-color: white;
+    font-weight: bolder;
+}
+
+.all_details_cards_upi{
+    flex-basis: 60%;
+    width: 96%;
+    padding: 10px 20px;
+    border: solid 1px #e1e1e1;
+    margin-left: -1px;
+    width: 35%;
+    position: absolute;
+    left: 22%;
+    padding: 30px;
+}
+
+
+form > input {
+    display: block;
+    width: 100%;
+}
+
+
+.add_new_card > p {
+    font-family: "Source Sans" , sans-serif;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 4%;
+}
+
+.label{
+    font-size: 14px;
+    font-family: "Source Sans" , sans-serif;
+    color: #333;
+    margin-top: 2.5%;
+}
+
+
+.card_number{
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    border: 1px solid #d9d9d9;
+    line-height: 1.5;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    width: 70%;
+    padding-right: 30px;
+    text-align: start;
+    padding: 5px;
+    margin-top: 2%;
+}
+
+
+
+select{
+    margin-top: 2%;
+    padding: 8px;
+    font-size: 14px;
+    width:20%;
+}
+
+select > option {
+    font-size: 14px;
+    padding: 5px;
+    margin-top: 2%;
+}
+
+select::-webkit-scrollbar {
+    display: none;
+}
+
+.checkbox_in {
+    display: flex;
+    align-items: center;
+}
+.checkbox_in > p{
+    margin-top: 3%;
+    margin-left: 1%;
+    font-size: 17px;
+}
+
+input[type="checkbox"]{
+    margin-top: 2%;
+   padding: 10px;
+   width: 18px;
+   height: 18px;
+}
+
+input[type="submit"]{
+    cursor: pointer;
+    width: 40%;
+    padding:12px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #ebb964;
+    border-color: #d9d9d9;
+    text-shadow: none;
+    border: 1px solid transparent;
+    margin-top: 2%;
+}
+
+footer{
+    margin-top: 20%;
+}
+
+
+
+.pricesAll{
+    border: 1px solid #f0f0f0;
+    background-color: #fafafa;
+    padding: 15px;
+}
+
+.secondpayment {
+    width: 25%;
+}
+
+.oder_delrails > p{
+    text-align: left;
+    margin-bottom: 10px;
+    padding: 0;
+    color: #121212;
+    font-family: Lora;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+
+
+
+.amount_span {
+    font-family: Lora;
+    display: flex;
+    gap: 10%;
+    justify-content: space-between;
+    margin-top: 3%;
+    color: #333;
+}
+
+.amount_span > p{
+    float: left;
+    text-align: left;
+    font-weight: normal;
+    padding: 0;
+    color: #333;
+    
+}
+
+
+.amount_span > p + p{
+    float: right;
+    text-align: right;
+    color: #333;
+}
+
+
+.amount_span > .amount{
+    font-family: "Source Sans Pro";
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.amount_span > .amount1{
+    font-family: "Source Sans Pro";
+    font-size: 16px;
+    font-weight: 600;
+    color: #121212cc;
+}
+
+
+.earn_money {
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    background-color: #fefbe4;
+    margin-bottom: 4%;
+}
+
+.earn_money > p{
+    font-size: 14px;
+}
+
+.earn_money > p + p {
+    color: blue;
+}

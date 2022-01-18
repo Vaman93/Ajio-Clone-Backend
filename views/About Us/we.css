@@ -1,0 +1,147 @@
+* {
+  font-family: "Times New Roman", Times, serif;
+  /* padding: 0px;
+  margin: 0px; */
+}
+#main {
+  border: 1px solid white;
+  width: 95%;
+  margin: auto;
+  height: 1600px;
+  margin-top: 50px;
+}
+h1 {
+  color: rgb(92, 88, 88);
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 4px;
+  font-family: "Times New Roman", Times, serif;
+}
+#head > p {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: rgb(100, 98, 98);
+  margin-left: 30px;
+}
+#image {
+  height: 300px;
+  width: 96%;
+  border: 2px solid white;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+#box1 {
+  border: 1px solid white;
+  height: 150px;
+  width: 96%;
+  margin: auto;
+  margin-top: 30px;
+  background-color: rgb(6, 43, 58);
+  color: white;
+  text-align: center;
+  letter-spacing: 1px;
+  /* line-height: 9px; */
+}
+#box1 > div {
+  margin-top: 43px;
+}
+#own {
+  border: 1px solid white;
+  display: flex;
+  height: 160px;
+  width: 96%;
+  margin: auto;
+  margin-top: 30px;
+  justify-content: space-around;
+  color: rgb(92, 88, 88);
+  font-size: 13px;
+}
+#own1 {
+  border: 1px solid white;
+  width: 50%;
+}
+#own2 {
+  border: 1px solid white;
+  width: 50%;
+}
+h2 {
+  font-weight: lighter;
+  font-family: "Times New Roman", Times, serif;
+}
+#own1 > div {
+  margin-top: 35px;
+  /* line-height: 8px; */
+}
+#own2 > div {
+  margin-top: 35px;
+  /* line-height: 8px; */
+}
+#box2 {
+  border: 1px solid white;
+  height: 230px;
+  width: 96%;
+  margin: auto;
+  margin-top: 30px;
+  background-color: rgb(6, 43, 58);
+  color: white;
+  text-align: center;
+  letter-spacing: 1px;
+  /* line-height: 7px; */
+  font-size: larger;
+}
+#box2 > div {
+  margin-top: 43px;
+  font-family: "Times New Roman", Times, serif;
+}
+#logo {
+  border: 1px solid white;
+  display: flex;
+  height: 130px;
+  width: 100%;
+  background-color: whitesmoke;
+  justify-content: space-between;
+  margin: auto;
+}
+#inlogo {
+  border: 1px solid whitesmoke;
+  width: 25%;
+  height: 60%;
+  margin: auto;
+  margin-bottom: 43px;
+}
+
+#img2 > img {
+  height: 10%;
+  width: 30%;
+  margin-left: 140px;
+}
+h3 {
+  margin-left: 90px;
+}
+#imgh2 > img {
+  height: 80px;
+  width: 30%;
+  margin-left: 140px;
+}
+h3 {
+  margin-left: 90px;
+}
+#imga2 > img {
+  height: 80px;
+  width: 30%;
+  margin-left: 140px;
+}
+h3 {
+  margin-left: 90px;
+}
+#mainhead {
+  font-size: 25px;
+}
+#para {
+  font-size: 14px;
+}
+#font {
+  font-size: 18px;
+  font-stretch: normal;
+}

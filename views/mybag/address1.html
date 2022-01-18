@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://assets.ajio.com/static/img/favicon.ico" type="image/icon type">
+  <link rel="stylesheet" href="../Main.css">
+
+  <script
+  src="https://kit.fontawesome.com/d829865ea3.js"
+  crossorigin="anonymous"
+></script>
+
+<link rel="stylesheet" href="./payment.css" />
+  
+    <title></title>
+    <style>
+        * {
+  font-family: sans-serif;
+}
+#main {
+  border: 1px solid rgb(68, 67, 67);
+  height: 520px;
+  width: 30%;
+  margin-left: 9%;
+  padding: 20px;
+  margin-top: 8%;
+}
+.head {
+  font-weight: normal;
+  font-size: 25px;
+  color: rgb(83, 83, 83);
+  margin-top: 0px;
+}
+
+
+.boxes {
+  height: 70%;
+  width: 42%;
+  margin: auto;
+  margin-right: 40px;
+}
+
+#line {
+  display: flex;
+  color: rgb(156, 145, 145);
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+  gap: 15px;
+  justify-content: center;
+}
+hr {
+  color: black;
+  width: 100px;
+}
+.container {
+  width: 96%;
+
+  position: relative;
+  margin-top: 4%;
+}
+
+.input {
+  width: 90%;
+  height: 15px;
+  border: 0;
+  padding: 3px 0;
+  border-bottom: 1px solid #ccc;
+}
+.input ~ .border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+}
+.input:focus ~ .border {
+  width: 100%;
+  transition: 0.5s;
+}
+#btn {
+  border: 1px solid white;
+  height: 40px;
+  width: 170px;
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  background-color: rgb(199, 134, 15);
+}
+body {
+  background-color: #fff;
+}
+:focus {
+  outline: none;
+}
+
+span {
+  color: rgb(72, 72, 88);
+}
+.p {
+  font-size: 13px;
+}
+#in {
+  color: rgb(83, 83, 83);
+}.tex{
+    font-size: 15px;
+}
+
+
+
+#label1{
+ margin-top: 30px;
+}
+#adiv1{
+    /* border:1px solid red; */
+    height:300px;
+    width:300px;
+    position:absolute;
+    right:150px;
+    top:120px;
+    background-color: #FAFAFA;
+}
+#adiv2{
+    /* border:1px solid blue; */
+    height:40px;
+    width:250px;
+    margin:auto;
+    margin-top: 20px;
+    text-align: right;
+    color:#2d363a;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding-right: 10px;
+    padding-top:5px; 
+}
+#adiv3{
+    /* border:1px solid green; */
+    width:100%;
+    height:180px;
+}
+#adiv4{
+    border:1px solid #D5A249;
+    width:100%;
+    height:29px;
+    background-color:#D5A249 ;
+    color:white;
+    font-family: sans-serif;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 7%;
+}
+#adiv4:hover{
+background-color: #BB8936;
+}
+#num1{
+    height:25px;
+    /* border :1px solid #333333; */
+    width:260px;
+    margin:auto;
+    padding-top: 5px;
+    font-weight: 600;
+    color:#333333;
+}
+button{
+  cursor: pointer;
+}
+#num2{
+    height:30px;
+    /* border :1px solid black; */
+    width:260px;
+    margin:auto;
+    padding-top: 5px;
+    font-family: sans-serif;
+    font-size: 13px;
+    color:#333333;
+}
+#num3{
+    height:20px;
+    /* border :1px solid black; */
+    width:260px;
+    margin:auto;
+    padding-top: 5px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color:#333333;
+}
+#amount{
+    margin-left: 137px;
+}
+#bg{
+    margin-left:110px;
+    color: #B09975;
+}
+#ta{
+    margin-left:75px; 
+}
+#delivery{
+    margin-left:178px;
+    color:#B09975;
+}
+
+
+footer{
+  margin-top:2%;
+}
+
+
+    </style>
+    
+</head>
+<body>
+  <div id="Nav_bar_main"></div>
+    <!-- create main box -->
+    <div id = "main">
+        <p class = "head">Add Address</p>
+
+         
+        <!-- Input Feilds -->
+        <div class="container">
+            <label class = "tex">Enter Name</label><br>
+            <input class="input" id="name" type="text" required><br><br>
+
+            <label class = "tex">Enter Mobile</label><br>
+            <input class="input" id="mob" type="number"><br><br>
+
+            <label class = "tex">Enter Pincode</label><br>
+            <input class="input" id="pin" type="number"/><br><br>
+
+            <label class = "tex">Enter Locality/Area/Street</label><br>
+            <input class="input" id="street" type="text"/><br><br>
+
+            <label class = "tex">Enter Flat Number/Building Name</label><br>
+            <input class="input" id="flatnum" type="text"/><br><br>
+
+            <label class = "tex">Enter Landmark</label><br>
+            <input class="input" id="landmark" type="text" /><br><br>
+
+            <label class = "tex">Enter District/City*</label><br>
+            <input class="input" id="city" type="text"/><br><br>
+
+            <label class = "tex">Enter State</label><br>
+            <input class="input" id="state" type="text"/><br><br>
+            <span class="border"></span>
+        </div>
+           
+    </div>
+    <div id="billdiv">
+
+    </div>
+
+    <footer></footer>
+</body>
+<script type="module" src="../navbar.js"></script>
+</html>
+<script src="address.js">
+</script>
+

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="signup.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://assets.ajio.com/static/img/favicon.ico" type="image/icon type">
+    <title>LogIn</title>
+</head>
+<body>
+    
+ <!-- create main box -->
+ <div id = "main">
+
+    <!-- create Main heading -->
+    <p class = "head">Welcome to AJIO</p>
+
+    <!-- create join heading -->
+    <h3 id = "in">Log-In</h3>
+
+    <!-- social media box -->
+    <div id = "logobox">
+
+        <!-- create fb box -->
+        <div class = "boxes" id = "fb">
+            <img src = "https://d2v9ipibika81v.cloudfront.net/uploads/sites/261/2017/01/facebook-logo-3.png"/>
+            <h4>FACEBOOK</h4>
+        </div>
+
+        <div>
+            <!-- create google box -->
+            <div class = "boxes" id = "google">
+                <img src = "https://www.teambonding.com/wp-content/uploads/2018/07/google.jpg"/>
+                <h4>GOOGLE</h4>
+            </div>
+        </div> 
+    </div>
+
+    <!-- create hr -->
+    <div id = "line">
+        <hr>or<hr>
+    </div>
+     
+    <!-- Input Feilds -->
+    <div class="container">
+       
+
+        
+        <!-- <label>Enter UserName</label><br> -->
+        <input class="input" id="username" type="text" placeholder= "Enter UserName" ><br><br>
+
+        <!-- <label>Enter Password</label><br> -->
+        <input class="input" id="password" type="password" placeholder="Enter Password" ><br><br>
+
+
+        
+        <span class="border"></span>
+       </div>
+
+       <!-- submit Button -->
+       <button  onclick="logIn()" id = "btn">CONTINUE</button>
+
+       <!-- Terms & Cond. -->
+       <p class = "p">By Signing In, I agree to<span id = "color">Terms and Conditions.</span> </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+<script>
+
+// api = "https://masai-api-mocker.herokuapp.com"
+
+async function logIn(){
+
+    let user = document.getElementById("username").value
+
+let detail = {
+    username: document.getElementById("username").value,
+    password: document.getElementById("password").value,
+}
+detail = JSON.stringify(detail);
+console.log('detail:', detail)
+
+
+
+let url = "https://masai-api-mocker.herokuapp.com/auth/login"
+
+let response = await fetch(url, {
+
+    method:"POST",
+    body: detail,
+
+    headers:{
+        "Content-Type": "application/json"
+    }
+});
+
+console.log('response:', response)
+
+let data = await response.json();
+
+
+if(data.error === true){
+    alert("User Not Exist");
+} else{
+   goinghomepag(user);
+
+}
+
+
+
+
+        
+}
+
+
+function goinghomepag(username) {
+
+    localStorage.setItem("username", username)
+    window.location.href = "../Home/index.html"
+
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+    
+ -->

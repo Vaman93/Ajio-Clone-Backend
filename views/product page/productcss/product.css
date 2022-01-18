@@ -1,0 +1,349 @@
+#main,:after, :before {
+    box-sizing: border-box;
+}
+#main{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    margin-top: 6%;
+   
+}
+.scprodhead{
+    position:fixed;
+    background-color: #e8f8ff;
+   
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+}
+.scprodspan1{
+    display: inline-block;
+    border-left: 1px solid #badceb;
+    margin: 0px 10px;
+    height: 30px;
+}
+.scprodsale{
+    color: #204053;
+    font-size: 14px;
+    font-weight: bolder;
+    font-family:'Source Sans Pro', sans-serif;
+    margin-left: 2%;
+    margin-right: 1%;
+}
+.scprodheaddesc{
+    color: #333333;
+    font-size: 14px;
+    font-family:'Source Sans Pro', sans-serif;
+    padding: 0px 10px;
+
+}
+.scmaindiv{
+
+    width: 80%;
+    margin: auto;
+}
+
+.scbreadcumb{
+    padding-top: 10px;
+    letter-spacing: 1px;
+    color: #939393;
+    font-size: 11px;
+    float: left;
+    margin-top: 4%;
+    margin-bottom: 20px;
+    display: block;
+    width: 90%;
+    position: relative;
+    font-family:'Source Sans Pro', sans-serif;
+    padding-left: 10%;
+
+}
+.scbreadcumb>a{
+    text-decoration: none;
+    color: #AFACAC;
+}
+.scbreadcumb>span{
+    margin: 0px 7px 0px 0px ;
+}
+.scmaindiv{
+    display: flex;
+    height: fit-content;
+}
+.scsubdiv1{
+    /* border: 1px solid red; */
+   
+    width: 20%;
+    min-height: 1000px;
+    float: left;
+    padding: 10px;
+}
+.scsubdiv2{
+    /* border: 1px solid red; */
+    width: 79%;
+}
+.screfine{
+    font-size: 18px;
+    font-family: 'Lora', serif;
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    margin: 15px 0px;
+    cursor: pointer;
+}
+
+.screfineimg{
+    width:20px;
+    height: 20px;
+    transform: rotate(180deg);  
+}
+.sclistflex{
+    display: flex;
+    font-size: 16px;
+    font-family:'Source Sans Pro', sans-serif;
+    padding: 0px 0px 15px;
+    
+}
+.scplus{
+    font-size: 16px;
+    font-family:'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    margin: 0px 10px 0px 0px;
+  
+}
+.screfineline{
+    width: 100%;
+    background-color: silver;
+    height: 1px;
+}
+.scselectdetails{
+   text-align: center;
+   padding: 20px 10px;
+}
+.scdetailshead{
+
+    color: #A7A7A7;
+    font-size: 14.6px;
+}
+.scdetailssubhead{
+    font-size: 36px;
+    font-family: 'Lora', serif;
+    color: #333333;
+}
+.scdetailstotal{
+
+    font-size: 14px;
+    font-family:'Source Sans Pro', sans-serif;
+    text-align: left;
+    letter-spacing: .1px;
+    color: #666;
+    padding: 0 100px;
+    margin-top: 6px;
+    line-height: 1.3em;
+
+}
+.scsort{
+    margin: 4px 0px;
+    padding: 20px 10px;
+    background-color: #F9F9F9;
+    display: flex;
+    justify-content: space-between;
+}
+.scsortcount{
+    font: 12px;
+    padding: 0px 5px;
+    color: #333333;
+    font-family:'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+.scsortgrid{
+    display: flex;
+}
+.scsortgridgrid{
+    color: #939393;
+    font-size: 14px;
+    margin: 0px 10px 0px 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 2px;
+}
+.scsortgridbackground3{
+    background-color: #FFFFFF;
+    padding: 3px;
+    width: 30px;
+    display: flex;
+    height: 17px;
+    border: 1px solid silver;
+}
+.scsortgridbackground3>div{
+
+    width: 9px;
+    height: 15px;
+    margin-right: 2px;
+    background-color:#939393 ;
+
+}
+.scsortgridbackground5{
+    background-color: #FFFFFF;
+    padding: 3px;
+    width: 47px;
+    display: flex;
+    height: 17px;
+    border: 1px solid silver;
+    border-left: none;
+
+}
+.scsortgridbackground5>div{
+    width: 9px;
+    height: 15px;
+    margin-right: 2px;
+    background-color:#c4c4c4 ;
+    cursor: pointer;
+}
+.scsortsort{
+    display: flex;
+    margin-right: 5%;
+}
+.scsortgridgrid>select{
+    background-color: #FFFFFF;
+    padding: 1px 20px 1px 6px;
+
+}
+#screflineline1{
+    width: 100%;
+    background-color: silver;
+    height: 0.5px;
+}
+#scjsgrid{
+display: grid;
+grid-column: span;
+grid-template-columns: auto auto auto;
+font-family: 'Lora', serif; 
+grid-gap:18px;
+padding-top: 2%;
+
+}
+#scjsgrid > div {
+    cursor: pointer;
+}
+#scquickView{
+    height: 45px;
+    z-index: 5;
+    box-sizing: border-box;
+    padding-top: 8px;
+    display: none;
+    background-color: #ffffff;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #2c4154;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 800;
+    opacity: 75%;
+    width: 100%;
+    margin-top: -45px;
+    cursor: pointer;
+  }
+  #grid5bbsmain{
+      display: flex;
+      justify-content: center;
+      background-color: #E8F8FF;
+      width: 303px;
+      padding: 2.5px 4px;
+  }
+  #img1grid5{
+      width: 303px;
+  }
+  .scplus{
+    margin: 0px 10px 0px 0px;
+  }
+  .sclistrefinename{
+    color: #333;
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  #screfinelistmain1 div input{
+ 
+    height: 14px;
+  }
+  #screfinelistmain1 div label{
+
+    color: #333;
+    font-size: 15px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: lighter;
+    vertical-align: text-top;
+   
+   }
+   .fifty{
+    width: 16px;
+    height: 16px;
+    margin: 0px 5px 0px 0px;
+    border-radius: 50%;
+    
+   }
+   #sccolors{
+       display: grid;
+       grid-template-columns: auto auto;
+       justify-content: left;
+       grid-gap: 5px;
+     
+   }
+   .fiftycolor{
+    color: #333;
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: lighter;
+   }
+   #fiftybeige{
+       background-color: beige;
+   }
+   #fiftyblack{
+       background-color: black;
+
+   }
+   #fiftyblue{
+    background-color: blue;
+    
+}
+#fiftybronze{
+    background-color: goldenrod;
+    
+}
+#fiftybrown{
+    background-color: brown;
+    
+}
+/* #screfineid::before{
+    display: none;
+} */
+
+
+
+
+
+#icon_div {
+    margin-top: 2%;
+    font-family: sans-serif;
+    padding: 30px 0;
+    background-color: #FAFAFA;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+
+#icon_div > .icons > i{
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+#icon_div > .icons > p{
+    font-size: 20px;
+    font-weight: 700;
+}

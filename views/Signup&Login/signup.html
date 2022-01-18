@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="signup.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://assets.ajio.com/static/img/favicon.ico" type="image/icon type">
+    <title>Sign Up</title>
+    
+</head>
+<body>
+    <!-- create main box -->
+    <div id = "main">
+
+        <!-- create Main heading -->
+        <p class = "head">Welcome to AJIO</p>
+
+        <!-- create join heading -->
+        <h5>Join/Sign In using</h5>
+
+        <!-- social media box -->
+        <div id = "logobox">
+
+            <!-- create fb box -->
+            <div class = "boxes" id = "fb">
+                <img src = "https://d2v9ipibika81v.cloudfront.net/uploads/sites/261/2017/01/facebook-logo-3.png"/>
+                <h4 id = "social">FACEBOOK</h4>
+            </div>
+
+            <div>
+                <!-- create google box -->
+                <div class = "boxes" id = "google">
+                    <img src = "https://www.teambonding.com/wp-content/uploads/2018/07/google.jpg"/>
+                    <h4 id = "social">GOOGLE</h4>
+                </div>
+            </div> 
+        </div>
+
+        <!-- create hr -->
+        <div id = "line">
+            <div><hr></div>Or
+            <div><hr></div>
+            <!-- <hr><p id = >or</p><hr> -->
+        </div>
+         
+        <!-- Input Feilds -->
+        <div class="container">
+            <!-- <label>Enter Name</label><br> -->
+            <input class="input" id="name" type="text" placeholder="Enter Name"><br><br>
+
+            <!-- <label>Enter Email</label><br> -->
+            <input class="input" id="email" type="text" placeholder="Enter Email"><br><br>
+
+            <!-- <label>Enter Password</label><br> -->
+            <input class="input" id="password" type="password" placeholder="Enter Password"><br><br>
+
+            <!-- <label>Enter UserName</label><br> -->
+            <input class="input" id="username" type="text" placeholder="Enter Username"><br><br>
+
+            <!-- <label>Enter Mobile</label><br> -->
+            <input class="input" id="mobile" type="number" placeholder="Enter Mobile"><br><br>
+
+            <!-- <label>Enter Description</label><br> -->
+            <input class="input" id="description" type="text" placeholder ="Enter Description"><br><br>
+            <span class="border"></span>
+           </div>
+
+           <!-- submit Button -->
+           <div id = "btn1">
+            <button  onclick="signUp()" id = "btn">CONTINUE</button>
+            <a href="signIn.html"><button id = "btn">LOG-IN</button></a>
+           </div>
+           <!-- <button  onclick="signUp()" id = "btn">CONTINUE</button> -->
+
+           <!-- Terms & Cond. -->
+           <p class = "p">By Signing In, I agree to<span id = "color">Terms and Conditions.</span> </p>
+           <!-- <button id = "btn">LogIn</button> -->
+    </div>
+</body>
+</html>
+<script>
+
+// api = "https://masai-api-mocker.herokuapp.com"
+
+
+
+async function signUp(){
+        let name= document.getElementById("name").value
+        let email= document.getElementById("email").value
+        let username= document.getElementById("username").value
+        let password= document.getElementById("password").value
+        let mobile= document.getElementById("mobile").value
+        let description= document.getElementById("mobile").value
+
+    let detail = {
+        name,
+        email,
+        username,
+        password,
+        mobile,
+        description,
+        
+    }
+    detail = JSON.stringify(detail);
+
+    let url = "https://masai-api-mocker.herokuapp.com/auth/register"
+    try{
+    let response = await fetch(url, {
+        method:"POST",
+        body: detail,
+
+        headers:{
+            "Content-Type": "application/json"
+        }
+    });
+
+    let data = await response.json();
+  
+    
+    if(data.error === true){
+        alert("Fill Details");
+    }else{
+        window.location.href = "./signIn.html"
+    }
+
+} catch(e){
+    alert("Fill Details");
+}
+    
+    
+   
+
+
+
+}
+</script>
