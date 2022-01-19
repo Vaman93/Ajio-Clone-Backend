@@ -35,20 +35,7 @@ $('.responsive').slick({
 
 
 
-const product = async () =>{
-  try{
-    let data = await fetch('https://ajio-clone-full.herokuapp.com/productadd')
 
-    let datawhatsnew = await data.json();
-
-    console.log(datawhatsnew)
-  }
-  catch(e){
-    console.log(e.message);
-  }
-}
-
-product()
 
 
 

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="signup.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://assets.ajio.com/static/img/favicon.ico" type="image/icon type">
+    <link rel="stylesheet" href="/css/login&sinupcss/signup.css">
     <title>LogIn</title>
 </head>
 <body>
@@ -61,84 +61,46 @@
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>
 <script>
 
-// api = "https://masai-api-mocker.herokuapp.com"
+let api = "https://ajio-clone-full.herokuapp.com/user/login"
 
 async function logIn(){
 
-    let user = document.getElementById("username").value
-
 let detail = {
-    username: document.getElementById("username").value,
+    email: document.getElementById("username").value,
     password: document.getElementById("password").value,
 }
 detail = JSON.stringify(detail);
 console.log('detail:', detail)
 
-
-
-let url = "https://masai-api-mocker.herokuapp.com/auth/login"
+let url = api;
 
 let response = await fetch(url, {
-
     method:"POST",
     body: detail,
-
     headers:{
         "Content-Type": "application/json"
     }
 });
 
-console.log('response:', response)
 
 let data = await response.json();
-
 
 if(data.error === true){
     alert("User Not Exist");
 } else{
-   goinghomepag(user);
-
+   goinghomepag();
 }
-
-
-
-
         
 }
 
 
 function goinghomepag(username) {
-
     localStorage.setItem("username", username)
-    window.location.href = "../Home/index.html"
-
+    window.location.href = "/"
 }
 
 </script>

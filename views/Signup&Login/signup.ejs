@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://assets.ajio.com/static/img/favicon.ico" type="image/icon type">
+    <link rel="stylesheet" href="/css/login&sinupcss/signup.css">
     <title>Sign Up</title>
     
 </head>
@@ -55,14 +56,8 @@
             <!-- <label>Enter Password</label><br> -->
             <input class="input" id="password" type="password" placeholder="Enter Password"><br><br>
 
-            <!-- <label>Enter UserName</label><br> -->
-            <input class="input" id="username" type="text" placeholder="Enter Username"><br><br>
-
             <!-- <label>Enter Mobile</label><br> -->
             <input class="input" id="mobile" type="number" placeholder="Enter Mobile"><br><br>
-
-            <!-- <label>Enter Description</label><br> -->
-            <input class="input" id="description" type="text" placeholder ="Enter Description"><br><br>
             <span class="border"></span>
            </div>
 
@@ -81,57 +76,42 @@
 </html>
 <script>
 
-// api = "https://masai-api-mocker.herokuapp.com"
-
-
+let url = "https://ajio-clone-full.herokuapp.com/user/register"
 
 async function signUp(){
         let name= document.getElementById("name").value
         let email= document.getElementById("email").value
-        let username= document.getElementById("username").value
         let password= document.getElementById("password").value
         let mobile= document.getElementById("mobile").value
-        let description= document.getElementById("mobile").value
 
     let detail = {
         name,
         email,
-        username,
         password,
         mobile,
-        description,
-        
     }
     detail = JSON.stringify(detail);
-
-    let url = "https://masai-api-mocker.herokuapp.com/auth/register"
     try{
     let response = await fetch(url, {
         method:"POST",
         body: detail,
-
         headers:{
             "Content-Type": "application/json"
         }
     });
 
     let data = await response.json();
-  
     
     if(data.error === true){
         alert("Fill Details");
     }else{
-        window.location.href = "./signIn.html"
+        window.location.href = "loginIn"
     }
 
 } catch(e){
     alert("Fill Details");
 }
     
-    
-   
-
-
 
 }
 </script>

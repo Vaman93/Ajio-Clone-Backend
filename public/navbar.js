@@ -7,7 +7,7 @@ let footershowinhtml = document.querySelector("footer")
     footershowinhtml.innerHTML = footershow()
 
 
-    let product_arr = JSON.parse(localStorage.getItem("All_product_deletes")) || []
+let product_arr = JSON.parse(localStorage.getItem("All_product_deletes")) || []
 
 
 let emptyprodut = document.getElementById("emptry_bag")
@@ -95,10 +95,27 @@ function hidediv(){
   }
 
 
+  let api = 'http://localhost:2222/user/cooke'
+
+  const product = async () =>{
+    try{
+      let data = await fetch(api)
+  
+      let datawhatsnew = await data.json();
+  
+      username(datawhatsnew.name)
+    }
+    catch(e){
+      console.log(e.message);
+    }
+  }
+
+product()
 
 
-
-let username = localStorage.getItem("username")  
+const username = function (data){
+  return data
+}
 
 let change_user = document.getElementById("user_name")
 
@@ -106,14 +123,14 @@ let change_user = document.getElementById("user_name")
 let logOut = document.querySelector(".Log_out")
 
 logOut.addEventListener("click", ()=>{
-  localStorage.removeItem("username")
+  
 })
 
-if(username === null){
+if(username() === null){
   change_user.innerHTML = "Sign In / Join AJIO"
   logOut.style.display = "none"
 } else{
-  change_user.innerHTML = `Hi ${username}`
+  change_user.innerHTML = `Hi ${username()}`
 }
 
 
