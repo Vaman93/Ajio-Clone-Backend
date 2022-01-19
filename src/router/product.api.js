@@ -67,7 +67,6 @@ router.get("/test" , async (req, res) => {
     let product = await ProductSchema.find({ producttype: { $eq: "tshirt" } });
 
     let getdataredis = await client.get(keyname)
-   
 
     if(!getdataredis) {
         client.set(keyname , JSON.stringify(product))
