@@ -450,13 +450,13 @@ let dataherko = async () =>{
   try{
     let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/women/productwomentshirt')
     let datawhatsnew = await datas.json();
+<<<<<<< Updated upstream
     let data = await datas.json();
     console.log(data);
+=======
+    let data = datawhatsnew;
+>>>>>>> Stashed changes
      displayProduct(data);
-
-
-
-
 let count1 = data.length;
 
 let count12 = document.getElementById("count1");
