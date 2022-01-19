@@ -35,8 +35,4 @@ app.use("/product" , ProductAPI)
 // });
 
 
-
-
-
-
 module.exports = app;
