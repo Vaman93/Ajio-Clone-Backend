@@ -18,14 +18,14 @@ router.get("/productwomentshirt", (req, res) => {
     res.render("product page/productwomentshirt");
   });
   
-router.get("/:id" , async (req, res) =>{
-    try{
-        const product = await ProductSchema.find({_id: req.params.id})
+// router.get("/:id" , async (req, res) =>{
+//     try{
+//         const product = await ProductSchema.find({_id: req.params.id})
 
-        console.lod(product)
-    }catch(e){
-        console.log(e)
-    }
-})
+//         console.lod(product)
+//     }catch(e){
+//         console.log(e)
+//     }
+// })
 
 module.exports = router

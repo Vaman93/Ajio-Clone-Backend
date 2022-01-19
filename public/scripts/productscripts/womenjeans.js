@@ -1,10 +1,10 @@
 
 let dataherko = async () =>{
   try{
-    let datas = await fetch('https://ajio-clone-full.herokuapp.com/product/women/productjeans')
+    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/women/productjeans')
     let datawhatsnew = await datas.json();
-    let data = await datas.json();
-     displayProduct(data);
+    let data = datawhatsnew
+    displayProduct(datawhatsnew);
 
 let count1 = data.length;
 
@@ -12,7 +12,7 @@ let count12 = document.getElementById("count1");
 count12.innerText = count1 + "  Items Found";
 
 var scselect = document.getElementById("scselect");
-let scjsgrid1 = document.getElementById("scjsgrid");
+var scjsgrid1 = document.getElementById("scjsgrid");
 
 
 try {
@@ -101,7 +101,7 @@ let grid5 = () => {
     scjsgrid1.style.gridTemplateColumns = "auto auto auto auto auto";
     scjsgrid1.style.gridGap = "12px";
     
-    let displayProduct = (data) =>{
+function displayProduct(data){
     
         data.forEach((data1) => {
     
@@ -247,7 +247,7 @@ let grid5 = () => {
 
 }
 //main working grid  5 over
-let displayProduct = (data) =>{
+function displayProduct (data){
     
     data.forEach((data1) => {
 
@@ -311,7 +311,7 @@ let displayProduct = (data) =>{
         bbsmain.style.padding = "2.5px 4px"
 
         let img2 = document.createElement("img");
-        img2.src = "/prodimg/pricelogo.svg"
+        // img2.src = "/prodimg/pricelogo.svg"
         img2.style.width = "17px";
         img2.style.height = "12px";
         img2.style.marginTop = "5px";

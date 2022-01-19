@@ -9,23 +9,8 @@ const ProductSchema = require('../Schema/project.schema')
 //men jacket and jeans 
 router.get("/men/productjacket" , async (req, res) => {
 
-    // await client.get("product" , async (err, product) => {
-
-    //     if(err) return res.status(500).json("test" ,{message: err.message})
-
-    //     if(product) return res.status(201).send(JSON.parse(product))
-
-    //     try{
-    //         const product = await ProductSchema.find({ producttype: { $eq: "jacket" } });
-    //         client.set("product" , JSON.stringify(product));
-    //         res.status(200).send(product);
-    
-    //     }catch (err) {
-    //         console.log(err);
-    //     }
-    // })
     const product = await ProductSchema.find({ producttype: { $eq: "jacket" } });
-    // client.set("product" , JSON.stringify(product));
+   
     res.status(200).send(product);
 })
 

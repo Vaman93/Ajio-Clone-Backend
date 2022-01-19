@@ -1,10 +1,10 @@
 
 let dataherko = async () =>{
-  try{
+
     let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/men/productjacket')
-    let data = await datas.json();
-    console.log(data);
-    let datawhatsnew = data;
+    let d = await datas.json();
+    let datawhatsnew = d ;
+    let data = d
     displayProduct(data);
     
     
@@ -1006,9 +1006,6 @@ let  nike= (data) => {
 const showSingleProd = (prodData) => {
     window.location.href = "/prodData"
 }
-}
-catch(e){
-  console.log(e.message);
-}
+
 }
 dataherko();

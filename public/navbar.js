@@ -95,27 +95,25 @@ function hidediv(){
   }
 
 
-  let api = 'http://localhost:2222/user/cooke'
+  // let api = 'http://localhost:2222/user/cooke'
 
-  const product = async () =>{
-    try{
-      let data = await fetch(api)
+  // const product = async () =>{
+  //   try{
+  //     let data = await fetch(api)
   
-      let datawhatsnew = await data.json();
+  //     let datawhatsnew = await data.json();
   
-      username(datawhatsnew.name)
-    }
-    catch(e){
-      console.log(e.message);
-    }
-  }
+  //     username(datawhatsnew.name)
+  //   }
+  //   catch(e){
+  //     console.log(e.message);
+  //   }
+  // }
 
-product()
+// product()
 
 
-const username = function (data){
-  return data
-}
+const username = null 
 
 let change_user = document.getElementById("user_name")
 
@@ -126,11 +124,11 @@ logOut.addEventListener("click", ()=>{
   
 })
 
-if(username() === null){
+if(username === null){
   change_user.innerHTML = "Sign In / Join AJIO"
   logOut.style.display = "none"
 } else{
-  change_user.innerHTML = `Hi ${username()}`
+  change_user.innerHTML = `Hi ${username}`
 }
 
 

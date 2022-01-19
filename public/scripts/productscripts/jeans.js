@@ -1,457 +1,458 @@
-
-// let data = [
+// let data =[
 //     {
-//         "brand": "DNMX",
-//         "producttype":"jeans",
-//         "type": "Mid-Rise Fitted Jeans",
-//         "imgsrc": "upload\\img1.webp",
-//         "price": 679,
-//         "op": 799,
-//         "discount": 15,
-//         "bbs": "BBS Price ₹639",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "U.S. Polo Assn.",
-//         "producttype":"jeans",
-//         "type": "Washed Skinny Jeans",
-//         "imgsrc": "upload\\img2.webp",
+//         "brand": "Puma",
+//         "producttype":"tshirt",
+//         "type": "Ws AOP Tee",
+//         "imgsrc": "upload\\wtshirts.jpg",
 //         "price": 1000,
 //         "op": 1999,
 //         "discount": 50,
-//         "bbs": "BBS Price ₹960",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "U.S. Polo Assn.",
-//         "producttype":"jeans",
-//         "type": "Mid-Wash Slim Fit Jeans",
-//         "imgsrc": "upload\\img3.webp",
-//         "price": 1511,
-//         "op": 2399,
-//         "discount": 37,
-//         "bbs": "BBS Price ₹1200",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "JOHN PLAYERS JEANS",
-//         "producttype":"jeans",
-//         "type": "Washed Skinny Fit Jeans with Whiskers",
-//         "imgsrc": "upload\\img4.webp",
-//         "price": 899,
-//         "op": 999,
-//         "discount": 10,
-//         "bbs": "BBS Price ₹849",
-//         "gender":"male"
+//         "bbs": "BBS Price 750",
+//         "gender":"women"
 //     },
 //     {
 //         "brand": "LEVIS",
-//         "producttype":"jeans",
-//         "type": "Chris-LTHR Branding 511 Slim Fit Jeans",
-//         "imgsrc": "upload\\img5.webp",
-//         "price": 1665,
-//         "op": 3699,
-//         "discount": 25,
-//         "bbs": "BBS Price ₹1665",
-//         "gender":"male"
+//         "producttype":"tshirt",
+//         "type": "Crew-Neck T-shirt with Brand Print",
+//         "imgsrc": "upload\\wtshirts1.jpg",
+//         "price": 635,
+//         "op": 1199,
+//         "discount": 47,
+//         "bbs": "BBS Price 576",
+//         "gender":"women"
 //     },
 //     {
-//         "brand": "U.S. Polo Assn.",
-//         "producttype":"jeans",
-//         "type": "Washed Skinny Jeans",
-//         "imgsrc": "upload\\img6.webp",
-//         "price": 1259,
-//         "op": 1999,
-//         "discount": 37,
-//         "bbs": "BBS Price ₹1000",
-//         "gender":"male"
+//         "brand": "Teamspirit",
+//         "producttype":"tshirt",
+//         "type": "Colourblock Striped Round Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts2.jpg",
+//         "price": 336,
+//         "op": 699,
+//         "discount": 52,
+//         "bbs": "BBS Price 210",
+//         "gender":"women"
 //     },
 //     {
-//         "brand": "DNMX",
-//         "producttype":"jeans",
-//         "type": "Lightly Washed Fitted Jeans",
-//         "imgsrc": "upload\\img7.webp",
-//         "price": 679,
+//         "brand": "Teamspirit",
+//         "producttype":"tshirt",
+//         "type": "Printed T-shirt with Full Sleeves",
+//         "imgsrc": "upload\\wtshirts3.jpg",
+//         "price": 384,
 //         "op": 799,
+//         "discount": 52,
+//         "bbs": "BBS Price 240",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "FIG",
+//         "producttype":"tshirt",
+//         "type": "Ribbed Round-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts4.jpg",
+//         "price": 424,
+//         "op": 499,
 //         "discount": 15,
-//         "bbs": "BBS Price ₹639",
-//         "gender":"male"
+//         "bbs": "BBS Price 399",
+//         "gender":"women"
 //     },
 //     {
-//         "brand": "U.S. Polo Assn.",
-//         "producttype":"jeans",
-//         "type": "Mid-Wash Skinny Fit Jeans",
-//         "imgsrc": "upload\\img8.webp",
-//         "price": 1511,
-//         "op": 2399,
-//         "discount": 37,
-//         "bbs": "BBS Price ₹1200",
-//         "gender":"male"
+//         "brand": "Calvin Klein Jeans",
+//         "producttype":"tshirt",
+//         "type": "Crew-Neck T-shirt with Embroidered Brand Text",
+//         "imgsrc": "upload\\wtshirts5.jpg",
+//         "price": 1749,
+//         "op": 2499,
+//         "discount": 30,
+//         "bbs": "BBS Price 1574",
+//         "gender":"women"
 //     },
 //     {
-//         "brand": "The Indian Garage Co",
-//         "producttype":"jeans",
-//         "type": "Mid-Rise Washed Slim Fit Jeans",
-//         "imgsrc": "upload\\img9.webp",
-//         "price": 660,
+//         "brand": "Teamspirit",
+//         "producttype":"tshirt",
+//         "type": "Typographic Print Crew-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts6.jpg",
+//         "price": 699,
+//         "op": 999,
+//         "discount": 30,
+//         "bbs": "BBS Price 629",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "TOMMY HILFIGER",
+//         "producttype":"tshirt",
+//         "type": "Organic Cotton Crew-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts7.jpg",
+//         "price": 1199,
 //         "op": 1999,
-//         "discount": 67,
-//         "bbs": "BBS Price ₹500",
-//         "gender":"male"
+//         "discount": 40,
+//         "bbs": "BBS Price 1099",
+//         "gender":"women"
 //     },
 //     {
-//         "brand": "Lee Cooper",
-//         "producttype":"jeans",
-//         "type": "Lightly Washed Slim Fit Jeans",
-//         "imgsrc": "upload\\img10.webp",
-//         "price": 985,
-//         "op": 1699,
+//         "brand": "TOMMY HILFIGER",
+//         "producttype":"tshirt",
+//         "type": "Brand Logo Embroidered Crew-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts8.jpg",
+//         "price": 1299,
+//         "op": 1999,
+//         "discount": 35,
+//         "bbs": "BBS Price 1199",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "TOMMY HILFIGER",
+//         "producttype":"tshirt",
+//         "type": "Crew-Neck T-shirt with Brand Embroidery",
+//         "imgsrc": "upload\\wtshirts9.jpg",
+//         "price": 1039,
+//         "op": 1599,
+//         "discount": 35,
+//         "bbs": "BBS Price 959",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "TOMMY HILFIGER",
+//         "producttype":"tshirt",
+//         "type": "Brand Print Crew-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts10.jpg",
+//         "price": 1585,
+//         "op": 2599,
+//         "discount": 39,
+//         "bbs": "BBS Price 1429",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "TOMMY HILFIGER",
+//         "producttype":"tshirt",
+//         "type": "Brand Print T-shirt with Drop Shoulders",
+//         "imgsrc": "upload\\wtshirts11.jpg",
+//         "price": 1043,
+//         "op": 1799,
 //         "discount": 42,
-//         "bbs": "BBS Price ₹984",
-//         "gender":"male"
+//         "bbs": "BBS Price 900",
+//         "gender":"women"
 //     },
 //     {
-//         "brand": "The Indian Garage Co",
-//         "producttype":"jeans",
-//         "type": "The men jeans blue 28",
-//         "imgsrc": "upload\\img11.webp",
-//         "price": 660,
-//         "op": 1999,
-//         "discount": 67,
-//         "bbs": "BBS Price ₹500",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "LEVIS",
-//         "producttype":"jeans",
-//         "type": "MB 511 Slim Fit Jeans",
-//         "imgsrc": "upload\\img12.webp",
-//         "price": 1551,
-//         "op": 3299,
-//         "discount": 53,
-//         "bbs": "BBS Price ₹1551",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "Campus Sutra",
-//         "producttype":"jeans",
-//         "type": "Mid-Wash Distressed Slim Fit Jeans",
-//         "imgsrc": "upload\\img13.webp",
-//         "price": 950,
-//         "op": 1899,
-//         "discount": 50,
-//         "bbs": "BBS Price ₹589",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "Rare Rabbit",
-//         "producttype":"jeans",
-//         "type": "Denim Slim Fit Jeans",
-//         "imgsrc": "upload\\img14.webp",
-//         "price": 3000,
-//         "op": 5999,
-//         "discount": 50,
-//         "bbs": "BBS Price ₹1860",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "LEVIS",
-//         "producttype":"jeans",
-//         "type": "511 Washed Slim Fit Jeans",
-//         "imgsrc": "upload\\img15.webp",
-//         "price": 1350,
-//         "op": 2999,
-//         "discount": 55,
-//         "bbs": "BBS Price ₹1350",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "LEVIS",
-//         "producttype":"jeans",
-//         "type": "511 Mid-Rise Slim Fit Jeans",
-//         "imgsrc": "upload\\img16.webp",
-//         "price": 1530,
-//         "op": 3399,
-//         "discount": 55,
-//         "bbs": "BBS Price ₹1530",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "Rare Rabbit",
-//         "producttype":"jeans",
-//         "type": "Lightly-Wash Jeans with 5-Pocket Styling",
-//         "imgsrc": "upload\\img17.webp",
-//         "price": 3000,
-//         "op": 5999,
-//         "discount": 50,
-//         "bbs": "BBS Price ₹1860",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "LEVIS",
-//         "producttype":"jeans",
-//         "type": "551 Z Washed Straight Fit Jeans",
-//         "imgsrc": "upload\\img18.webp",
-//         "price": 1598,
-//         "op": 3399,
-//         "discount": 53,
-//         "bbs": "BBS Price ₹1598",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "U.S. Polo Assn.",
-//         "producttype":"jeans",
-//         "type": "Stone-Wash Skinny Jeans",
-//         "imgsrc": "upload\\img19.webp",
-//         "price": 1530,
-//         "op": 3399,
-//         "discount": 55,
-//         "bbs": "BBS Price ₹1530",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "U.S. Polo Assn.",
-//         "producttype":"jeans",
-//         "type": "Mid-Wash Mid-Rise 5-Pocket Slim Jeans",
-//         "imgsrc": "upload\\img20.webp",
-//         "price": 1385,
-//         "op": 2199,
+//         "brand": "TOMMY HILFIGER",
+//         "producttype":"tshirt",
+//         "type": "Printed Crew-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts12.jpg",
+//         "price": 1007,
+//         "op": 1599,
 //         "discount": 37,
-//         "bbs": "BBS Price ₹1100",
-//         "gender":"male"
+//         "bbs": "BBS Price 879",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "Puma",
+//         "producttype":"tshirt",
+//         "type": "Brand Print Crew-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts13.jpg",
+//         "price": 1199,
+//         "op": 1999,
+//         "discount": 40,
+//         "bbs": "BBS Price 899",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "TOMMY HILFIGER",
+//         "producttype":"tshirt",
+//         "type": "Logo Print Crew-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts14.jpg",
+//         "price": 1349,
+//         "op": 1799,
+//         "discount": 25,
+//         "bbs": "BBS Price 1223",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "TOMMY HILFIGER",
+//         "producttype":"tshirt",
+//         "type": "Brand Print Crew-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts15.jpg",
+//         "price": 1689,
+//         "op": 2599,
+//         "discount": 35,
+//         "bbs": "BBS Price 1559",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "ARMANI EXCHANGE",
+//         "producttype":"tshirt",
+//         "type": "Logo Print Slim Fit Crew-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts16.jpg",
+//         "price": 4199,
+//         "op": 5999,
+//         "discount": 30,
+//         "bbs": "BBS Price 3419",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "Puma",
+//         "producttype":"tshirt",
+//         "type": "Brand Icon Print Crew-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts17.jpg",
+//         "price": 520,
+//         "op": 1299,
+//         "discount": 60,
+//         "bbs": "BBS Price 442",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "TOMMY HILFIGER",
+//         "producttype":"tshirt",
+//         "type": "Cotton V-neck T-shirt",
+//         "imgsrc": "upload\\wtshirts18.jpg",
+//         "price": 927,
+//         "op": 1599,
+//         "discount": 42,
+//         "bbs": "BBS Price 800",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "TOMMY HILFIGER",
+//         "producttype":"tshirt",
+//         "type": "Round-Neck T-shirt with Full Sleeves",
+//         "imgsrc": "upload\\wtshirts19.jpg",
+//         "price": 1097,
+//         "op": 1799,
+//         "discount": 39,
+//         "bbs": "BBS Price 989",
+//         "gender":"women"
 //     },
 // ];
 // //data for default display imp
 
-// let datawhatsnew = [
+// let datawhatsnew =[
 //     {
-//         "brand": "DNMX",
-//         "producttype":"jeans",
-//         "type": "Mid-Rise Fitted Jeans",
-//         "imgsrc": "upload\\img1.webp",
-//         "price": 679,
-//         "op": 799,
-//         "discount": 15,
-//         "bbs": "BBS Price ₹639",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "U.S. Polo Assn.",
-//         "producttype":"jeans",
-//         "type": "Washed Skinny Jeans",
-//         "imgsrc": "upload\\img2.webp",
+//         "brand": "Puma",
+//         "producttype":"tshirt",
+//         "type": "Ws AOP Tee",
+//         "imgsrc": "upload\\wtshirts.jpg",
 //         "price": 1000,
 //         "op": 1999,
 //         "discount": 50,
-//         "bbs": "BBS Price ₹960",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "U.S. Polo Assn.",
-//         "producttype":"jeans",
-//         "type": "Mid-Wash Slim Fit Jeans",
-//         "imgsrc": "upload\\img3.webp",
-//         "price": 1511,
-//         "op": 2399,
-//         "discount": 37,
-//         "bbs": "BBS Price ₹1200",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "JOHN PLAYERS JEANS",
-//         "producttype":"jeans",
-//         "type": "Washed Skinny Fit Jeans with Whiskers",
-//         "imgsrc": "upload\\img4.webp",
-//         "price": 899,
-//         "op": 999,
-//         "discount": 10,
-//         "bbs": "BBS Price ₹849",
-//         "gender":"male"
+//         "bbs": "BBS Price 750",
+//         "gender":"women"
 //     },
 //     {
 //         "brand": "LEVIS",
-//         "producttype":"jeans",
-//         "type": "Chris-LTHR Branding 511 Slim Fit Jeans",
-//         "imgsrc": "upload\\img5.webp",
-//         "price": 1665,
-//         "op": 3699,
-//         "discount": 55,
-//         "bbs": "BBS Price ₹1665",
-//         "gender":"male"
+//         "producttype":"tshirt",
+//         "type": "Crew-Neck T-shirt with Brand Print",
+//         "imgsrc": "upload\\wtshirts1.jpg",
+//         "price": 635,
+//         "op": 1199,
+//         "discount": 47,
+//         "bbs": "BBS Price 576",
+//         "gender":"women"
 //     },
 //     {
-//         "brand": "U.S. Polo Assn.",
-//         "producttype":"jeans",
-//         "type": "Washed Skinny Jeans",
-//         "imgsrc": "upload\\img6.webp",
-//         "price": 1259,
-//         "op": 1999,
-//         "discount": 37,
-//         "bbs": "BBS Price ₹1000",
-//         "gender":"male"
+//         "brand": "Teamspirit",
+//         "producttype":"tshirt",
+//         "type": "Colourblock Striped Round Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts2.jpg",
+//         "price": 336,
+//         "op": 699,
+//         "discount": 52,
+//         "bbs": "BBS Price 210",
+//         "gender":"women"
 //     },
 //     {
-//         "brand": "DNMX",
-//         "producttype":"jeans",
-//         "type": "Lightly Washed Fitted Jeans",
-//         "imgsrc": "upload\\img7.webp",
-//         "price": 679,
+//         "brand": "Teamspirit",
+//         "producttype":"tshirt",
+//         "type": "Printed T-shirt with Full Sleeves",
+//         "imgsrc": "upload\\wtshirts3.jpg",
+//         "price": 384,
 //         "op": 799,
+//         "discount": 52,
+//         "bbs": "BBS Price 240",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "FIG",
+//         "producttype":"tshirt",
+//         "type": "Ribbed Round-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts4.jpg",
+//         "price": 424,
+//         "op": 499,
 //         "discount": 15,
-//         "bbs": "BBS Price ₹639",
-//         "gender":"male"
+//         "bbs": "BBS Price 399",
+//         "gender":"women"
 //     },
 //     {
-//         "brand": "U.S. Polo Assn.",
-//         "producttype":"jeans",
-//         "type": "Mid-Wash Skinny Fit Jeans",
-//         "imgsrc": "upload\\img8.webp",
-//         "price": 1511,
-//         "op": 2399,
-//         "discount": 37,
-//         "bbs": "BBS Price ₹1200",
-//         "gender":"male"
+//         "brand": "Calvin Klein Jeans",
+//         "producttype":"tshirt",
+//         "type": "Crew-Neck T-shirt with Embroidered Brand Text",
+//         "imgsrc": "upload\\wtshirts5.jpg",
+//         "price": 1749,
+//         "op": 2499,
+//         "discount": 30,
+//         "bbs": "BBS Price 1574",
+//         "gender":"women"
 //     },
 //     {
-//         "brand": "The Indian Garage Co",
-//         "producttype":"jeans",
-//         "type": "Mid-Rise Washed Slim Fit Jeans",
-//         "imgsrc": "upload\\img9.webp",
-//         "price": 660,
+//         "brand": "Teamspirit",
+//         "producttype":"tshirt",
+//         "type": "Typographic Print Crew-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts6.jpg",
+//         "price": 699,
+//         "op": 999,
+//         "discount": 30,
+//         "bbs": "BBS Price 629",
+//         "gender":"women"
+//     },
+    
+//     {
+//         "brand": "TOMMY HILFIGER",
+//         "producttype":"tshirt",
+//         "type": "Organic Cotton Crew-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts7.jpg",
+//         "price": 1199,
 //         "op": 1999,
-//         "discount": 67,
-//         "bbs": "BBS Price ₹500",
-//         "gender":"male"
+//         "discount": 40,
+//         "bbs": "BBS Price 1099",
+//         "gender":"women"
 //     },
 //     {
-//         "brand": "Lee Cooper",
-//         "producttype":"jeans",
-//         "type": "Lightly Washed Slim Fit Jeans",
-//         "imgsrc": "upload\\img10.webp",
-//         "price": 985,
-//         "op": 1699,
+//         "brand": "TOMMY HILFIGER",
+//         "producttype":"tshirt",
+//         "type": "Brand Logo Embroidered Crew-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts8.jpg",
+//         "price": 1299,
+//         "op": 1999,
+//         "discount": 35,
+//         "bbs": "BBS Price 1199",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "TOMMY HILFIGER",
+//         "producttype":"tshirt",
+//         "type": "Crew-Neck T-shirt with Brand Embroidery",
+//         "imgsrc": "upload\\wtshirts9.jpg",
+//         "price": 1039,
+//         "op": 1599,
+//         "discount": 35,
+//         "bbs": "BBS Price 959",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "TOMMY HILFIGER",
+//         "producttype":"tshirt",
+//         "type": "Brand Print Crew-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts10.jpg",
+//         "price": 1585,
+//         "op": 2599,
+//         "discount": 39,
+//         "bbs": "BBS Price 1429",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "TOMMY HILFIGER",
+//         "producttype":"tshirt",
+//         "type": "Brand Print T-shirt with Drop Shoulders",
+//         "imgsrc": "upload\\wtshirts11.jpg",
+//         "price": 1043,
+//         "op": 1799,
 //         "discount": 42,
-//         "bbs": "BBS Price ₹984",
-//         "gender":"male"
+//         "bbs": "BBS Price 900",
+//         "gender":"women"
 //     },
 //     {
-//         "brand": "The Indian Garage Co",
-//         "producttype":"jeans",
-//         "type": "The men jeans blue 28",
-//         "imgsrc": "upload\\img11.webp",
-//         "price": 660,
-//         "op": 1999,
-//         "discount": 67,
-//         "bbs": "BBS Price ₹500",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "LEVIS",
-//         "producttype":"jeans",
-//         "type": "MB 511 Slim Fit Jeans",
-//         "imgsrc": "upload\\img12.webp",
-//         "price": 1551,
-//         "op": 3299,
-//         "discount": 53,
-//         "bbs": "BBS Price ₹1551",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "Campus Sutra",
-//         "producttype":"jeans",
-//         "type": "Mid-Wash Distressed Slim Fit Jeans",
-//         "imgsrc": "upload\\img13.webp",
-//         "price": 950,
-//         "op": 1899,
-//         "discount": 50,
-//         "bbs": "BBS Price ₹589",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "Rare Rabbit",
-//         "producttype":"jeans",
-//         "type": "Denim Slim Fit Jeans",
-//         "imgsrc": "upload\\img14.webp",
-//         "price": 3000,
-//         "op": 5999,
-//         "discount": 50,
-//         "bbs": "BBS Price ₹1860",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "LEVIS",
-//         "producttype":"jeans",
-//         "type": "511 Washed Slim Fit Jeans",
-//         "imgsrc": "upload\\img15.webp",
-//         "price": 1350,
-//         "op": 2999,
-//         "discount": 55,
-//         "bbs": "BBS Price ₹1350",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "LEVIS",
-//         "producttype":"jeans",
-//         "type": "511 Mid-Rise Slim Fit Jeans",
-//         "imgsrc": "upload\\img16.webp",
-//         "price": 1530,
-//         "op": 3399,
-//         "discount": 55,
-//         "bbs": "BBS Price ₹1530",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "Rare Rabbit",
-//         "producttype":"jeans",
-//         "type": "Lightly-Wash Jeans with 5-Pocket Styling",
-//         "imgsrc": "upload\\img17.webp",
-//         "price": 3000,
-//         "op": 5999,
-//         "discount": 50,
-//         "bbs": "BBS Price ₹1860",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "LEVIS",
-//         "producttype":"jeans",
-//         "type": "551 Z Washed Straight Fit Jeans",
-//         "imgsrc": "upload\\img18.webp",
-//         "price": 1598,
-//         "op": 3399,
-//         "discount": 53,
-//         "bbs": "BBS Price ₹1598",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "U.S. Polo Assn.",
-//         "producttype":"jeans",
-//         "type": "Stone-Wash Skinny Jeans",
-//         "imgsrc": "upload\\img19.webp",
-//         "price": 1530,
-//         "op": 3399,
-//         "discount": 55,
-//         "bbs": "BBS Price ₹1530",
-//         "gender":"male"
-//     },
-//     {
-//         "brand": "U.S. Polo Assn.",
-//         "producttype":"jeans",
-//         "type": "Mid-Wash Mid-Rise 5-Pocket Slim Jeans",
-//         "imgsrc": "upload\\img20.webp",
-//         "price": 1385,
-//         "op": 2199,
+//         "brand": "TOMMY HILFIGER",
+//         "producttype":"tshirt",
+//         "type": "Printed Crew-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts12.jpg",
+//         "price": 1007,
+//         "op": 1599,
 //         "discount": 37,
-//         "bbs": "BBS Price ₹1100",
-//         "gender":"male"
+//         "bbs": "BBS Price 879",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "Puma",
+//         "producttype":"tshirt",
+//         "type": "Brand Print Crew-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts13.jpg",
+//         "price": 1199,
+//         "op": 1999,
+//         "discount": 40,
+//         "bbs": "BBS Price 899",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "TOMMY HILFIGER",
+//         "producttype":"tshirt",
+//         "type": "Logo Print Crew-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts14.jpg",
+//         "price": 1349,
+//         "op": 1799,
+//         "discount": 25,
+//         "bbs": "BBS Price 1223",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "TOMMY HILFIGER",
+//         "producttype":"tshirt",
+//         "type": "Brand Print Crew-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts15.jpg",
+//         "price": 1689,
+//         "op": 2599,
+//         "discount": 35,
+//         "bbs": "BBS Price 1559",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "ARMANI EXCHANGE",
+//         "producttype":"tshirt",
+//         "type": "Logo Print Slim Fit Crew-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts16.jpg",
+//         "price": 4199,
+//         "op": 5999,
+//         "discount": 30,
+//         "bbs": "BBS Price 3419",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "Puma",
+//         "producttype":"tshirt",
+//         "type": "Brand Icon Print Crew-Neck T-shirt",
+//         "imgsrc": "upload\\wtshirts17.jpg",
+//         "price": 520,
+//         "op": 1299,
+//         "discount": 60,
+//         "bbs": "BBS Price 442",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "TOMMY HILFIGER",
+//         "producttype":"tshirt",
+//         "type": "Cotton V-neck T-shirt",
+//         "imgsrc": "upload\\wtshirts18.jpg",
+//         "price": 927,
+//         "op": 1599,
+//         "discount": 42,
+//         "bbs": "BBS Price 800",
+//         "gender":"women"
+//     },
+//     {
+//         "brand": "TOMMY HILFIGER",
+//         "producttype":"tshirt",
+//         "type": "Round-Neck T-shirt with Full Sleeves",
+//         "imgsrc": "upload\\wtshirts19.jpg",
+//         "price": 1097,
+//         "op": 1799,
+//         "discount": 39,
+//         "bbs": "BBS Price 989",
+//         "gender":"women"
 //     },
 // ];
 
 let dataherko = async () =>{
   try{
     let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/men/productjeans')
-    //let datawhatsnew = await datas.json();
     let datawhatsnew = await datas.json();
+    let data = datawhatsnew
     displayProduct(datawhatsnew);
+
 
 let count1 = data.length;
 
@@ -497,7 +498,6 @@ try {
 };
 
 let grid3 = () => {
-    console.log("grid3 check")
     scjsgrid1.innerHTML = "";
     scjsgrid1.style.gridTemplateColumns = "auto auto auto";
     try {
@@ -694,7 +694,7 @@ let grid5 = () => {
 
 }
 //main working grid  5 over
-let displayProduct = (data) =>{
+async function displayProduct (data){
     
     data.forEach((data1) => {
 
@@ -1456,9 +1456,11 @@ const showSingleProd = (prodData) => {
     localStorage.setItem("clickeproduct", JSON.stringify(prodData));
     window.location.href = "/EachProduct/one_Product.html"
 };
-}
-catch(e){
+
+
+}catch(e){
   console.log(e.message);
 }
 }
+
 dataherko();
