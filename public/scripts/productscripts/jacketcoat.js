@@ -2,17 +2,19 @@
 let dataherko = async () =>{
   try{
     let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/men/productjacket')
-    let datawhatsnew = await datas.json();
-     displayProduct(datawhatsnew);
-
-
+    let data = await datas.json();
+    console.log(data);
+    let datawhatsnew = data;
+    displayProduct(data);
+    
+    
 let count1 = data.length;
 
 let count12 = document.getElementById("count1");
 count12.innerText = count1 + "  Items Found";
 
 var scselect = document.getElementById("scselect");
-let scjsgrid1 = document.getElementById("scjsgrid");
+ var scjsgrid1 = document.getElementById("scjsgrid");
 
 
 try {

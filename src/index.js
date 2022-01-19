@@ -33,21 +33,5 @@ app.use("/user", User);
 
 app.use("/product" , Product)
 
-app.get("/productjackets", (req, res) => {
-  res.render("product page/productjackets");
-});
-
-// app.get("/productjeans", (req, res) => {
-//   res.render("product page/productjeans");
-// });
-
-// app.get("/productwomenjeans", (req, res) => {
-//   res.render("product page/productwomenjeans");
-// });
-
-// app.get("/productwomentshirt", (req, res) => {
-//   res.render("product page/productwomentshirt");
-// });
-
 
 module.exports = app;

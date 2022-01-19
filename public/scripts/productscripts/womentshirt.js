@@ -448,9 +448,10 @@
 
 let dataherko = async () =>{
   try{
-    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productadd')
+    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/women/productwomentshirt')
     let datawhatsnew = await datas.json();
     let data = await datas.json();
+    console.log(data);
      displayProduct(data);
 
 
