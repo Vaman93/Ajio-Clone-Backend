@@ -22,13 +22,13 @@ app.use(cors({
 }))
 app.use(express.json())
 
-app.use("/" , Homepage)
+app.use("/", Homepage);
 
-app.use("/productadd" , ProductAddSchema)
+app.use("/productadd", ProductAddSchema);
 
-app.use("/productApi" , ProductAPI)
+app.use("/productApi", ProductAPI);
 
-app.use("/user" , User)
+app.use("/user", User);
 
 
 // app.use("/product" , )

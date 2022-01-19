@@ -59,8 +59,6 @@ router.get("/women/productjeans", async (req, res) => {
     }
 });
 
-
-
 // router.get("/test" , async (req, res) => {
 
 //     let keyname = "product"
@@ -89,7 +87,5 @@ router.get("/women/productjeans", async (req, res) => {
 //     // res.send(JSON.parse(getdataredis))
 
 // })
-
-
 
 module.exports = router
