@@ -15,8 +15,9 @@ app.use("/" , Homepage)
 
 app.use("/productadd" , ProductAddSchema)
 
-app.use("/product" , ProductAPI)
+app.use("/productApi" , ProductAPI)
 
+// app.use("/product" , )
 
 // app.get("/productjackets", (req, res) => {
 //   res.render("product page/productjackets");
