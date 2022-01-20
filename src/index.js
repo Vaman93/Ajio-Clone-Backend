@@ -1,4 +1,3 @@
-
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
@@ -31,7 +30,6 @@ app.use(cookieParser());
 
 app.use(cors({
     credentials: true,
-    original: ["http://localhost:2222/"]
 }))
 
 
