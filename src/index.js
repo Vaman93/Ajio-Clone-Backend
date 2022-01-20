@@ -2,7 +2,6 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const cookieParser = require('cookie-parser') 
-var methodOverride = require("method-override");
 
 const User = require('./router/user.router');
 const Homepage = require('./router/home.router');
@@ -10,8 +9,6 @@ const ProductAddSchema = require('./router/product.add');
 const Product = require('./router/product');
 const ProductAPI = require('./router/product.api');
 const EachProduct = require('./router/each.product');
-
-
 
 app.use(express.urlencoded({ extended: true }));
 
