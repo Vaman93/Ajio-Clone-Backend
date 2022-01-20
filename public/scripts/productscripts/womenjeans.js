@@ -699,9 +699,22 @@ var refine = () => {
 
    //price sort
     //under1000.addEventListener("click", under1000);
-   let countunder1000 = 0;
-   function under1000 (data) {
-    
+async function under1000api(gender,type) {
+  try {
+    const underapi = await fetch(`http://localhost:2222/filterbyprice/under1000/${gender}/${type}`);
+
+    const dataapiunder1000 = await underapi.json();
+    console.log(dataapiunder1000);
+  }
+  catch (err) {
+    console.log(err);
+  }
+}
+
+let countunder1000 = 0;
+   
+function under1000(data) {
+  under1000api(data[0].gender,data[0].producttype);
      if (countunder1000 % 2 == 0) {
         countunder1000++;
        data.sort((a, b) => a.price - b.price);

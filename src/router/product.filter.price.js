@@ -8,9 +8,10 @@ const ProductSchema = require('../Schema/project.schema');
 
 //under 1000 products
 
-router.get("/under1000", async (req, res) => {
+router.get("/under1000/:gender/:type", async (req, res) => {
+    console.log(req.params.men);
     try {
-        const under1000 = await ProductSchema.find({ $and: [{ price: { $gt: 0 } }, { price: { $lte: 1000 } }] });
+        const under1000 = await ProductSchema.find({ $and: [{ price: { $gt: 0 } }, { price: { $lte: 1000 } },{gender:{$eq: req.params.gender } },{producttype:{$eq: req.params.type } }] });
    
         res.status(200).send(under1000);
     } catch (err) { 
