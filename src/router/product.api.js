@@ -7,12 +7,15 @@ const ProductSchema = require('../Schema/project.schema')
 
 
 //men jacket and jeans 
-router.get("/men/productjacket" , async (req, res) => {
-
-    const product = await ProductSchema.find({ producttype: { $eq: "jacket" } });
+router.get("/men/productjacket", async (req, res) => {
+    try {
+        const product = await ProductSchema.find({ producttype: { $eq: "jacket" } });
    
-    res.status(200).send(product);
-})
+        res.status(200).send(product);
+    } catch (err) { 
+        console.log(err.message);
+    }
+});
 
 router.get("/men/productjeans", async (req, res) => {
     try {
