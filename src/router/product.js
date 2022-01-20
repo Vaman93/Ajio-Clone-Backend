@@ -1,5 +1,4 @@
 const router = require('express').Router()
-const ProductSchema = require('../Schema/project.schema')
 
 
 router.get("/productjackets", (req, res) => {
@@ -17,15 +16,5 @@ router.get("/productwomenjeans", (req, res) => {
 router.get("/productwomentshirt", (req, res) => {
     res.render("product page/productwomentshirt");
   });
-  
-// router.get("/:id" , async (req, res) =>{
-//     try{
-//         const product = await ProductSchema.find({_id: req.params.id})
-
-//         console.lod(product)
-//     }catch(e){
-//         console.log(e)
-//     }
-// })
 
 module.exports = router
