@@ -95,41 +95,50 @@ function hidediv(){
   }
 
 
-  // let api = 'http://localhost:2222/user/cooke'
+userdatalogin()
 
-  // const product = async () =>{
-  //   try{
-  //     let data = await fetch(api)
+async function userdatalogin (){
+    try{
+      let userdata = await fetch("http://localhost:2222/user/cooke")
+      
+      let usermon = await userdata.json();
+      
+      userlogingornot(usermon)
+    }
+    catch(e){
+      console.log(e.message);
+    }
+  }
   
-  //     let datawhatsnew = await data.json();
-  
-  //     username(datawhatsnew.name)
-  //   }
-  //   catch(e){
-  //     console.log(e.message);
-  //   }
-  // }
+  let logOut = document.querySelector(".Log_out")
 
-// product()
+  let change_user = document.getElementById("user_name")
 
-
-const username = null 
-
-let change_user = document.getElementById("user_name")
-
-
-let logOut = document.querySelector(".Log_out")
-
-logOut.addEventListener("click", ()=>{
-  
-})
-
-if(username === null){
+function userlogingornot(userm) {
+    const username = userm.name
+    console.log(username)
+if(username === undefined){
   change_user.innerHTML = "Sign In / Join AJIO"
   logOut.style.display = "none"
 } else{
   change_user.innerHTML = `Hi ${username}`
 }
+
+}
+
+
+
+
+logOut.addEventListener("click",async ()=>{
+  try{
+    let userdata = await fetch("http://localhost:2222/user/logout")
+    let usermon = await userdata.json();
+    userlogingornot(usermon)
+  }
+  catch(e){
+    console.log(e.message);
+  }
+})
 
 
 

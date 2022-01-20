@@ -45,7 +45,7 @@
     <!-- Input Feilds -->
     <div class="container">
         <!-- <label>Enter UserName</label><br> -->
-        <input class="input" id="username" type="text" placeholder= "Enter UserName" ><br><br>
+        <input class="input" id="username" type="text" placeholder= "Enter email" ><br><br>
 
         <!-- <label>Enter Password</label><br> -->
         <input class="input" id="password" type="password" placeholder="Enter Password" ><br><br>
@@ -65,7 +65,7 @@
 </html>
 <script>
 
-let api = "https://ajio-clone-full.herokuapp.com/user/login"
+let api = "http://localhost:2222/user/login"
 
 async function logIn(){
 
@@ -88,18 +88,18 @@ let response = await fetch(url, {
 
 
 let data = await response.json();
+console.log('data:', data)
 
 if(data.error === true){
     alert("User Not Exist");
 } else{
-   goinghomepag();
+//    goinghomepag();
 }
         
 }
 
 
-function goinghomepag(username) {
-    localStorage.setItem("username", username)
+function goinghomepag() {
     window.location.href = "/"
 }
 

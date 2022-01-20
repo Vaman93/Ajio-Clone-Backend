@@ -12,72 +12,10 @@ $('.responsive').slick({
   });
   
 
-  
-
-
-let bagbutton = document.getElementById("addtobagnewata")
-
-bagbutton.addEventListener("click", () => {
-    addtobagfunction(localstorgeitem.data1)
-})
-
-
-let product_arr_p = JSON.parse(localStorage.getItem("All_product_deletes")) || []
-
-function addtobagfunction({bbs,brand,discount,imgsrc,op,price,type}) {
-
-    let product_data = {
-       
-        bbs,
-        brand,
-        discount,
-        imgsrc,
-        op,
-        price,
-        type
-    }
-    
-    product_arr_p.push(product_data)
-
-    localStorage.setItem('All_product_deletes' , JSON.stringify( product_arr_p))
-
-    window.location.href = "";
-
-}
-
-
-
-let savetoclotes = document.getElementById("savetoclotes")
-
-let product_arr_closter = JSON.parse(localStorage.getItem("All_product_closte")) || []
-
-savetoclotes.addEventListener("click", ()=>{
-    savetoclotesfunction(localstorgeitem.data1)
-})
-
- function savetoclotesfunction({bbs,brand,discount,imgsrc,op,price,type}) {
-
-    let product_cloter = {
-       
-        bbs,
-        brand,
-        discount,
-        imgsrc,
-        op,
-        price,
-        type
-    }
-    
-    product_arr_closter.push(product_cloter)
-
-    localStorage.setItem('All_product_closte' , JSON.stringify(product_arr_closter))
-
-    window.location.href = "";
-
- }
-
-
-
+  function productid (id){
+      id = JSON.parse(id);
+      console.log(id)
+  }
 
 
 

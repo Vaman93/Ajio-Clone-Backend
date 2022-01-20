@@ -1,14 +1,20 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 const app = express()
 const cors = require('cors')
 const cookieParser = require('cookie-parser') 
 
-const User = require('./router/user.router');
-const Homepage = require('./router/home.router');
-const ProductAddSchema = require('./router/product.add');
-const Product = require('./router/product');
-const ProductAPI = require('./router/product.api');
-const EachProduct = require('./router/each.product');
+const User = require('./router/user.router')
+const Homepage = require('./router/home.router')
+const ProductAddSchema = require('./router/product.add')
+const Product = require('./router/product')
+const ProductAPI = require('./router/product.api')
+const EachProduct = require('./router/each.product')
+const BagProduct = require('./router/bag.product')
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 
 app.use(express.urlencoded({ extended: true }));
 
@@ -22,7 +28,7 @@ app.use(cookieParser());
 
 app.use(cors({
     credentials: true,
-    original: ["http://localhost:2222"]
+    original: ["http://localhost:2222/"]
 }))
 
 
@@ -32,6 +38,7 @@ app.use("/productadd", ProductAddSchema);
 
 app.use("/productApi", ProductAPI);
 
+app.use("/bagproduct" , BagProduct)
 
 
 app.use("/yourproduct" , EachProduct)
