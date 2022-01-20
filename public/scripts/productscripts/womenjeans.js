@@ -24,9 +24,6 @@ async function dataherko1(){
     let dataheroku1 = await datas.json();
   
     datawhatsnew = dataheroku1;
-    //console.log(data);
-    // count1 = data.length;
-    // displayProduct(data);
   }
   catch(e){
     console.log(e.message);
@@ -158,14 +155,11 @@ function displayProduct(data) {
         mainDiv.style.width = "303px";
         mainDiv.append(imgandquick, div1);
 
-        let prodData = {
-           data1,
-        }
+        let productid = data1._id
         mainDiv.onclick = () =>{
-
-            showSingleProd(prodData);
-            
+            showSingleProd(productid);
         }
+
         const hoveringfunc = () => {
             quickView.style.display = "block";
         }
@@ -316,15 +310,11 @@ function displayProduct(data){
             div1.append(brand, type, divmid, bbsmain);
             div1.style.textAlign = "center";
     
-            mainDiv.append(imgandquick, div1);
-    
-            let prodData = {
-               data1,
-            }
+          
+            let dataproductid = data1._id
+
             mainDiv.onclick = () =>{
-    
-                showSingleProd(prodData);
-                
+              showSingleProd(dataproductid); 
             }
     
             const hoveringfunc = () => {
@@ -380,7 +370,6 @@ function displayProduct(data){
 }
 //main working grid  5 over
 
-//displayProduct(data);
 
 
    // refine by functionality
@@ -1039,8 +1028,6 @@ let  nike= (data) => {
  }
 
 
-const showSingleProd = (prodData) => {
-
-    localStorage.setItem("clickeproduct", JSON.stringify(prodData));
-    window.location.href = "/EachProduct/one_Product.html"
+const showSingleProd = (productid) => {
+    window.location.href = `/yourproduct/${productid}`
 };

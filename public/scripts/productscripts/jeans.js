@@ -204,13 +204,11 @@ let grid5 = () => {
     
             mainDiv.append(imgandquick, div1);
     
-            let prodData = {
-               data1,
-            }
+            
+            let dataproductid = data1._id
+
             mainDiv.onclick = () =>{
-    
-                showSingleProd(prodData);
-                
+              showSingleProd(dataproductid); 
             }
     
             const hoveringfunc = () => {
@@ -354,14 +352,13 @@ let grid5 = () => {
         mainDiv.style.width = "303px";
         mainDiv.append(imgandquick, div1);
 
-        let prodData = {
-           data1,
-        }
-        mainDiv.onclick = () =>{
+        
+        let dataproductid = data1._id
 
-            showSingleProd(prodData);
-            
+        mainDiv.onclick = () =>{
+          showSingleProd(dataproductid); 
         }
+
         const hoveringfunc = () => {
             quickView.style.display = "block";
         }
@@ -377,7 +374,7 @@ let grid5 = () => {
     });
 };
 
-displayProduct(data);
+
 
 
    // refine by functionality
@@ -1025,9 +1022,7 @@ let  nike= (data) => {
  }
 
 
-const showSingleProd = (prodData) => {
-
-    localStorage.setItem("clickeproduct", JSON.stringify(prodData));
-    window.location.href = "/EachProduct/one_Product.html"
+const showSingleProd = (productid) => {
+    window.location.href = `/yourproduct/${productid}`
 };
 

@@ -1,6 +1,4 @@
 
-
-
 $('.responsive').slick({
     arrows: true,
     dots: false,
@@ -14,11 +12,8 @@ $('.responsive').slick({
 
   function productid (id){
       id = JSON.parse(id);
-      console.log(id)
+
   }
-
-
-
 
 
 let returnsugggetion = document.querySelector(".show_the_dale")

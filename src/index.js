@@ -5,7 +5,6 @@ const cors = require('cors')
 const cookieParser = require('cookie-parser') 
 
 
-
 const User = require('./router/user.router')
 const Homepage = require('./router/home.router')
 const ProductAddSchema = require('./router/product.add')

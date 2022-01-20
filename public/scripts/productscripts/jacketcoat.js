@@ -5,6 +5,7 @@ let data;
 let count1;
 dataherko();
 dataherko1();
+
 async function dataherko() {
   try {
     let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/men/productjacket');
@@ -24,8 +25,7 @@ async function dataherko1() {
     let d = await datas.json();
    
     datawhatsnew = d;
-    //count1 = data.length;
-    //displayProduct(data);
+
   } catch (err) { 
     console.log(err.message);
   }
@@ -207,13 +207,8 @@ count12.innerText = count1 + "  Items Found";
     
             mainDiv.append(imgandquick, div1);
             let dataid = data1._id
-            let prodData = {
-              dataid
-            }
             mainDiv.onclick = () =>{
-    
-                showSingleProd(prodData);
-                
+              showSingleProd(dataid);
             }
     
             const hoveringfunc = () => {
@@ -356,13 +351,8 @@ count12.innerText = count1 + "  Items Found";
         mainDiv.style.width = "303px";
         mainDiv.append(imgandquick, div1);
         let dataid = data1._id
-        let prodData = {
-          dataid
-        }
         mainDiv.onclick = () =>{
-
-            showSingleProd(prodData);
-            
+            showSingleProd(dataid);
         }
         const hoveringfunc = () => {
             quickView.style.display = "block";
@@ -379,7 +369,6 @@ count12.innerText = count1 + "  Items Found";
     });
 }
 
-displayProduct(data);
 
 
    // refine by functionality
@@ -1026,5 +1015,5 @@ let  nike= (data) => {
   }
  }
 const showSingleProd = (prodData) => {
-    window.location.href = "/prodData"
+  window.location.href = `/yourproduct/${prodData}`
 }

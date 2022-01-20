@@ -2,14 +2,14 @@ let navbarCom = () => {
   return ` <div class="nav_bar_all">
 <div class="firstSectionOfNavBar">
   <a href="/user/login"><p id="user_name">Sign In / Join AJIO</p></a>
-  <a class="Log_out" href=""><p class="Log_out">Log Out</p></a>
+  <a class="/user/Log_out" href=""><p class="Log_out">Log Out</p></a>
   <a href=""><p>Customer Care</p></a>
  <a  class="visitedib" href=""><p>Visit AJIOLUXE</p></a>
 </div>
 <div class="secondsectionnavbar">
   <div class="left_section_img">
     <div class="logo_img_div">
-      <a href="/index.html"><img src="/Images/Ajio-Logo.svg" alt=""></a>
+      <a href="/"><img src="/Images/Ajio-Logo.svg" alt=""></a>
     </div>
   </div>
   <div class="right_side_div">

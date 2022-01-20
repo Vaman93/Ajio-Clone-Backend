@@ -7,7 +7,7 @@ dataherko1();
 
 async function dataherko (){
   try{
-    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/women/productwomentshirt');
+    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/women/producttshirt');
     
     data = await datas.json();
     
@@ -208,13 +208,11 @@ let grid5 = () => {
     
             mainDiv.append(imgandquick, div1);
     
-            let prodData = {
-               data1,
-            }
+           
+            let dataproductid = data1._id
+
             mainDiv.onclick = () =>{
-    
-                showSingleProd(prodData);
-                
+              showSingleProd(dataproductid); 
             }
     
             const hoveringfunc = () => {
@@ -357,13 +355,10 @@ count12.innerText = count1 + "  Items Found";
         mainDiv.style.width = "303px";
         mainDiv.append(imgandquick, div1);
 
-        let prodData = {
-           data1,
-        }
-        mainDiv.onclick = () =>{
+        let dataproductid = data1._id
 
-            showSingleProd(prodData);
-            
+        mainDiv.onclick = () =>{
+          showSingleProd(dataproductid); 
         }
         const hoveringfunc = () => {
             quickView.style.display = "block";
@@ -380,7 +375,6 @@ count12.innerText = count1 + "  Items Found";
     });
 }
 
-displayProduct(data);
 
 
    // refine by functionality
@@ -1028,8 +1022,7 @@ let  nike= (data) => {
  }
 
 
-const showSingleProd = (prodData) => {
 
-    localStorage.setItem("clickeproduct", JSON.stringify(prodData));
-    window.location.href = "/EachProduct/one_Product.html"
+ const showSingleProd = (productid) => {
+  window.location.href = `/yourproduct/${productid}`
 };

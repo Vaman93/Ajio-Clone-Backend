@@ -9,7 +9,7 @@ router.get("/:id/:product" , async (req, res) => {
     })
     res.send(user.CheckOut)
     }catch(err){
-        res.send({message: "product allready add"})
+        res.send({message: "product all ready add"})
     }
 
 })
