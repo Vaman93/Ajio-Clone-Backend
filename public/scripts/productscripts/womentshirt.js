@@ -22,7 +22,7 @@ catch(e){
 
 async function dataherko1 (){
   try{
-    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/women/productwomentshirt');
+    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/women/producttshirt');
     
     datawhatsnew = await datas.json();
 
@@ -38,7 +38,6 @@ let scjsgrid1 = document.getElementById("scjsgrid");
 
 try {
     scselect.onchange = () => {
-        //console.log("check");
         if (scselect.value === "Relevance") { 
             data = data.sort((a, b) => a.type > b.type ? 1 : b.type > a.type ? -1 : 0);
             scjsgrid1.innerHTML ="";
@@ -108,11 +107,7 @@ let grid3 = () => {
         console.log("errorfound:", err);
     };
     
-
     displayProduct(data);
-
-
-
 }
 
 let grid5 = () => {
