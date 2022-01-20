@@ -1,8 +1,11 @@
+
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const cors = require('cors')
 const cookieParser = require('cookie-parser') 
+
+
 
 const User = require('./router/user.router')
 const Homepage = require('./router/home.router')
@@ -20,9 +23,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.json());
 
-app.set('view engine', 'ejs')
-app.use(express.static("public"))
-app.use("/upload", express.static("./upload"))
+app.set('view engine', 'ejs');
+app.use(express.static("public"));
+app.use("/upload", express.static("./upload"));
 
 app.use(cookieParser());
 
