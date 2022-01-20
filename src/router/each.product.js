@@ -6,7 +6,7 @@ router.get('/:id', async (req, res) =>{
         const product = await ProductSchema.find({_id: req.params.id})
 
         res.render('EachProduct/one_Product' , {
-            product
+            p:product
         })
     }catch(e){
         console.error(e);

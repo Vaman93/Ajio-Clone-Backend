@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const cookieParser = require('cookie-parser') 
-
+var methodOverride = require("method-override");
 
 const User = require('./router/user.router')
 const Homepage = require('./router/home.router')
@@ -10,6 +10,10 @@ const ProductAddSchema = require('./router/product.add')
 const Product = require('./router/product')
 const ProductAPI = require('./router/product.api')
 const EachProduct = require('./router/each.product')
+
+app.use(express.urlencoded({ extended: true }));
+
+app.use(express.json());
 
 app.set('view engine', 'ejs')
 app.use(express.static("public"))
@@ -21,7 +25,7 @@ app.use(cors({
     credentials: true,
     original: ["http://localhost:2222"]
 }))
-app.use(express.json());
+
 
 app.use("/", Homepage);
 
