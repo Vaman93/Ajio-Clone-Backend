@@ -233,6 +233,8 @@ let grid5 = () => {
     
 function displayProduct(data){
     
+  let count12 = document.getElementById("count1");
+  count12.innerText = count1 + "  Items Found";
         data.forEach((data1) => {
     
             let div1 = document.createElement("div");

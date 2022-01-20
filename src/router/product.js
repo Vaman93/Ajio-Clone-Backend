@@ -2,18 +2,18 @@ const router = require('express').Router()
 
 
 router.get("/menjackets", (req, res) => {
-    res.render("product page/menjackets");
+    res.render("product page/productjackets");
   });
   
 router.get("/menjeans", (req, res) => {
-    res.render("product page/menjeans");
+    res.render("product page/productjeans");
 });
   
 router.get("/womenjeans", (req, res) => {
-    res.render("product page/womenjeans");
+    res.render("product page/productwomenjeans");
   });
 
 router.get("/womentshirt", (req, res) => {
-    res.render("product page/womentshirt");
+    res.render("product page/productwomentshirt");
   });
 module.exports = router;

@@ -1,463 +1,32 @@
-// let data =[
-//     {
-//         "brand": "Puma",
-//         "producttype":"tshirt",
-//         "type": "Ws AOP Tee",
-//         "imgsrc": "upload\\wtshirts.jpg",
-//         "price": 1000,
-//         "op": 1999,
-//         "discount": 50,
-//         "bbs": "BBS Price 750",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "LEVIS",
-//         "producttype":"tshirt",
-//         "type": "Crew-Neck T-shirt with Brand Print",
-//         "imgsrc": "upload\\wtshirts1.jpg",
-//         "price": 635,
-//         "op": 1199,
-//         "discount": 47,
-//         "bbs": "BBS Price 576",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "Teamspirit",
-//         "producttype":"tshirt",
-//         "type": "Colourblock Striped Round Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts2.jpg",
-//         "price": 336,
-//         "op": 699,
-//         "discount": 52,
-//         "bbs": "BBS Price 210",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "Teamspirit",
-//         "producttype":"tshirt",
-//         "type": "Printed T-shirt with Full Sleeves",
-//         "imgsrc": "upload\\wtshirts3.jpg",
-//         "price": 384,
-//         "op": 799,
-//         "discount": 52,
-//         "bbs": "BBS Price 240",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "FIG",
-//         "producttype":"tshirt",
-//         "type": "Ribbed Round-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts4.jpg",
-//         "price": 424,
-//         "op": 499,
-//         "discount": 15,
-//         "bbs": "BBS Price 399",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "Calvin Klein Jeans",
-//         "producttype":"tshirt",
-//         "type": "Crew-Neck T-shirt with Embroidered Brand Text",
-//         "imgsrc": "upload\\wtshirts5.jpg",
-//         "price": 1749,
-//         "op": 2499,
-//         "discount": 30,
-//         "bbs": "BBS Price 1574",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "Teamspirit",
-//         "producttype":"tshirt",
-//         "type": "Typographic Print Crew-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts6.jpg",
-//         "price": 699,
-//         "op": 999,
-//         "discount": 30,
-//         "bbs": "BBS Price 629",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "TOMMY HILFIGER",
-//         "producttype":"tshirt",
-//         "type": "Organic Cotton Crew-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts7.jpg",
-//         "price": 1199,
-//         "op": 1999,
-//         "discount": 40,
-//         "bbs": "BBS Price 1099",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "TOMMY HILFIGER",
-//         "producttype":"tshirt",
-//         "type": "Brand Logo Embroidered Crew-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts8.jpg",
-//         "price": 1299,
-//         "op": 1999,
-//         "discount": 35,
-//         "bbs": "BBS Price 1199",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "TOMMY HILFIGER",
-//         "producttype":"tshirt",
-//         "type": "Crew-Neck T-shirt with Brand Embroidery",
-//         "imgsrc": "upload\\wtshirts9.jpg",
-//         "price": 1039,
-//         "op": 1599,
-//         "discount": 35,
-//         "bbs": "BBS Price 959",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "TOMMY HILFIGER",
-//         "producttype":"tshirt",
-//         "type": "Brand Print Crew-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts10.jpg",
-//         "price": 1585,
-//         "op": 2599,
-//         "discount": 39,
-//         "bbs": "BBS Price 1429",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "TOMMY HILFIGER",
-//         "producttype":"tshirt",
-//         "type": "Brand Print T-shirt with Drop Shoulders",
-//         "imgsrc": "upload\\wtshirts11.jpg",
-//         "price": 1043,
-//         "op": 1799,
-//         "discount": 42,
-//         "bbs": "BBS Price 900",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "TOMMY HILFIGER",
-//         "producttype":"tshirt",
-//         "type": "Printed Crew-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts12.jpg",
-//         "price": 1007,
-//         "op": 1599,
-//         "discount": 37,
-//         "bbs": "BBS Price 879",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "Puma",
-//         "producttype":"tshirt",
-//         "type": "Brand Print Crew-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts13.jpg",
-//         "price": 1199,
-//         "op": 1999,
-//         "discount": 40,
-//         "bbs": "BBS Price 899",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "TOMMY HILFIGER",
-//         "producttype":"tshirt",
-//         "type": "Logo Print Crew-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts14.jpg",
-//         "price": 1349,
-//         "op": 1799,
-//         "discount": 25,
-//         "bbs": "BBS Price 1223",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "TOMMY HILFIGER",
-//         "producttype":"tshirt",
-//         "type": "Brand Print Crew-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts15.jpg",
-//         "price": 1689,
-//         "op": 2599,
-//         "discount": 35,
-//         "bbs": "BBS Price 1559",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "ARMANI EXCHANGE",
-//         "producttype":"tshirt",
-//         "type": "Logo Print Slim Fit Crew-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts16.jpg",
-//         "price": 4199,
-//         "op": 5999,
-//         "discount": 30,
-//         "bbs": "BBS Price 3419",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "Puma",
-//         "producttype":"tshirt",
-//         "type": "Brand Icon Print Crew-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts17.jpg",
-//         "price": 520,
-//         "op": 1299,
-//         "discount": 60,
-//         "bbs": "BBS Price 442",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "TOMMY HILFIGER",
-//         "producttype":"tshirt",
-//         "type": "Cotton V-neck T-shirt",
-//         "imgsrc": "upload\\wtshirts18.jpg",
-//         "price": 927,
-//         "op": 1599,
-//         "discount": 42,
-//         "bbs": "BBS Price 800",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "TOMMY HILFIGER",
-//         "producttype":"tshirt",
-//         "type": "Round-Neck T-shirt with Full Sleeves",
-//         "imgsrc": "upload\\wtshirts19.jpg",
-//         "price": 1097,
-//         "op": 1799,
-//         "discount": 39,
-//         "bbs": "BBS Price 989",
-//         "gender":"women"
-//     },
-// ];
-// //data for default display imp
 
-// let datawhatsnew =[
-//     {
-//         "brand": "Puma",
-//         "producttype":"tshirt",
-//         "type": "Ws AOP Tee",
-//         "imgsrc": "upload\\wtshirts.jpg",
-//         "price": 1000,
-//         "op": 1999,
-//         "discount": 50,
-//         "bbs": "BBS Price 750",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "LEVIS",
-//         "producttype":"tshirt",
-//         "type": "Crew-Neck T-shirt with Brand Print",
-//         "imgsrc": "upload\\wtshirts1.jpg",
-//         "price": 635,
-//         "op": 1199,
-//         "discount": 47,
-//         "bbs": "BBS Price 576",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "Teamspirit",
-//         "producttype":"tshirt",
-//         "type": "Colourblock Striped Round Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts2.jpg",
-//         "price": 336,
-//         "op": 699,
-//         "discount": 52,
-//         "bbs": "BBS Price 210",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "Teamspirit",
-//         "producttype":"tshirt",
-//         "type": "Printed T-shirt with Full Sleeves",
-//         "imgsrc": "upload\\wtshirts3.jpg",
-//         "price": 384,
-//         "op": 799,
-//         "discount": 52,
-//         "bbs": "BBS Price 240",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "FIG",
-//         "producttype":"tshirt",
-//         "type": "Ribbed Round-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts4.jpg",
-//         "price": 424,
-//         "op": 499,
-//         "discount": 15,
-//         "bbs": "BBS Price 399",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "Calvin Klein Jeans",
-//         "producttype":"tshirt",
-//         "type": "Crew-Neck T-shirt with Embroidered Brand Text",
-//         "imgsrc": "upload\\wtshirts5.jpg",
-//         "price": 1749,
-//         "op": 2499,
-//         "discount": 30,
-//         "bbs": "BBS Price 1574",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "Teamspirit",
-//         "producttype":"tshirt",
-//         "type": "Typographic Print Crew-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts6.jpg",
-//         "price": 699,
-//         "op": 999,
-//         "discount": 30,
-//         "bbs": "BBS Price 629",
-//         "gender":"women"
-//     },
-    
-//     {
-//         "brand": "TOMMY HILFIGER",
-//         "producttype":"tshirt",
-//         "type": "Organic Cotton Crew-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts7.jpg",
-//         "price": 1199,
-//         "op": 1999,
-//         "discount": 40,
-//         "bbs": "BBS Price 1099",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "TOMMY HILFIGER",
-//         "producttype":"tshirt",
-//         "type": "Brand Logo Embroidered Crew-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts8.jpg",
-//         "price": 1299,
-//         "op": 1999,
-//         "discount": 35,
-//         "bbs": "BBS Price 1199",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "TOMMY HILFIGER",
-//         "producttype":"tshirt",
-//         "type": "Crew-Neck T-shirt with Brand Embroidery",
-//         "imgsrc": "upload\\wtshirts9.jpg",
-//         "price": 1039,
-//         "op": 1599,
-//         "discount": 35,
-//         "bbs": "BBS Price 959",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "TOMMY HILFIGER",
-//         "producttype":"tshirt",
-//         "type": "Brand Print Crew-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts10.jpg",
-//         "price": 1585,
-//         "op": 2599,
-//         "discount": 39,
-//         "bbs": "BBS Price 1429",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "TOMMY HILFIGER",
-//         "producttype":"tshirt",
-//         "type": "Brand Print T-shirt with Drop Shoulders",
-//         "imgsrc": "upload\\wtshirts11.jpg",
-//         "price": 1043,
-//         "op": 1799,
-//         "discount": 42,
-//         "bbs": "BBS Price 900",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "TOMMY HILFIGER",
-//         "producttype":"tshirt",
-//         "type": "Printed Crew-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts12.jpg",
-//         "price": 1007,
-//         "op": 1599,
-//         "discount": 37,
-//         "bbs": "BBS Price 879",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "Puma",
-//         "producttype":"tshirt",
-//         "type": "Brand Print Crew-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts13.jpg",
-//         "price": 1199,
-//         "op": 1999,
-//         "discount": 40,
-//         "bbs": "BBS Price 899",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "TOMMY HILFIGER",
-//         "producttype":"tshirt",
-//         "type": "Logo Print Crew-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts14.jpg",
-//         "price": 1349,
-//         "op": 1799,
-//         "discount": 25,
-//         "bbs": "BBS Price 1223",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "TOMMY HILFIGER",
-//         "producttype":"tshirt",
-//         "type": "Brand Print Crew-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts15.jpg",
-//         "price": 1689,
-//         "op": 2599,
-//         "discount": 35,
-//         "bbs": "BBS Price 1559",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "ARMANI EXCHANGE",
-//         "producttype":"tshirt",
-//         "type": "Logo Print Slim Fit Crew-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts16.jpg",
-//         "price": 4199,
-//         "op": 5999,
-//         "discount": 30,
-//         "bbs": "BBS Price 3419",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "Puma",
-//         "producttype":"tshirt",
-//         "type": "Brand Icon Print Crew-Neck T-shirt",
-//         "imgsrc": "upload\\wtshirts17.jpg",
-//         "price": 520,
-//         "op": 1299,
-//         "discount": 60,
-//         "bbs": "BBS Price 442",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "TOMMY HILFIGER",
-//         "producttype":"tshirt",
-//         "type": "Cotton V-neck T-shirt",
-//         "imgsrc": "upload\\wtshirts18.jpg",
-//         "price": 927,
-//         "op": 1599,
-//         "discount": 42,
-//         "bbs": "BBS Price 800",
-//         "gender":"women"
-//     },
-//     {
-//         "brand": "TOMMY HILFIGER",
-//         "producttype":"tshirt",
-//         "type": "Round-Neck T-shirt with Full Sleeves",
-//         "imgsrc": "upload\\wtshirts19.jpg",
-//         "price": 1097,
-//         "op": 1799,
-//         "discount": 39,
-//         "bbs": "BBS Price 989",
-//         "gender":"women"
-//     },
-// ];
 
-let dataherko = async () =>{
+let datawhatsnew;
+let data;
+let count1;
+dataherko();
+dataherko1();
+
+
+ async function dataherko(){
   try{
-    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/men/productjeans')
-    let datawhatsnew = await datas.json();
-    let data = datawhatsnew
-    displayProduct(datawhatsnew);
+    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/men/productjeans');
+    data = await datas.json();
+    count1 = data.length;
+    displayProduct(data);
 
-
-let count1 = data.length;
-
-let count12 = document.getElementById("count1");
-count12.innerText = count1 + "  Items Found";
+  }catch(e){
+    console.log(e.message);
+  }
+}
+  
+async function dataherko1(){
+  try{
+    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/men/productjeans');
+    datawhatsnew = await datas.json();
+  }catch(e){
+    console.log(e.message);
+  }
+  }
 
 var scselect = document.getElementById("scselect");
 let scjsgrid1 = document.getElementById("scjsgrid");
@@ -548,8 +117,10 @@ let grid5 = () => {
     scjsgrid1.style.gridTemplateColumns = "auto auto auto auto auto";
     scjsgrid1.style.gridGap = "12px";
     
-    let displayProduct = (data) =>{
+    function displayProduct (data){
     
+    let count12 = document.getElementById("count1");
+    count12.innerText = count1 + "  Items Found";
         data.forEach((data1) => {
     
             let div1 = document.createElement("div");
@@ -612,7 +183,7 @@ let grid5 = () => {
             bbsmain.style.padding = "2.5px 4px"
     
             let img2 = document.createElement("img");
-            img2.src = "./prodimg/pricelogo.svg"
+          img2.src = "/Images/prodimg/pricelogo.svg";
             img2.style.width = "15px";
             img2.style.height = "9px";
             img2.style.marginTop = "5px";
@@ -694,8 +265,11 @@ let grid5 = () => {
 
 }
 //main working grid  5 over
-async function displayProduct (data){
+  function displayProduct (data){
     
+    
+    let count12 = document.getElementById("count1");
+    count12.innerText = count1 + "  Items Found";
     data.forEach((data1) => {
 
         let div1 = document.createElement("div");
@@ -758,7 +332,7 @@ async function displayProduct (data){
         bbsmain.style.padding = "2.5px 4px"
 
         let img2 = document.createElement("img");
-        img2.src = "./prodimg/pricelogo.svg"
+      img2.src = "/Images/prodimg/pricelogo.svg";
         img2.style.width = "17px";
         img2.style.height = "12px";
         img2.style.marginTop = "5px";
@@ -801,7 +375,7 @@ async function displayProduct (data){
         scjsgrid1.append(mainDiv);
 
     });
-}
+};
 
 displayProduct(data);
 
@@ -1457,10 +1031,3 @@ const showSingleProd = (prodData) => {
     window.location.href = "/EachProduct/one_Product.html"
 };
 
-
-}catch(e){
-  console.log(e.message);
-}
-}
-
-dataherko();
