@@ -9,7 +9,7 @@ dataherko1();
 
  async function dataherko(){
   try{
-    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/men/productjeans')
+    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/men/productjeans');
     data = await datas.json();
     count1 = data.length;
     displayProduct(data);
@@ -21,7 +21,7 @@ dataherko1();
   
 async function dataherko1(){
   try{
-    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/men/productjeans')
+    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/men/productjeans');
     datawhatsnew = await datas.json();
   }catch(e){
     console.log(e.message);
@@ -183,7 +183,7 @@ let grid5 = () => {
             bbsmain.style.padding = "2.5px 4px"
     
             let img2 = document.createElement("img");
-            img2.src = "/Images/prodimg/pricelogo.svg"
+          img2.src = "/Images/prodimg/pricelogo.svg";
             img2.style.width = "15px";
             img2.style.height = "9px";
             img2.style.marginTop = "5px";
@@ -267,6 +267,9 @@ let grid5 = () => {
 //main working grid  5 over
   function displayProduct (data){
     
+    
+    let count12 = document.getElementById("count1");
+    count12.innerText = count1 + "  Items Found";
     data.forEach((data1) => {
 
         let div1 = document.createElement("div");
@@ -329,7 +332,7 @@ let grid5 = () => {
         bbsmain.style.padding = "2.5px 4px"
 
         let img2 = document.createElement("img");
-        img2.src = "/Images/prodimg/pricelogo.svg"
+      img2.src = "/Images/prodimg/pricelogo.svg";
         img2.style.width = "17px";
         img2.style.height = "12px";
         img2.style.marginTop = "5px";

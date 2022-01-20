@@ -186,7 +186,7 @@ count12.innerText = count1 + "  Items Found";
             bbsmain.style.padding = "2.5px 4px"
     
             let img2 = document.createElement("img");
-            img2.src = "/Images/prodimg/pricelogo.svg"
+            img2.src = "/Images/prodimg/pricelogo.svg";
             img2.style.width = "15px";
             img2.style.height = "9px";
             img2.style.marginTop = "5px";
@@ -269,7 +269,9 @@ count12.innerText = count1 + "  Items Found";
 }
 //main working grid  5 over
 function displayProduct (data) {
-    
+       
+let count12 = document.getElementById("count1");
+count12.innerText = count1 + "  Items Found";
     data.forEach((data1) => {
 
         let div1 = document.createElement("div");
@@ -332,7 +334,7 @@ function displayProduct (data) {
         bbsmain.style.padding = "2.5px 4px"
 
         let img2 = document.createElement("img");
-        img2.src = "/Images/prodimg/pricelogo.svg"
+      img2.src = "/Images/prodimg/pricelogo.svg";
         img2.style.width = "17px";
         img2.style.height = "12px";
         img2.style.marginTop = "5px";
@@ -719,7 +721,7 @@ var refine = () => {
     
     //from1001 to 1500
 
-    let countunder1000to1500 = 0;
+  let countunder1000to1500 = 0;
    let  under1000to1500 = (data) => {
     
      if (countunder1000to1500 % 2 == 0) {
@@ -1026,4 +1028,3 @@ let  nike= (data) => {
 const showSingleProd = (prodData) => {
     window.location.href = "/prodData"
 }
-
