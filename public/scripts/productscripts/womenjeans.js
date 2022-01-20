@@ -3,10 +3,10 @@ let datawhatsnew;
 let data;
 let count1;
 dataherko();
-dataherko1()
+dataherko1();
   async function dataherko(){
   try{
-    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/women/productjeans')
+    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/women/productjeans');
     let dataheroku = await datas.json();
   
     data = dataheroku;
@@ -181,7 +181,7 @@ function displayProduct(data) {
     });
 }
 let grid3 = () => {
-    //console.log("grid3 check")
+    //console.log("grid3 check");
     scjsgrid1.innerHTML = "";
     scjsgrid1.style.gridTemplateColumns = "auto auto auto";
     try {
@@ -295,7 +295,7 @@ function displayProduct(data){
             bbsmain.style.padding = "2.5px 4px"
     
             let img2 = document.createElement("img");
-            img2.src = "/prodimg/pricelogo.svg"
+            img2.src = "/Images/prodimg/pricelogo.svg"
             img2.style.width = "15px";
             img2.style.height = "9px";
             img2.style.marginTop = "5px";

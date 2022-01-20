@@ -1,17 +1,35 @@
 
-let dataherko = async () =>{
 
-    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/men/productjacket')
+let datawhatsnew;
+let data;
+let count1;
+dataherko();
+dataherko1();
+async function dataherko() {
+  try {
+    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/men/productjacket');
     let d = await datas.json();
-    let datawhatsnew = d ;
-    let data = d
+   
+    data = d
+    count1 = data.length;
     displayProduct(data);
-    
-    
-let count1 = data.length;
+  } catch (err) { 
+    console.log(err.message);
+  }
+}
 
-let count12 = document.getElementById("count1");
-count12.innerText = count1 + "  Items Found";
+async function dataherko1() {
+  try {
+    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/men/productjacket');
+    let d = await datas.json();
+   
+    datawhatsnew = d;
+    //count1 = data.length;
+    //displayProduct(data);
+  } catch (err) { 
+    console.log(err.message);
+  }
+}
 
 var scselect = document.getElementById("scselect");
  var scjsgrid1 = document.getElementById("scjsgrid");
@@ -104,6 +122,8 @@ let grid5 = () => {
     
     function displayProduct (data) {
     
+let count12 = document.getElementById("count1");
+count12.innerText = count1 + "  Items Found";
         data.forEach((data1) => {
     
             let div1 = document.createElement("div");
@@ -166,7 +186,7 @@ let grid5 = () => {
             bbsmain.style.padding = "2.5px 4px"
     
             let img2 = document.createElement("img");
-            img2.src = "./prodimg/pricelogo.svg"
+            img2.src = "/Images/prodimg/pricelogo.svg"
             img2.style.width = "15px";
             img2.style.height = "9px";
             img2.style.marginTop = "5px";
@@ -312,7 +332,7 @@ function displayProduct (data) {
         bbsmain.style.padding = "2.5px 4px"
 
         let img2 = document.createElement("img");
-        img2.src = "./prodimg/pricelogo.svg"
+        img2.src = "/Images/prodimg/pricelogo.svg"
         img2.style.width = "17px";
         img2.style.height = "12px";
         img2.style.marginTop = "5px";
@@ -1007,5 +1027,3 @@ const showSingleProd = (prodData) => {
     window.location.href = "/prodData"
 }
 
-}
-dataherko();
