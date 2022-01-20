@@ -1,16 +1,37 @@
 
-let dataherko = async () =>{
+let datawhatsnew;
+let data;
+let count1;
+dataherko();
+dataherko1()
+  async function dataherko(){
   try{
     let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/women/productjeans')
-    let datawhatsnew = await datas.json();
-    let data = datawhatsnew
-    displayProduct(datawhatsnew);
-
-let count1 = data.length;
-
-let count12 = document.getElementById("count1");
-count12.innerText = count1 + "  Items Found";
-
+    let dataheroku = await datas.json();
+  
+    data = dataheroku;
+    //console.log(data);
+    count1 = data.length;
+    displayProduct(data);
+  }
+  catch(e){
+    console.log(e.message);
+  }
+}
+async function dataherko1(){
+  try{
+    let datas = await fetch('https://ajio-clone-full.herokuapp.com/productApi/women/productjeans')
+    let dataheroku1 = await datas.json();
+  
+    datawhatsnew = dataheroku1;
+    //console.log(data);
+    // count1 = data.length;
+    // displayProduct(data);
+  }
+  catch(e){
+    console.log(e.message);
+  }
+  }
 var scselect = document.getElementById("scselect");
 var scjsgrid1 = document.getElementById("scjsgrid");
 
@@ -49,8 +70,118 @@ try {
     console.log("errorfound:", err);
 };
 
+function displayProduct(data) {
+  
+  let count12 = document.getElementById("count1");
+  count12.innerText = count1 + "  Items Found";
+    data.forEach((data1) => {
+
+        let div1 = document.createElement("div");
+        
+        let mainDiv = document.createElement("div");
+
+        var img1 = document.createElement("img");
+        img1.setAttribute("id", "img1grid5");
+        img1.src = data1.imgsrc;
+        img1.style.width = "303px"
+        
+        let quickView = document.createElement("div");
+        quickView.setAttribute("id", "scquickView");
+        quickView.innerText = "QUICKVIEW";
+        
+        let imgandquick = document.createElement("div");
+        imgandquick.append(img1, quickView);
+
+        let brand = document.createElement("div");
+        brand.innerText = data1.brand;
+        brand.style.color = "#b19975";
+        brand.style.fontWeight = "600";
+        brand.style.fontSize= "13px";
+
+        let type = document.createElement("div");
+        type.innerText = data1.type;
+        type.style.fontSize = "13px";
+        type.style.overflow = "hidden";
+
+        let divmid = document.createElement("div");
+
+
+        let price = document.createElement("span");
+        price.innerText = "Rs. " + data1.price +"  ";
+        price.style.fontSize = "14px"
+        price.style.fontWeight = "bold";
+        price.style.marginRight = "5px";
+        let op = document.createElement("span");
+        op.innerText = "Rs. " + data1.op;
+        op.style.textDecoration = "line-through";
+        op.style.fontSize = "14px";
+        op.style.marginRight = "5px";
+
+        let discount = document.createElement("span");
+        discount.innerText ="(" + data1.discount + "% off)";
+        discount.style.color = "#b19975";
+        discount.style.fontSize = "14px";
+
+        divmid.append(price, op, discount);
+        divmid.style.display = "flex";
+        divmid.style.justifyContent="center"
+
+
+        var bbsmain = document.createElement("div");
+        bbsmain.setAttribute("id","grid5bbsmain")
+        bbsmain.style.display = "flex";
+        bbsmain.style.justifyContent = "center";
+        bbsmain.style.backgroundColor = "#E8F8FF";
+        bbsmain.style.width = "303px";
+        bbsmain.style.padding = "2.5px 4px"
+
+        let img2 = document.createElement("img");
+        img2.src = "/Images/prodimg/pricelogo.svg"
+        img2.style.width = "17px";
+        img2.style.height = "12px";
+        img2.style.marginTop = "5px";
+        
+        let bbsdiv = document.createElement("div");
+        bbsdiv.innerText = data1.bbs;
+        bbsdiv.style.fontSize = "13px"
+        bbsdiv.style.fontWeight = "bold";
+       
+        bbsmain.style.width = "303px";
+
+        bbsmain.append(img2, bbsdiv);
+       
+
+
+        div1.append(brand, type, divmid, bbsmain);
+        div1.style.textAlign = "center";
+
+        mainDiv.style.width = "303px";
+        mainDiv.append(imgandquick, div1);
+
+        let prodData = {
+           data1,
+        }
+        mainDiv.onclick = () =>{
+
+            showSingleProd(prodData);
+            
+        }
+        const hoveringfunc = () => {
+            quickView.style.display = "block";
+        }
+        const hoveringfunc1 = () => {
+            quickView.style.display = "none";
+        }
+        mainDiv.addEventListener("mouseenter", hoveringfunc);
+        
+        mainDiv.addEventListener("mouseleave",hoveringfunc1);
+        scjsgrid1.style.gridTemplateColumns = "auto auto auto";
+        scjsgrid1.append(mainDiv);
+
+    });
+}
 let grid3 = () => {
-    console.log("grid3 check")
+    //console.log("grid3 check")
     scjsgrid1.innerHTML = "";
     scjsgrid1.style.gridTemplateColumns = "auto auto auto";
     try {
@@ -78,8 +209,9 @@ let grid3 = () => {
                 displayProduct(data);
             }
             else if (scselect.value === "What's New") { 
-                scjsgrid1.innerHTML = "";
-                displayProduct(datawhatsnew);
+              scjsgrid1.innerHTML = "";
+             // console.log(datawhatsnew);
+              displayProduct(datawhatsnew);
             };
     
         };
@@ -89,8 +221,6 @@ let grid3 = () => {
     
 
     displayProduct(data);
-
-
 
 }
 
@@ -247,116 +377,8 @@ function displayProduct(data){
 
 }
 //main working grid  5 over
-function displayProduct (data){
-    
-    data.forEach((data1) => {
 
-        let div1 = document.createElement("div");
-        
-        let mainDiv = document.createElement("div");
-
-        var img1 = document.createElement("img");
-        img1.setAttribute("id", "img1grid5");
-        img1.src = data1.imgsrc;
-        img1.style.width = "303px"
-        
-        let quickView = document.createElement("div");
-        quickView.setAttribute("id", "scquickView");
-        quickView.innerText = "QUICKVIEW";
-        
-        let imgandquick = document.createElement("div");
-        imgandquick.append(img1, quickView);
-
-        let brand = document.createElement("div");
-        brand.innerText = data1.brand;
-        brand.style.color = "#b19975";
-        brand.style.fontWeight = "600";
-        brand.style.fontSize= "13px";
-
-        let type = document.createElement("div");
-        type.innerText = data1.type;
-        type.style.fontSize = "13px";
-        type.style.overflow = "hidden";
-
-        let divmid = document.createElement("div");
-
-
-        let price = document.createElement("span");
-        price.innerText = "Rs. " + data1.price +"  ";
-        price.style.fontSize = "14px"
-        price.style.fontWeight = "bold";
-        price.style.marginRight = "5px";
-        let op = document.createElement("span");
-        op.innerText = "Rs. " + data1.op;
-        op.style.textDecoration = "line-through";
-        op.style.fontSize = "14px";
-        op.style.marginRight = "5px";
-
-        let discount = document.createElement("span");
-        discount.innerText ="(" + data1.discount + "% off)";
-        discount.style.color = "#b19975";
-        discount.style.fontSize = "14px";
-
-        divmid.append(price, op, discount);
-        divmid.style.display = "flex";
-        divmid.style.justifyContent="center"
-
-
-        var bbsmain = document.createElement("div");
-        bbsmain.setAttribute("id","grid5bbsmain")
-        bbsmain.style.display = "flex";
-        bbsmain.style.justifyContent = "center";
-        bbsmain.style.backgroundColor = "#E8F8FF";
-        bbsmain.style.width = "303px";
-        bbsmain.style.padding = "2.5px 4px"
-
-        let img2 = document.createElement("img");
-        // img2.src = "/prodimg/pricelogo.svg"
-        img2.style.width = "17px";
-        img2.style.height = "12px";
-        img2.style.marginTop = "5px";
-        
-        let bbsdiv = document.createElement("div");
-        bbsdiv.innerText = data1.bbs;
-        bbsdiv.style.fontSize = "13px"
-        bbsdiv.style.fontWeight = "bold";
-       
-        bbsmain.style.width = "303px";
-
-        bbsmain.append(img2, bbsdiv);
-       
-
-
-        div1.append(brand, type, divmid, bbsmain);
-        div1.style.textAlign = "center";
-
-        mainDiv.style.width = "303px";
-        mainDiv.append(imgandquick, div1);
-
-        let prodData = {
-           data1,
-        }
-        mainDiv.onclick = () =>{
-
-            showSingleProd(prodData);
-            
-        }
-        const hoveringfunc = () => {
-            quickView.style.display = "block";
-        }
-        const hoveringfunc1 = () => {
-            quickView.style.display = "none";
-        }
-        mainDiv.addEventListener("mouseenter", hoveringfunc);
-        
-        mainDiv.addEventListener("mouseleave",hoveringfunc1);
-        scjsgrid1.style.gridTemplateColumns = "auto auto auto";
-        scjsgrid1.append(mainDiv);
-
-    });
-}
-
-displayProduct(data);
+//displayProduct(data);
 
 
    // refine by functionality
@@ -674,9 +696,9 @@ var refine = () => {
      //sorting display
 
    //price sort
-
+    //under1000.addEventListener("click", under1000);
    let countunder1000 = 0;
-   let under1000 = (data) =>{
+   function under1000 (data) {
     
      if (countunder1000 % 2 == 0) {
         countunder1000++;
@@ -1007,9 +1029,3 @@ const showSingleProd = (prodData) => {
     localStorage.setItem("clickeproduct", JSON.stringify(prodData));
     window.location.href = "/EachProduct/one_Product.html"
 };
-}
-catch(e){
-  console.log(e.message);
-}
-}
-dataherko();

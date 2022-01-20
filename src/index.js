@@ -20,7 +20,7 @@ app.use(cors({
     credentials: true,
     original: ["http://localhost:2222"]
 }))
-app.use(express.json())
+app.use(express.json());
 
 app.use("/", Homepage);
 
