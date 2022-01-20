@@ -2,20 +2,20 @@ const router = require('express').Router()
 const ProductSchema = require('../Schema/project.schema')
 
 
-router.get("/productjackets", (req, res) => {
-    res.render("product page/productjackets");
+router.get("/menjackets", (req, res) => {
+    res.render("product page/menjackets");
   });
   
-router.get("/productjeans", (req, res) => {
-    res.render("product page/productjeans");
-  });
+router.get("/menjeans", (req, res) => {
+    res.render("product page/menjeans");
+});
   
-router.get("/productwomenjeans", (req, res) => {
-    res.render("product page/productwomenjeans");
+router.get("/womenjeans", (req, res) => {
+    res.render("product page/womenjeans");
   });
-  
-router.get("/productwomentshirt", (req, res) => {
-    res.render("product page/productwomentshirt");
+
+router.get("/womentshirt", (req, res) => {
+    res.render("product page/womentshirt");
   });
   
 // router.get("/:id" , async (req, res) =>{
@@ -26,6 +26,6 @@ router.get("/productwomentshirt", (req, res) => {
 //     }catch(e){
 //         console.log(e)
 //     }
-// })
+// }
 
-module.exports = router
+module.exports = router;
