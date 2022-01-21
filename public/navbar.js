@@ -6,68 +6,66 @@ let mainnavbar = document.getElementById("Nav_bar_main")
 let footershowinhtml = document.querySelector("footer")
     footershowinhtml.innerHTML = footershow()
 
+    let emptyprodut = document.getElementById("emptry_bag")
 
-let product_arr = JSON.parse(localStorage.getItem("All_product_deletes")) || []
+    let hidebag = document.querySelectorAll(".hidebag")
 
 
-let emptyprodut = document.getElementById("emptry_bag")
+async function  addtobagApi(userid){
+  if(userid.error === true){
+      emptyprodut.style.display = "block"
+      hidebag[0].style.display = "none"
+      hidebag[2].style.display = "none"
+      hidebag[3].style.display = "none"
+      hidebag[1].style.display = "none"
+  } else {
+  try{
 
-let hidebag = document.querySelectorAll(".hidebag")
+    const p = await fetch(`http://localhost:2222/usercheck/product/${userid._id}`)
 
-if(product_arr.length === 0) {
-  emptyprodut.style.display = "block"
-  hidebag[0].style.display = "none"
-  hidebag[2].style.display = "none"
-  hidebag[3].style.display = "none"
-  hidebag[1].style.display = "none"
-} else{
+    const product_arr = await p.json()
     
-let bag_div_li = document.querySelector(".showthe_all_produtTo_bag")
+    let bag_div_li = document.querySelector(".showthe_all_produtTo_bag")
 
-let totalofprodut = document.getElementById("total")
+    let totalofprodut = document.getElementById("total")
 
-let findtotal = product_arr.reduce(function (a,b){
-     
-      return  a + b.price
-}, 0)
-
-totalofprodut.innerText =`₹${findtotal}`
-show_the_produt_in_bag(product_arr)
-
-
-function show_the_produt_in_bag(d){
-
-    bag_div_li.innerHTML = "";
-
-  d.forEach(({discount,imgsrc,op,price,type})=>{
-
-    let bag_product_div_each = document.createElement("div")
-        bag_product_div_each.setAttribute("class" , "bag_product_div_each")
-
-        bag_product_div_each.innerHTML = `
-         <div class="bag_product_img">
-              <img src="${imgsrc}" alt="">
-             </div>
-             <div class="bag_produt_info">
-            <div class="bag_product_pirces">
-                <p>Rs. ${price}</p> 
-            </div>
-            <div class="bag_demo_pisez">
-                <span>${op}</span> <span>${discount}</span>
-            </div>
-            <div class="bag_product_name">
-                <p>${type}</p>
-            </div>
-        </div>`  
+    let findtotal = product_arr.reduce(function (a,b){
         
-        bag_div_li.append(bag_product_div_each)
-        
+          return  a + b.price
+    }, 0)
 
-  })  
+    totalofprodut.innerText =`₹${findtotal}`
+    show_the_produt_in_bag(product_arr)
 
+
+    function show_the_produt_in_bag(d){
+        bag_div_li.innerHTML = "";
+      d.forEach(({discount,imgsrc,op,price,type})=>{
+        let bag_product_div_each = document.createElement("div")
+            bag_product_div_each.setAttribute("class" , "bag_product_div_each")
+            bag_product_div_each.innerHTML = `
+            <div class="bag_product_img">
+                  <img src="${imgsrc}" alt="">
+                </div>
+                <div class="bag_produt_info">
+                <div class="bag_product_pirces">
+                    <p>Rs. ${price}</p> 
+                </div>
+                <div class="bag_demo_pisez">
+                    <span>${op}</span> <span>${discount}</span>
+                </div>
+                <div class="bag_product_name">
+                    <p>${type}</p>
+                </div>
+            </div>`  
+            bag_div_li.append(bag_product_div_each)  
+      })  
+    }
+  }catch(err){console.log("err")
 }
+}}
 
-}
+
 
 
 
@@ -99,10 +97,11 @@ userdatalogin()
 
 async function userdatalogin (){
     try{
-      let userdata = await fetch("https://ajio-clone-full.herokuapp.com/user/cooke")
+      let userdata = await fetch("http://localhost:2222/user/cooke")
       let usermon = await userdata.json();
       userlogingornot(usermon)
       closeia(usermon)
+      addtobagApi(usermon)
     }
     catch(e){
       console.log(e.message);
@@ -129,7 +128,7 @@ let logOut = document.querySelector(".Log_out")
 
 logOut.addEventListener("click",async ()=>{
   try{
-    let userdata = await fetch("https://ajio-clone-full.herokuapp.com/user/logout")
+    let userdata = await fetch("http://localhost:2222/user/logout")
     let usermon = await userdata.json();
     userlogingornot(usermon)
   }

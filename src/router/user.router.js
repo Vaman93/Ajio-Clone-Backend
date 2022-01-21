@@ -2,6 +2,7 @@ const router = require("express").Router();
 const bcjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../Schema/User.Schema");
+const ProductSchema = require('../Schema/project.schema')
 const { body, validationResult } = require('express-validator');
 
 router.get("/login", async (req, res) => {
@@ -79,5 +80,7 @@ router.get("/logout", async (req, res) => {
   res.cookie("jwt", "", { maxAge: 0 });
   return res.status(404).send({ error : true, message: "unauthicated" });
 });
+
+
 
 module.exports = router;

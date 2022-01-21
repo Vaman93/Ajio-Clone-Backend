@@ -8,12 +8,52 @@ $('.responsive').slick({
     slidesToScroll: 4,
     
   });
+
+
   
 
-  function productid (id){
-      id = JSON.parse(id);
 
+async function userdatalogin (){
+    try{
+      let userdata = await fetch("http://localhost:2222/user/cooke")
+      let usermon = await userdata.json();
+
+      return usermon
+
+    }
+    catch(e){
+      console.log(e.message);
+    }
   }
+
+  
+
+ async function productid (id){
+      
+   let userauth = await userdatalogin()
+   
+   if(userauth.error === true){
+       alert('Please login first')
+   } else{
+       addtobag(userauth._id , id)
+   }
+  }
+
+
+async function addtobag(userid, productid){
+    productid = JSON.parse(productid)
+    try{
+        const addbagapi = await fetch(`http://localhost:2222/bagproduct/${userid}/${productid}`)
+
+        const addbagdata = await addbagapi.json()
+
+        if(addbagdata.message === "Success"){
+            alert("Product is added successfully")
+            window.location.reload()
+        } 
+
+    }catch(err){console.log("err")}
+}
 
 
 let returnsugggetion = document.querySelector(".show_the_dale")

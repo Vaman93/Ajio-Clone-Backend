@@ -1,7 +1,7 @@
 let navbarCom = () => {
   return ` <div class="nav_bar_all">
 <div class="firstSectionOfNavBar">
-  <a href="/user/login"><p id="user_name">Sign In / Join AJIO</p></a>
+  <a href="/user/signup"><p id="user_name">Sign In / Join AJIO</p></a>
   <a class="/user/Log_out" href=""><p class="Log_out">Log Out</p></a>
   <a href=""><p>Customer Care</p></a>
  <a  class="visitedib" href=""><p>Visit AJIOLUXE</p></a>

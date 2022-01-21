@@ -11,8 +11,9 @@ const ProductAddSchema = require('./router/product.add')
 const Product = require('./router/product')
 const ProductAPI = require('./router/product.api')
 const EachProduct = require('./router/each.product')
-const BagProduct = require('./router/bag.product')
+const AddtoBagProduct = require('./router/bag.product')
 const Filter = require('./router/product.filter.price');
+const Mybag = require('./router/mybag')
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -34,22 +35,13 @@ app.use(cors({
 
 
 app.use("/", Homepage);
-
 app.use("/productadd", ProductAddSchema);
-
 app.use("/productApi", ProductAPI);
-
-app.use("/bagproduct" , BagProduct)
-
-
+app.use("/bagproduct" , AddtoBagProduct)
 app.use("/yourproduct" , EachProduct)
-
 app.use("/user", User);
-
 app.use("/filterbyprice", Filter);
-
-
 app.use("/product" , Product)
-
+app.use("/usercheck", Mybag)
 
 module.exports = app;
