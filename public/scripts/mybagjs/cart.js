@@ -1,14 +1,43 @@
+forcheckout()
+
+async function forcheckout (){
+    try{
+      let userdata = await fetch("http://localhost:2222/user/cooke")
+      let usermon = await userdata.json();
+      apidata(usermon)
+    }
+    catch(e){
+      console.log(e.message);
+    }
+  }
 
 
-let data = JSON.parse(localStorage.getItem("All_product_deletes")) 
+async function apidata(bid){
+    // console.log(bid);
+    try{
+        const api =await fetch(`http://localhost:2222/usercheck/product/${bid._id}`);
+        const dataapi=await api.json();
+        display(dataapi);
+        productsum(dataapi)
+        console.log(dataapi);
+    }
+    catch(err){
+console.log(err.message);
+    }
+}
+
+
+// let data = JSON.parse(localStorage.getItem("All_product_deletes")) 
 
 var body=document.querySelector("body");
 
 
-function display(){
+function display(data){
+// console.log(data)
 
 data.forEach(function(el){
 
+console.log(el)
 let maindiv=document.createElement("div");
 maindiv.setAttribute("id","maindiv")
        
@@ -48,10 +77,14 @@ div.append(img);
 div3.append(div4);
 maindiv.append(div,div1,div2,div3);
 body.append(maindiv);
-    
+   console.log(body) 
 });
+
 }
-display();
+
+function productsum(data){
+
+
 
 let sum=function(ac,el) //price sum
 {
@@ -79,12 +112,17 @@ let billdetails={
     bg:bagdiscount,
     ta:totalamount,
 }
-receipt.push(billdetails);      //bill details
-localStorage.setItem("bills",JSON.stringify(receipt));
+receipt.push(billdetails); 
 
-function bill(){
+bill(originalprice,bagdiscount,totalamount)
+}    
 
-    data.forEach(function(el){
+ //bill details
+// localStorage.setItem("bills",JSON.stringify(receipt));
+
+function bill(originalprice,bagdiscount,totalamount){
+
+    // data.forEach(function(el){
         
     let div=document.createElement("div");
     div.setAttribute("id","bdiv");
@@ -107,9 +145,9 @@ function bill(){
     div.append(bdiv,bdiv1,bdiv2);
 
     body.append(div);
-    });
+    // });
 }
-bill();
+// bill();
 
 
 function gotopagenextpage(){
