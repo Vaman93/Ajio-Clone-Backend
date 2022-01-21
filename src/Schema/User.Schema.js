@@ -5,7 +5,8 @@ const User = new mongoose.Schema({
     email : {type: String , required: true},
     password : {type: String , required: true},
     mobile : {type: Number, required: false},
-    CheckOut:[{type: mongoose.Schema.Types.ObjectId , ref:"product",required: false}]
+    CheckOut:[{type: mongoose.Schema.Types.ObjectId , ref:"product",required: false}],
+    Closte:[{type: mongoose.Schema.Types.ObjectId , ref:"product",required: false}]
 } , {
     timestamps: true,
     versionKey: false,

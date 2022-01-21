@@ -56,6 +56,37 @@ async function addtobag(userid, productid){
 }
 
 
+
+async function addtocloste (cloid){
+
+   let useridcloste = await userdatalogin()
+   if(useridcloste.error === true){
+    return alert('Please login first')
+    } else{
+        addtoclostearr(useridcloste._id , JSON.parse(cloid))
+    }
+
+}
+
+
+async function addtoclostearr(useridc , procid){
+          try{
+        const addclosteapi = await fetch(`http://localhost:2222/closte/${useridc}/${procid}`)
+
+        const addclsotedata = await addclosteapi.json()
+
+        if(addclsotedata.message === "Success"){
+            alert("Product is added successfully to closet")
+            window.location.reload()
+        } 
+
+    }catch(err){console.log("err")}
+}
+
+
+
+
+
 let returnsugggetion = document.querySelector(".show_the_dale")
 
 let ret = document.querySelector(".return_text > p")

@@ -1,11 +1,33 @@
+userlogin()
 
-let product_arr_closter = JSON.parse(localStorage.getItem("All_product_closte"))
-console.log('product_arr_closter:', product_arr_closter)
+async function userlogin (){
+    try{
+      let userdata = await fetch("http://localhost:2222/user/cooke")
+      let usermon = await userdata.json();
+      clostedata(usermon._id)
+    }
+    catch(e){
+      console.log(e.message);
+    }
+}
+  
+
+async function clostedata(cloid){
+
+    try{
+        const closte = await fetch(`http://localhost:2222/closte/clsotepro/data/product/${cloid}`)
+
+        const closteuserdata = await closte.json()
+
+        showtheclost(closteuserdata)
+
+    }catch(err){
+        console.log(err.message);
+    }
+
+}
 
 let slider_main = document.querySelector(".slider_main")
-
-showtheclost(product_arr_closter)
-
 
 function showtheclost(d){
 

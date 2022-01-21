@@ -6,13 +6,28 @@ const ProductSchema = require('../Schema/project.schema');
 
 // user check page
 
-router.get("/checkout" , (req, res) =>{
-    res.render("mybag/cart1")
+router.get("/" , (req, res) =>{
+    res.render("Closet/index")
 })
+
+
+router.get("/:id/:product" , async (req, res) => {
+    try{
+
+   await User.findOneAndUpdate({_id: req.params.id}, {$addToSet: {Closte : {$each:[req.params.product]}}},{
+        new: true
+    })
+    res.send({message : 'Success'})
+    }catch(err){
+        res.send({message: "product all ready add"})
+    }
+
+})
+
 
 // partiCully user product
 
-router.get("/product/:id", async (req, res) => {
+router.get("/clsotepro/data/product/:id", async (req, res) => {
   
   if(req.params.id === undefined){
    return res.send("user is not logged in")

@@ -14,6 +14,7 @@ const EachProduct = require('./router/each.product')
 const AddtoBagProduct = require('./router/bag.product')
 const Filter = require('./router/product.filter.price');
 const Mybag = require('./router/mybag')
+const Closte = require('./router/closte')
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -42,6 +43,7 @@ app.use("/yourproduct" , EachProduct)
 app.use("/user", User);
 app.use("/filterbyprice", Filter);
 app.use("/product" , Product)
+app.use("/closte" , Closte)
 app.use("/usercheck", Mybag)
 
 module.exports = app;
