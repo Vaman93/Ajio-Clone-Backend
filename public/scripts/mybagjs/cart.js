@@ -1,11 +1,40 @@
 
+let deletid;
 
-let data = JSON.parse(localStorage.getItem("All_product_deletes")) 
+forcheckout()
 
-var body=document.querySelector("body");
+async function forcheckout (){
+    try{
+      let userdata = await fetch("http://localhost:2222/user/cooke")
+      let usermon = await userdata.json();
+      apidata(usermon)
+    }
+    catch(e){
+      console.log(e.message);
+    }
+  }
 
 
-function display(){
+async function apidata(bid){
+    // console.log(bid);
+    try{
+        const api =await fetch(`http://localhost:2222/usercheck/product/${bid._id}`);
+        const dataapi=await api.json();
+        display(dataapi , bid);
+        productsum(dataapi)
+
+    }
+    catch(err){
+console.log(err.message);
+    }
+}
+
+
+var body=document.getElementById("bodydemio");
+
+
+function display(data , bid){
+
 
 data.forEach(function(el){
 
@@ -39,19 +68,50 @@ div3.innerHTML=`
 
 let div4=document.createElement("div");
 div4.setAttribute("id","div5");
-div4.innerHTML=`<div id="ldiv4">
-                <div id="delete"><span style="margin-left:60px;">Delete<span></div>
-                <div id="move"><span>Move to Closet</span></div>
-                <div>`;
+
+let ldiv4 = document.createElement("div");
+    ldiv4.setAttribute("id","ldiv4")
+
+    let deletediv = document.createElement("div")
+        deletediv.setAttribute("id","delete")
+        deletediv.innerHTML = `<span style="margin-left:60px;">Delete<span>`
+        deletediv.addEventListener("click" , ()=>{
+                 deletedproduct(el._id , bid._id)
+             })
+    let move = document.createElement("div")    
+    move.setAttribute("id","move")
+    move.innerHTML = `<span>Add to Closet<span>`
+    ldiv4.append(deletediv, move)
+    div4.append(ldiv4)   
 
 div.append(img);
 div3.append(div4);
 maindiv.append(div,div1,div2,div3);
 body.append(maindiv);
-    
 });
+
 }
-display();
+
+async function deletedproduct(elidpro , useridele){
+
+    try{
+
+        const productdelete = await fetch(`http://localhost:2222/usercheck/productdelete/${useridele}/${elidpro}` ,  { method: 'DELETE' })
+
+        const delectproduct = await productdelete.json()
+        
+        window.location.reload()
+
+    } catch(err){
+        console.log(err.message)
+    }
+
+}
+
+
+function productsum(data){
+
+
 
 let sum=function(ac,el) //price sum
 {
@@ -79,12 +139,17 @@ let billdetails={
     bg:bagdiscount,
     ta:totalamount,
 }
-receipt.push(billdetails);      //bill details
-localStorage.setItem("bills",JSON.stringify(receipt));
+receipt.push(billdetails); 
 
-function bill(){
+bill(originalprice,bagdiscount,totalamount)
+}    
 
-    data.forEach(function(el){
+ //bill details
+// localStorage.setItem("bills",JSON.stringify(receipt));
+
+function bill(originalprice,bagdiscount,totalamount){
+
+    // data.forEach(function(el){
         
     let div=document.createElement("div");
     div.setAttribute("id","bdiv");
@@ -107,9 +172,9 @@ function bill(){
     div.append(bdiv,bdiv1,bdiv2);
 
     body.append(div);
-    });
+    // });
 }
-bill();
+// bill();
 
 
 function gotopagenextpage(){
