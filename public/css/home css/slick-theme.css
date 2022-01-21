@@ -1,9 +1,9 @@
 @charset 'UTF-8';
 /* Slider */
-.slick-loading .slick-list
+/* .slick-loading .slick-list
 {
-    background: #fff url('./ajax-loader.gif') center center no-repeat;
-}
+    background: #fff url('/ajax-loader.gif') center center no-repeat;
+} */
 
 /* Icons */
 @font-face
@@ -12,8 +12,8 @@
     font-weight: normal;
     font-style: normal;
 
-    src: url('./fonts/slick.eot');
-    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+    /* src: url('./fonts/slick.eot');
+    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg'); */
 }
 
 
@@ -22,7 +22,7 @@
 /* Arrows */
 
 .slick-next , .slick-prev{
-    background-image: url("/Home/Images/right-arrow-1438234-1216195.webp");
+    background-image: url("https://ajio-clone-full.herokuapp.com/Images/right-arrow-1438234-1216195.webp");
     background-color: rgba(255, 255, 255, 0.623);
     background-size: cover;
     background-size:30px 30px;
@@ -33,7 +33,7 @@
     z-index: 1;
 }
 .slick-prev{
-    background-image: url("/Home/Images/left.png");
+    background-image: url("https://ajio-clone-full.herokuapp.com/Images/left.png");
 }
 
 .slick-prev,

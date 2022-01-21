@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="signup.css">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,7 +64,7 @@
            <!-- submit Button -->
            <div id = "btn1">
             <button  onclick="signUp()" id = "btn">CONTINUE</button>
-            <a href="signIn.html"><button id = "btn">LOG-IN</button></a>
+            <a href="/user/login"><button id = "btn">LOG-IN</button></a>
            </div>
            <!-- <button  onclick="signUp()" id = "btn">CONTINUE</button> -->
 
@@ -83,6 +83,10 @@ async function signUp(){
         let email= document.getElementById("email").value
         let password= document.getElementById("password").value
         let mobile= document.getElementById("mobile").value
+
+        if(name.length === 0) return alert("Please enter a name")
+        if(email.length === 0) return alert("Please enter a email")
+        if(password.length === 0) return alert("Please enter a password")
 
     let detail = {
         name,
@@ -103,13 +107,16 @@ async function signUp(){
     let data = await response.json();
     
     if(data.error === true){
-        alert("Fill Details");
-    }else{
-        window.location.href = "loginIn"
+        alert(data.message);
+    } else if (data.va === true){
+        alert(data.errors[0].msg);
+    }
+    else{
+        window.location.href = "/user/login"
     }
 
 } catch(e){
-    alert("Fill Details");
+    // alert("Fill Details");
 }
     
 

@@ -65,7 +65,7 @@
 </html>
 <script>
 
-let api = "http://localhost:2222/user/login"
+let url = "https://ajio-clone-full.herokuapp.com/user/login"
 
 async function logIn(){
 
@@ -73,10 +73,12 @@ let detail = {
     email: document.getElementById("username").value,
     password: document.getElementById("password").value,
 }
-detail = JSON.stringify(detail);
-console.log('detail:', detail)
+    if(detail.email.length === 0) return alert("Please enter a email")
+    if(detail.password.length === 0) return alert("Please enter a password")
 
-let url = api;
+
+detail = JSON.stringify(detail);
+
 
 let response = await fetch(url, {
     method:"POST",
@@ -86,15 +88,15 @@ let response = await fetch(url, {
     }
 });
 
-
 let data = await response.json();
-console.log('data:', data)
 
 if(data.error === true){
-    alert("User Not Exist");
-} else{
-   goinghomepag();
-}
+        alert(data.message);
+    } else if (data.va === true){
+        alert(data.errors[0].msg);
+    } else{
+        goinghomepag();
+    }
         
 }
 

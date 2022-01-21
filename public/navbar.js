@@ -99,24 +99,22 @@ userdatalogin()
 
 async function userdatalogin (){
     try{
-      let userdata = await fetch("http://localhost:2222/user/cooke")
-      
+      let userdata = await fetch("https://ajio-clone-full.herokuapp.com/user/cooke")
       let usermon = await userdata.json();
-      
       userlogingornot(usermon)
+      closeia(usermon)
     }
     catch(e){
       console.log(e.message);
     }
   }
   
-  let logOut = document.querySelector(".Log_out")
+
 
   let change_user = document.getElementById("user_name")
 
 function userlogingornot(userm) {
     const username = userm.name
-    console.log(username)
 if(username === undefined){
   change_user.innerHTML = "Sign In / Join AJIO"
   logOut.style.display = "none"
@@ -127,11 +125,11 @@ if(username === undefined){
 }
 
 
-
+let logOut = document.querySelector(".Log_out")
 
 logOut.addEventListener("click",async ()=>{
   try{
-    let userdata = await fetch("http://localhost:2222/user/logout")
+    let userdata = await fetch("https://ajio-clone-full.herokuapp.com/user/logout")
     let usermon = await userdata.json();
     userlogingornot(usermon)
   }
@@ -147,14 +145,15 @@ let closerdiv = document.querySelector(".showthehangerdiv")
 
 let icon_hanger = document.querySelector(".icon_hanger")
 
+function closeia(usernameclo){
 
-if(username !== null){
+if(usernameclo.name !== undefined){
   closerdiv.style.display = "none"
   icon_hanger.addEventListener("click", ()=>{
     window.location.href = "/Closet/index.html"
   })
 }
-
+}
 
 
 
