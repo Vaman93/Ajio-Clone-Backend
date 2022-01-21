@@ -11,7 +11,7 @@ const ProductSchema = require('../Schema/project.schema');
 router.get("/under1000/:gender/:type", async (req, res) => {
     console.log(req.params.men);
     try {
-        const under1000 = await ProductSchema.find({ $and: [{ price: { $gt: 0 } }, { price: { $lte: 1000 } },{gender:{$eq: req.params.gender } },{producttype:{$eq: req.params.type } }] });
+        const under1000 = await ProductSchema.find({ $and: [{ price: { $gt: 0 } }, { price: { $lte: 1000 } },{gender:{$eq: req.params.gender } },{producttype:{$eq: req.params.type } }] }).sort({price:1});
    
         res.status(200).send(under1000);
     } catch (err) { 
@@ -23,7 +23,7 @@ router.get("/under1000/:gender/:type", async (req, res) => {
 
 router.get("/between1001to1500/:gender/:type", async (req, res) => {
 try{
-    const between1001to1500 = await ProductSchema.find({ $and: [{ price: { $gt: 1000 } }, { price: { $lte: 1500 } },{gender:{$eq: req.params.gender } },{producttype:{$eq: req.params.type } }] });
+    const between1001to1500 = await ProductSchema.find({ $and: [{ price: { $gt: 1000 } }, { price: { $lte: 1500 } },{gender:{$eq: req.params.gender } },{producttype:{$eq: req.params.type } }] }).sort({price:1});
    
     res.status(200).send(between1001to1500);
 } catch (err) { 
@@ -35,7 +35,7 @@ try{
 router.get("/between1501to2000/:gender/:type", async (req, res) => {
     try {
     
-    const between1501to2000 = await ProductSchema.find({ $and: [{ price: { $gt: 1500 } }, { price: { $lte: 2000 } },{gender:{$eq: req.params.gender } },{producttype:{$eq: req.params.type } }] });
+    const between1501to2000 = await ProductSchema.find({ $and: [{ price: { $gt: 1500 } }, { price: { $lte: 2000 } },{gender:{$eq: req.params.gender } },{producttype:{$eq: req.params.type } }] }).sort({price:1});
    
     res.status(200).send(between1501to2000);
 } catch (err) { 
@@ -48,7 +48,7 @@ router.get("/between1501to2000/:gender/:type", async (req, res) => {
 
 router.get("/above200/:gender/:type", async (req, res) => {
 try{
-    const above200 = await ProductSchema.find({ $and: [{ price: { $gt: 2000 } },{gender:{$eq: req.params.gender } },{producttype:{$eq: req.params.type } }] });
+    const above200 = await ProductSchema.find({ $and: [{ price: { $gt: 2000 } },{gender:{$eq: req.params.gender } },{producttype:{$eq: req.params.type } }] }).sort({price:1});
    
     res.status(200).send(above200);
 } catch (err) { 

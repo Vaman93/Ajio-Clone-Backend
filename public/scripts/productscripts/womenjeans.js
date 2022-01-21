@@ -693,28 +693,21 @@ async function under1000api(gender,type) {
     const underapi = await fetch(`http://localhost:2222/filterbyprice/under1000/${gender}/${type}`);
 
     const dataapiunder1000 = await underapi.json();
-    console.log(dataapiunder1000);
+    
+    return dataapiunder1000;
   }
   catch (err) {
-    console.log(err);
+    console.log(err.message);
   }
 }
-
 let countunder1000 = 0;
-   
-function under1000(data) {
-  under1000api(data[0].gender,data[0].producttype);
+async function under1000(data) {
+  let data1000 = await under1000api(data[0].gender, data[0].producttype);
+  //console.log(data1000);
      if (countunder1000 % 2 == 0) {
         countunder1000++;
-       data.sort((a, b) => a.price - b.price);
-       let arr1 = [];
-       data.forEach((element) => {
-         if (element.price < 1000) {
-           arr1.push(element);
-         }
-       });
        scjsgrid1.innerHTML = "";
-       displayProduct(arr1);
+       displayProduct(data1000);
      } else {
         countunder1000++;
        scjsgrid1.innerHTML = "";
