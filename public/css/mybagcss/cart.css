@@ -207,7 +207,7 @@ img {
 #odiv1{
     height: 25px;
     width:255px;
-    /* border:1px solid black; */
+    width: 255px;
     padding-top: 5px;
     font-weight: 600;
     font-size: 15px;
@@ -217,7 +217,8 @@ img {
 #odiv2{
     height: 25px;
     width:255px;
-    /* border:1px solid black; */
+    display: flex;
+    justify-content: space-between;
     margin:auto;
     font-family: sans-serif;
     font-size: 14px;
@@ -225,7 +226,8 @@ img {
 #odiv3{
     height: 25px;
     width:255px;
-    /* border:1px solid black; */
+    display: flex;
+    justify-content: space-between;
     margin:auto;
     font-weight: 700;
     font-family: sans-serif;

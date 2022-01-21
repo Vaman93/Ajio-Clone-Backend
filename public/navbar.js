@@ -24,7 +24,15 @@ async function  addtobagApi(userid){
     const p = await fetch(`http://localhost:2222/usercheck/product/${userid._id}`)
 
     const product_arr = await p.json()
-    
+
+    if(product_arr.length === 0){
+      emptyprodut.style.display = "block"
+      hidebag[0].style.display = "none"
+      hidebag[2].style.display = "none"
+      hidebag[3].style.display = "none"
+      hidebag[1].style.display = "none"
+  }
+
     let bag_div_li = document.querySelector(".showthe_all_produtTo_bag")
 
     let totalofprodut = document.getElementById("total")
