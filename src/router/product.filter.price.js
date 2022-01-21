@@ -46,7 +46,7 @@ router.get("/between1501to2000/:gender/:type", async (req, res) => {
 
 //above 2000
 
-router.get("/above200/:gender/:type", async (req, res) => {
+router.get("/above2000/:gender/:type", async (req, res) => {
 try{
     const above200 = await ProductSchema.find({ $and: [{ price: { $gt: 2000 } },{gender:{$eq: req.params.gender } },{producttype:{$eq: req.params.type } }] }).sort({price:1});
    
