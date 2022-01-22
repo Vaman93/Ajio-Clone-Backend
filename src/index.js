@@ -18,6 +18,7 @@ const Brand = require('./router/product.filter.brand');
 const Sort = require('./router/product.sort');
 const Mybag = require('./router/mybag')
 const Closte = require('./router/closte')
+const Payment = require('./router/payment')
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -53,5 +54,6 @@ app.use("/sort", Sort);
 app.use("/product" , Product)
 app.use("/closte" , Closte)
 app.use("/usercheck", Mybag)
+app.use("/payment" , Payment)
 
 module.exports = app;

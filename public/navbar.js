@@ -157,7 +157,7 @@ function closeia(usernameclo){
 if(usernameclo.name !== undefined){
   closerdiv.style.display = "none"
   icon_hanger.addEventListener("click", ()=>{
-    window.location.href = "/Closet/index.html"
+    window.location.href = "/closte"
   })
 }
 }
@@ -166,5 +166,5 @@ if(usernameclo.name !== undefined){
 
 let bag_page_fu = document.getElementById("bag_page_fu")
     bag_page_fu.addEventListener("click", ()=>{
-        window.location.href= "/mybag/cart1.html"
+        window.location.href= "/usercheck/checkout"
     })

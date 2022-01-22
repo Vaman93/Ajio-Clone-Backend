@@ -67,12 +67,12 @@ let navbarCom = () => {
       </div>
       <div class="second_div_ul derop_ul_li_same">
         <ul>MEN
-         <a href="/productjackets"> <li> Jackets & Coats </li></a>
-         <a href="/productjeans"> <li> Jeans</li></a>
+         <a href="/product/menjackets"> <li> Jackets & Coats </li></a>
+         <a href="/product/menjeans"> <li> Jeans</li></a>
         </ul>
         <ul> WOMEN
-         <a href="/productwomenjeans"> <li>Jeans & Jeggings</li></a>
-         <a href="/productwomentshirt"> <li>T-Shirts</li></a>
+         <a href="/product/womenjeans"> <li>Jeans & Jeggings</li></a>
+         <a href="/product/womentshirt"> <li>T-Shirts</li></a>
         </ul>
         <ul>EXCLUSIVE BRANDS
          <a href=""> <li>Indie Picks</li></a>
@@ -125,11 +125,11 @@ let navbarCom = () => {
       <div class="input_div_nav_bar">
       <input id="inpu" type="text" placeholder="Search AJIO"><i class="fas fa-search"></i>
       <div class="input_suggestion_div">
-        <a href="/product page/productjackets.html"><p>Men Jackets & Coats </p></a>
+        <a href="/product/menjackets"><p>Men Jackets & Coats </p></a>
         
-        <a href="/product page/productjeans.html"><p>Men Jeans</p></a>
-        <a href="/product page/productwomenjeans.html"><p>Women Jeans & Jeggings</p></a>
-        <a href="/product page/productwomentshirt.html"><p>Women T-Shirts</p></a>
+        <a href="/product/menjeans"><p>Men Jeans</p></a>
+        <a href="/product/womenjeans"><p>Women Jeans & Jeggings</p></a>
+        <a href="/product/womentshirt"><p>Women T-Shirts</p></a>
         <a href=""><p>Jacket</p></a>
         <a href=""><p>Top</p></a>
         <a href=""><p>Heels</p></a>
@@ -144,7 +144,7 @@ let navbarCom = () => {
         </div>
       </div>
       <div class="icon_bag_div icon-bag-hang">
-       <a href="/mybag/cart1.html"><i class="fas fa-shopping-bag"></i></a> 
+       <a href="/usercheck/checkout"><i class="fas fa-shopping-bag"></i></a> 
       <div class="addtocartnavbardiv">
       <div id="emptry_bag">
         <img src="https://image.freepik.com/free-vector/man-shopping-supermarket_74855-7612.jpg" alt="">

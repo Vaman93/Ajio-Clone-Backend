@@ -21,7 +21,7 @@ async function apidata(bid){
         const api =await fetch(`http://localhost:2222/usercheck/product/${bid._id}`);
         const dataapi=await api.json();
         display(dataapi , bid);
-        productsum(dataapi)
+        productsum(dataapi,bid)
 
     }
     catch(err){
@@ -109,7 +109,7 @@ async function deletedproduct(elidpro , useridele){
 }
 
 
-function productsum(data){
+function productsum(data , bid){
 
 
 
@@ -141,14 +141,14 @@ let billdetails={
 }
 receipt.push(billdetails); 
 
-bill(originalprice,bagdiscount,totalamount)
+bill(bid,originalprice,bagdiscount,totalamount)
 }    
 
  //bill details
 // localStorage.setItem("bills",JSON.stringify(receipt));
 
-function bill(originalprice,bagdiscount,totalamount){
-
+function bill(bid,originalprice,bagdiscount,totalamount){
+    
     // data.forEach(function(el){
         
     let div=document.createElement("div");
@@ -162,13 +162,15 @@ function bill(originalprice,bagdiscount,totalamount){
     bdiv1.setAttribute("id","bdiv2");
     bdiv1.innerHTML=`<div id="odiv1">Order Details</div>
                      <div id="odiv2">  Bag total   <span id="s1">Rs.${originalprice}.00</span>   </div>                     
-                     <div id="odiv2">  Bag discount<span id="s2"> -Rs.${bagdiscount}.00</span></div>
+    <div id="odiv2" >  Bag discount<span id="s2" style="text-decoration: line-through;"> -Rs.${bagdiscount}.00</span></div>
                      <div id="odiv2">  Delivery    <span id="s3">Free</span>   </div> 
                      <div id="odiv3">  Total Amount<span id="s4" style="font-size:15px;"> Rs.${totalamount}.00</span></div>`;
     let bdiv2=document.createElement("div");
     bdiv2.setAttribute("id","bdiv3");
     bdiv2.textContent=`PROCEED TO SHIPPING`;
-    bdiv2.addEventListener("click" , gotopagenextpage)
+    bdiv2.addEventListener("click" , ()=>{
+        gotopagenextpage(bid._id,originalprice,bagdiscount,totalamount)
+    })
     div.append(bdiv,bdiv1,bdiv2);
 
     body.append(div);
@@ -177,6 +179,15 @@ function bill(originalprice,bagdiscount,totalamount){
 // bill();
 
 
-function gotopagenextpage(){
-    window.location.href = "./address1.html"
+async function gotopagenextpage(bid,o,b,t){
+ try{
+    const billapi = await fetch(`http://localhost:2222/payment/user/payment/bill/add/${bid}/${o}/${b}/${t}`)
+
+    const billmessage = await billapi.json()
+    
+    if(billmessage.error === false) {
+        window.location.href = "/payment/address"
+    }
+
+ }catch(e){console.log(e.message)}
 }
