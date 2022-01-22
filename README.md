@@ -72,7 +72,7 @@
 
 ---
 - *About Us Page*
-##### here user will have to fill their payment details then they will be notified that their order has been placed.
+##### 
 ![About Us Page](https://github.com/Vaman93/Ajio-Clone/blob/main/public/Images/ReadmeImg/about%20us%20img.png)
 
 ---

@@ -140,6 +140,7 @@ logOut.addEventListener("click",async ()=>{
     let userdata = await fetch("https://ajio-clone-full.herokuapp.com/user/logout")
     let usermon = await userdata.json();
     userlogingornot(usermon)
+    window.location.href = "/"
   }
   catch(e){
     console.log(e.message);

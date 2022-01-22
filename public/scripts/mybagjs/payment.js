@@ -29,7 +29,7 @@ function paymentfuction(biils) {
 
   let bg = +biils[1];
 
-  let tag = amount - bg;
+  let tag = biils[2];
 
   document.getElementById("payvalue").value = `PAY ₹${tag} SECURELY`;
 
