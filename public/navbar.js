@@ -31,7 +31,7 @@ async function  addtobagApi(userid){
       hidebag[2].style.display = "none"
       hidebag[3].style.display = "none"
       hidebag[1].style.display = "none";
-      break;
+        return;
   }
 
     let bag_div_li = document.querySelector(".showthe_all_produtTo_bag")
