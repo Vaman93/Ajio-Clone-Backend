@@ -1,4 +1,4 @@
-![image](https://media4.ppl-media.com/static/purplle/img/purplle-logo-1.svg)
+![image](https://github.com/Vaman93/Ajio-Clone/blob/main/public/Images/ReadmeImg/Ajio-Logo.svg)
 
 
 # Ajio-Website-Clone 🔗
@@ -31,53 +31,49 @@
 
 - *Home Page*
 ##### here is the landing page of purplle clone
-![Landing Page](https://github.com/kavya-2021/Purplle_Backend/blob/main/public/image/landing_page.png)
+![Landing Page](https://github.com/Vaman93/Ajio-Clone/blob/main/public/Images/ReadmeImg/home%20page.png)
 
 ---
 - *login Page*
 
-![Sign In Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/login.png)
+![Sign In Page](https://github.com/Vaman93/Ajio-Clone/blob/main/public/Images/ReadmeImg/singup%20page.png)
 
 
 ---
 
-- *Product Page*
+- *Products Page*
 ##### Here user can filter/Sort the products according to choice
-![Product Category Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/cat_p.png)
+![Products Category Page](https://github.com/Vaman93/Ajio-Clone/blob/main/public/Images/ReadmeImg/product.png)
 
 ---
 
 - *Product Description Page*
 ##### Here User can get more information about product
-![Product Details Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/prod_desc.png)
-
----
-- *Cart Page*
-##### From here user can add and remove products from cart
-![Cart Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/cart_page.png)
-
----
-- *Closet List Page*
-##### here users can save their favorite products.
-![Wish List](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/wishlist.png)
+![Product Details Page](https://github.com/Vaman93/Ajio-Clone/blob/main/public/Images/ReadmeImg/one%20product%20img.png)
 
 ---
 
 - *Bag Page*
 ##### Here user get all product which they want to buy
-![Checkout Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/adress.png)
+![Bag Page](https://github.com/Vaman93/Ajio-Clone/blob/main/public/Images/ReadmeImg/bag%20page.png)
+
+---
+- *Closet List Page*
+##### here users can save their favorite products.
+![Closet List](https://github.com/Vaman93/Ajio-Clone/blob/main/public/Images/ReadmeImg/Closet.png)
+
 
 ---
 - *Payment Page*
 ##### here user will have to fill their payment details then they will be notified that their order has been placed.
-![Payment Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/pay.png)
+![Payment Page](https://github.com/Vaman93/Ajio-Clone/blob/main/public/Images/ReadmeImg/payment.png)
 
 ---
 
 ---
 - *About Us Page*
 ##### here user will have to fill their payment details then they will be notified that their order has been placed.
-![About Us Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/pay.png)
+![About Us Page](https://github.com/Vaman93/Ajio-Clone/blob/main/public/Images/ReadmeImg/about%20us%20img.png)
 
 ---
 
