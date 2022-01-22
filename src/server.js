@@ -5,10 +5,10 @@ const port = process.env.PORT || 2222;
 const connect = require('./config/database');
 
 app.listen(port, async () => {
-    try{
+    try {
         await connect();
         console.log(`listen on ${port}`);
-    } catch(err){
+    } catch (err) {
         console.log("server.js file error: " + err.message);
     }
-}) 
+}); 

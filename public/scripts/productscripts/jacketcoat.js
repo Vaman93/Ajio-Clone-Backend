@@ -32,78 +32,171 @@ async function dataherko1() {
 }
 
 var scselect = document.getElementById("scselect");
- var scjsgrid1 = document.getElementById("scjsgrid");
+var scjsgrid1 = document.getElementById("scjsgrid");
+
+//apis for sorting
+
+//sort by latest
+async function latestapi(gender,type) {
+  try {
+    const underapi = await fetch(`http://localhost:2222/sort/${gender}/${type}/latest`);
+
+    const dataapilatest= await underapi.json();
+    
+    return dataapilatest;
+  }
+  catch (err) {
+    console.log(err.message);
+  }
+}
+
+
+//sort by alphabetical
+async function alphabeticalbybrandapi(gender,type) {
+  try {
+    const underapi = await fetch(`http://localhost:2222/sort/${gender}/${type}/alphabeticalbybrand`);
+
+    const dataapialphabeticalbybrand= await underapi.json();
+    
+    return dataapialphabeticalbybrand;
+  }
+  catch (err) {
+    console.log(err.message);
+  }
+}
+
+
+
+
+//sort by discount
+
+async function discountapi(gender,type) {
+  try {
+    const underapi = await fetch(`http://localhost:2222/sort/${gender}/${type}/discount`);
+
+    const dataapidiscount = await underapi.json();
+    
+    return dataapidiscount ;
+  }
+  catch (err) {
+    console.log(err.message);
+  }
+}
+
+
+
+
+//sort by price high to low
+
+async function pricehightolow(gender,type) {
+  try {
+    const underapi = await fetch(`http://localhost:2222/sort/${gender}/${type}/pricehightolow`);
+
+    const dataapipricehightolow = await underapi.json();
+    
+    return dataapipricehightolow ;
+  }
+  catch (err) {
+    console.log(err.message);
+  }
+}
+
+
+//sort by price low to high
+
+async function pricelowtohigh(gender,type) {
+  try {
+    const underapi = await fetch(`http://localhost:2222/sort/${gender}/${type}/pricelowtohigh`);
+
+    const dataapipricelowtohigh = await underapi.json();
+    
+    return dataapipricelowtohigh ;
+  }
+  catch (err) {
+    console.log(err.message);
+  }
+}
 
 
 try {
-    scselect.onchange = () => {
-        //console.log("check");
-        if (scselect.value === "Relevance") { 
-            data = data.sort((a, b) => a.type > b.type ? 1 : b.type > a.type ? -1 : 0);
-            scjsgrid1.innerHTML ="";
-            displayProduct(data);
-           // console.log("ggg")
-        }
-       else if(scselect.value === "Price(highest first)") {
-            data.sort((a, b) => b.price - a.price);
-            scjsgrid1.innerHTML = "";
-            displayProduct(data);
-        }
-        else if (scselect.value === "Price(lowest first)") {
-            data.sort((a, b) => a.price - b.price);
-            scjsgrid1.innerHTML = "";
-            displayProduct(data);
-        }
-        else if (scselect.value === "Discount") {
-            data.sort((a, b) => b.discount - a.discount);
-            scjsgrid1.innerHTML = "";
-            displayProduct(data);
-        }
-        else if (scselect.value === "What's New") { 
-            scjsgrid1.innerHTML = "";
-            displayProduct(datawhatsnew);
-        };
-
+  scselect.onchange = async  function ()  {
+    //console.log("check");
+     if (scselect.value === "Relevance") { 
+      
+    let datalatest =  await alphabeticalbybrandapi(data[0].gender, data[0].producttype);
+        scjsgrid1.innerHTML ="";
+        displayProduct(datalatest);
+       // console.log("ggg")
+    }
+     else if (scselect.value === "Price(highest first)") {
+       
+      let datahighestfirst =  await pricehightolow(data[0].gender, data[0].producttype);
+        scjsgrid1.innerHTML = "";
+        displayProduct(datahighestfirst);
+    }
+     else if (scselect.value === "Price(lowest first)") {
+       
+      let datalowestfirst =  await pricelowtohigh(data[0].gender, data[0].producttype);
+        // data.sort((a, b) => a.price - b.price);
+        scjsgrid1.innerHTML = "";
+        displayProduct(datalowestfirst);
+    }
+    else if (scselect.value === "Discount") {
+      //  data.sort((a, b) => b.discount - a.discount);
+       let datadiscountapi =  await discountapi(data[0].gender, data[0].producttype);
+        scjsgrid1.innerHTML = "";
+        displayProduct(datadiscountapi);
+    }
+    else if (scselect.value === "What's New") { 
+        scjsgrid1.innerHTML = "";
+        displayProduct(datawhatsnew);
     };
+
+};
 } catch (err) {
     console.log("errorfound:", err);
 };
 
 let grid3 = () => {
-  console.log("grid3 check")
+ // console.log("grid3 check")
   try {
     scjsgrid1.innerHTML = "";
     scjsgrid1.style.gridTemplateColumns = "auto auto auto";
    
-        scselect.onchange = () => {
-            //console.log("check");
-            if (scselect.value === "Relevance") { 
-                data = data.sort((a, b) => a.type > b.type ? 1 : b.type > a.type ? -1 : 0);
-                scjsgrid1.innerHTML ="";
-                displayProduct(data);
-               // console.log("ggg")
-            }
-           else if(scselect.value === "Price(highest first)") {
-                data.sort((a, b) => b.price - a.price);
-                scjsgrid1.innerHTML = "";
-                displayProduct(data);
-            }
-            else if (scselect.value === "Price(lowest first)") {
-                data.sort((a, b) => a.price - b.price);
-                scjsgrid1.innerHTML = "";
-                displayProduct(data);
-            }
-            else if (scselect.value === "Discount") {
-                data.sort((a, b) => b.discount - a.discount);
-                scjsgrid1.innerHTML = "";
-                displayProduct(data);
-            }
-            else if (scselect.value === "What's New") { 
-                scjsgrid1.innerHTML = "";
-                displayProduct(datawhatsnew);
-            };
-    
-        };
+    scselect.onchange = async  function ()  {
+      //console.log("check");
+       if (scselect.value === "Relevance") { 
+        
+      let datalatest =  await alphabeticalbybrandapi(data[0].gender, data[0].producttype);
+          scjsgrid1.innerHTML ="";
+          displayProduct(datalatest);
+         // console.log("ggg")
+      }
+       else if (scselect.value === "Price(highest first)") {
+         
+        let datahighestfirst =  await pricehightolow(data[0].gender, data[0].producttype);
+          scjsgrid1.innerHTML = "";
+          displayProduct(datahighestfirst);
+      }
+       else if (scselect.value === "Price(lowest first)") {
+         
+        let datalowestfirst =  await pricelowtohigh(data[0].gender, data[0].producttype);
+          // data.sort((a, b) => a.price - b.price);
+          scjsgrid1.innerHTML = "";
+          displayProduct(datalowestfirst);
+      }
+      else if (scselect.value === "Discount") {
+        //  data.sort((a, b) => b.discount - a.discount);
+         let datadiscountapi =  await discountapi(data[0].gender, data[0].producttype);
+          scjsgrid1.innerHTML = "";
+          displayProduct(datadiscountapi);
+      }
+      else if (scselect.value === "What's New") { 
+          scjsgrid1.innerHTML = "";
+          displayProduct(datawhatsnew);
+      };
+
+  };
     } catch (err) {
         console.log("errorfound:", err);
     };
@@ -114,7 +207,7 @@ let grid3 = () => {
 }
 
 let grid5 = () => {
-    console.log("grid5 check")
+   // console.log("grid5 check")
     scjsgrid1.innerHTML = "";
     scjsgrid1.style.display = "grid";
     scjsgrid1.style.gridTemplateColumns = "auto auto auto auto auto";
@@ -228,35 +321,40 @@ count12.innerText = count1 + "  Items Found";
     
     displayProduct(data);
     try {
-        scselect.onchange = () => {
-            //console.log("check");
-            if (scselect.value === "Relevance") { 
-                data = data.sort((a, b) => a.type > b.type ? 1 : b.type > a.type ? -1 : 0);
-                scjsgrid1.innerHTML ="";
-                displayProduct(data);
-               // console.log("ggg")
-            }
-           else if(scselect.value === "Price(highest first)") {
-                data.sort((a, b) => b.price - a.price);
-                scjsgrid1.innerHTML = "";
-                displayProduct(data);
-            }
-            else if (scselect.value === "Price(lowest first)") {
-                data.sort((a, b) => a.price - b.price);
-                scjsgrid1.innerHTML = "";
-                displayProduct(data);
-            }
-            else if (scselect.value === "Discount") {
-                data.sort((a, b) => b.discount - a.discount);
-                scjsgrid1.innerHTML = "";
-                displayProduct(data);
-            }
-            else if (scselect.value === "What's New") { 
-                scjsgrid1.innerHTML = "";
-                displayProduct(datawhatsnew);
-            };
-    
+      scselect.onchange = async  function ()  {
+        //console.log("check");
+         if (scselect.value === "Relevance") { 
+          
+        let datalatest =  await alphabeticalbybrandapi(data[0].gender, data[0].producttype);
+            scjsgrid1.innerHTML ="";
+            displayProduct(datalatest);
+           // console.log("ggg")
+        }
+         else if (scselect.value === "Price(highest first)") {
+           
+          let datahighestfirst =  await pricehightolow(data[0].gender, data[0].producttype);
+            scjsgrid1.innerHTML = "";
+            displayProduct(datahighestfirst);
+        }
+         else if (scselect.value === "Price(lowest first)") {
+           
+          let datalowestfirst =  await pricelowtohigh(data[0].gender, data[0].producttype);
+            // data.sort((a, b) => a.price - b.price);
+            scjsgrid1.innerHTML = "";
+            displayProduct(datalowestfirst);
+        }
+        else if (scselect.value === "Discount") {
+          //  data.sort((a, b) => b.discount - a.discount);
+           let datadiscountapi =  await discountapi(data[0].gender, data[0].producttype);
+            scjsgrid1.innerHTML = "";
+            displayProduct(datadiscountapi);
+        }
+        else if (scselect.value === "What's New") { 
+            scjsgrid1.innerHTML = "";
+            displayProduct(datawhatsnew);
         };
+
+    };
     } catch (err) {
         console.log("errorfound:", err);
     };
@@ -687,117 +785,259 @@ var refine = () => {
 
    //price sort
 
-   let countunder1000 = 0;
-   let under1000 = (data) =>{
-    
-     if (countunder1000 % 2 == 0) {
-        countunder1000++;
-       data.sort((a, b) => a.price - b.price);
-       let arr1 = [];
-       data.forEach((element) => {
-         if (element.price < 1000) {
-           arr1.push(element);
-         }
-       });
-       scjsgrid1.innerHTML = "";
-       displayProduct(arr1);
-     } else {
-        countunder1000++;
-       scjsgrid1.innerHTML = "";
-       displayProduct(datawhatsnew);
-     }
-    }
-    
-    //from1001 to 1500
-
-  let countunder1000to1500 = 0;
-   let  under1000to1500 = (data) => {
-    
-     if (countunder1000to1500 % 2 == 0) {
-        countunder1000to1500++;
-       data.sort((a, b) => a.price - b.price);
-       let arr1 = [];
-       data.forEach((element) => {
-         if (element.price >= 1000 && element.price <=1500) {
-            arr1.push(element);
-         }
-       });
-
-     
-       scjsgrid1.innerHTML = "";
-       displayProduct(arr1);
-     } else {
-        countunder1000to1500++;
-       scjsgrid1.innerHTML = "";
-       displayProduct(datawhatsnew);
-     }
-    }
-    
-
-    let countunder1500to2000 = 0;
-    let  under1500to2000= (data) => {
-     
-      if (countunder1500to2000 % 2 == 0) {
-        countunder1500to2000++;
-        data.sort((a, b) => a.price - b.price);
-        let arr1 = [];
-        data.forEach((element) => {
-          if (element.price >= 1500 && element.price <=2000) {
-             arr1.push(element);
-          }
-        });
- 
+    //filter api function for the price filters
+  //under1000api
+  async function under1000api(gender,type) {
+    try {
+      const underapi = await fetch(`http://localhost:2222/filterbyprice/under1000/${gender}/${type}`);
+  
+      const dataapiunder1000 = await underapi.json();
       
-        scjsgrid1.innerHTML = "";
-        displayProduct(arr1);
-      } else {
-        countunder1500to2000++;
-        scjsgrid1.innerHTML = "";
-        displayProduct(datawhatsnew);
-      }
-     }
-     
-
-     let countunder2000above = 0;
-    let  under2000above= (data) => {
-     
-      if (countunder2000above % 2 == 0) {
-        countunder2000above++;
-        data.sort((a, b) => a.price - b.price);
-        let arr1 = [];
-        data.forEach((element) => {
-          if (element.price > 2000) {
-             arr1.push(element);
-          }
-        });
- 
+      return dataapiunder1000;
+    }
+    catch (err) {
+      console.log(err.message);
+    }
+  }
+  ///between1001to1500
+  async function under1000to1500api(gender,type) {
+    try {
+      const underapi = await fetch(`http://localhost:2222/filterbyprice/between1001to1500/${gender}/${type}`);
+  
+      const between1001to1500 = await underapi.json();
       
-        scjsgrid1.innerHTML = "";
-        displayProduct(arr1);
-      } else {
-        countunder2000above++;
-        scjsgrid1.innerHTML = "";
-        displayProduct(datawhatsnew);
+      return between1001to1500;
+    }
+    catch (err) {
+      console.log(err.message);
+    }
+  }
+  
+  ///between1501to2000
+  async function between1501to2000api(gender,type) {
+    try {
+      const underapi = await fetch(`http://localhost:2222/filterbyprice/between1501to2000/${gender}/${type}`);
+  
+      const between1501to2000 = await underapi.json();
+      
+      return between1501to2000;
+    }
+    catch (err) {
+      console.log(err.message);
+    }
+  }
+  
+  ///above2000
+  async function above2000api(gender,type) {
+    try {
+      const underapi = await fetch(`http://localhost:2222/filterbyprice/above2000/${gender}/${type}`);
+  
+      const above2000 = await underapi.json();
+      
+      return above2000;
+    }
+    catch (err) {
+      console.log(err.message);
+    }
+  }
+  
+  
+  
+  
+  let countunder1000 = 0;
+  async function under1000(data) {
+    let data1000 = await under1000api(data[0].gender, data[0].producttype);
+    //console.log(data1000);
+       if (countunder1000 % 2 == 0) {
+          countunder1000++;
+         scjsgrid1.innerHTML = "";
+         displayProduct(data1000);
+       } else {
+          countunder1000++;
+         scjsgrid1.innerHTML = "";
+         displayProduct(datawhatsnew);
+       }
       }
-     }
-   // discount filters
+      
+      //from1001 to 1500
+  
+      let countunder1000to1500 = 0;
+     async function under1000to1500 (data){
+      let data1000above = await under1000to1500api(data[0].gender, data[0].producttype);
+       if (countunder1000to1500 % 2 == 0) {
+          countunder1000to1500++;
+        //  data.sort((a, b) => a.price - b.price);
+        //  let arr1 = [];
+        //  data.forEach((element) => {
+        //    if (element.price >= 1000 && element.price <=1500) {
+        //       arr1.push(element);
+        //    }
+        //  });
+  
+       
+         scjsgrid1.innerHTML = "";
+         displayProduct(data1000above);
+       } else {
+          countunder1000to1500++;
+         scjsgrid1.innerHTML = "";
+         displayProduct(datawhatsnew);
+       }
+      }
+      
+  
+      let countunder1500to2000 = 0;
+      async function under1500to2000 (data) {
+        let data1500above = await between1501to2000api(data[0].gender, data[0].producttype);
+        if (countunder1500to2000 % 2 == 0) {
+          countunder1500to2000++;
+          // data.sort((a, b) => a.price - b.price);
+          // let arr1 = [];
+          // data.forEach((element) => {
+          //   if (element.price >= 1500 && element.price <=2000) {
+          //      arr1.push(element);
+          //   }
+          // });
    
-   let count0to20 = 0;
-   let  under0to20= (data) => {
+        
+          scjsgrid1.innerHTML = "";
+          displayProduct(data1500above);
+        } else {
+          countunder1500to2000++;
+          scjsgrid1.innerHTML = "";
+          displayProduct(datawhatsnew);
+        }
+       }
+       
+  
+       let countunder2000above = 0;
+      async function under2000above(data) {
+        let data2000above = await above2000api(data[0].gender, data[0].producttype);
+        if (countunder2000above % 2 == 0) {
+          countunder2000above++;
+          // data.sort((a, b) => a.price - b.price);
+          // let arr1 = [];
+          // data.forEach((element) => {
+          //   if (element.price > 2000) {
+          //      arr1.push(element);
+          //   }
+          // });
+   
+        
+          scjsgrid1.innerHTML = "";
+          displayProduct(data2000above);
+        } else {
+          countunder2000above++;
+          scjsgrid1.innerHTML = "";
+          displayProduct(datawhatsnew);
+        }
+  }
+          
+   // discount filters
+  
+  //filter api function for the discount filters
+   //under20
+
+   async function under20api(gender,type) {
+    try {
+      const underapi = await fetch(`http://localhost:2222/filterbydiscount/0to20percent/${gender}/${type}`);
+  
+      const dataapiunder20 = await underapi.json();
+      
+      return dataapiunder20;
+    }
+    catch (err) {
+      console.log(err.message);
+    }
+}
+
+
+
+//under30
+
+async function under30api(gender,type) {
+  try {
+    const underapi = await fetch(`http://localhost:2222/filterbydiscount/21to30percent/${gender}/${type}`);
+
+    const dataapiunder30 = await underapi.json();
     
+    return dataapiunder30;
+  }
+  catch (err) {
+    console.log(err.message);
+  }
+}
+
+
+
+//under40
+
+async function under40api(gender,type) {
+  try {
+    const underapi = await fetch(`http://localhost:2222/filterbydiscount/31to40percent/${gender}/${type}`);
+
+    const dataapiunder40 = await underapi.json();
+    
+    return dataapiunder40;
+  }
+  catch (err) {
+    console.log(err.message);
+  }
+}
+
+
+
+//under50
+
+async function under50api(gender,type) {
+  try {
+    const underapi = await fetch(`http://localhost:2222/filterbydiscount/41to50percent/${gender}/${type}`);
+
+    const dataapiunder50 = await underapi.json();
+    
+    return dataapiunder50;
+  }
+  catch (err) {
+    console.log(err.message);
+  }
+}
+
+
+
+//under80
+
+async function under80api(gender,type) {
+  try {
+    const underapi = await fetch(`http://localhost:2222/filterbydiscount/51to80percent/${gender}/${type}`);
+
+    const dataapiunder80 = await underapi.json();
+    
+    return dataapiunder80;
+  }
+  catch (err) {
+    console.log(err.message);
+  }
+}
+
+
+
+
+
+   let count0to20 = 0;
+  async function under0to20 (data) {
+    let data20 = await under20api(data[0].gender, data[0].producttype);
      if (count0to20 % 2 == 0) {
         count0to20++;
-       data.sort((a, b) => a.discount - b.discount);
-       let arr1 = [];
-       data.forEach((element) => {
-         if (element.discount >=0  && element.discount <= 20) {
-            arr1.push(element);
-         }
-       });
+      //  data.sort((a, b) => a.discount - b.discount);
+      //  let arr1 = [];
+      //  data.forEach((element) => {
+      //    if (element.discount >=0  && element.discount <= 20) {
+      //       arr1.push(element);
+      //    }
+      //  });
 
      
        scjsgrid1.innerHTML = "";
-       displayProduct(arr1);
+       displayProduct(data20);
      } else {
         count0to20++;
        scjsgrid1.innerHTML = "";
@@ -806,21 +1046,21 @@ var refine = () => {
 }
     
 let coun20to30 = 0;
-let  under20to30= (data) => {
- 
+async function under20to30 (data)  {
+  let data30 = await under30api(data[0].gender, data[0].producttype);
   if (coun20to30 % 2 == 0) {
     coun20to30++;
-    data.sort((a, b) => a.discount - b.discount);
-    let arr1 = [];
-    data.forEach((element) => {
-      if (element.discount >20  && element.discount <= 30) {
-         arr1.push(element);
-      }
-    });
+    // data.sort((a, b) => a.discount - b.discount);
+    // let arr1 = [];
+    // data.forEach((element) => {
+    //   if (element.discount >20  && element.discount <= 30) {
+    //      arr1.push(element);
+    //   }
+    // });
 
   
     scjsgrid1.innerHTML = "";
-    displayProduct(arr1);
+    displayProduct(data30);
   } else {
     coun20to30++;
     scjsgrid1.innerHTML = "";
@@ -830,21 +1070,19 @@ let  under20to30= (data) => {
 
 
  let coun30to40 = 0;
-let  under30to40= (data) => {
- 
+async function  under30to40(data){
+  let data40 = await under40api(data[0].gender, data[0].producttype);
   if (coun30to40 % 2 == 0) {
     coun30to40++;
-    data.sort((a, b) => a.discount - b.discount);
-    let arr1 = [];
-    data.forEach((element) => {
-      if (element.discount >30  && element.discount <= 40) {
-         arr1.push(element);
-      }
-    });
-
-  
+    // data.sort((a, b) => a.discount - b.discount);
+    // let arr1 = [];
+    // data.forEach((element) => {
+    //   if (element.discount >30  && element.discount <= 40) {
+    //      arr1.push(element);
+    //   }
+    // });
     scjsgrid1.innerHTML = "";
-    displayProduct(arr1);
+    displayProduct(data40);
   } else {
     coun30to40++;
     scjsgrid1.innerHTML = "";
@@ -853,21 +1091,21 @@ let  under30to40= (data) => {
 }
  
 let coun40to50 = 0;
-let  under40to50= (data) => {
- 
+async function under40to50(data) {
+  let data50 = await under50api(data[0].gender, data[0].producttype);
   if (coun40to50 % 2 == 0) {
     coun40to50++;
-    data.sort((a, b) => a.discount - b.discount);
-    let arr1 = [];
-    data.forEach((element) => {
-      if (element.discount >40  && element.discount <= 50) {
-         arr1.push(element);
-      }
-    });
+    // data.sort((a, b) => a.discount - b.discount);
+    // let arr1 = [];
+    // data.forEach((element) => {
+    //   if (element.discount >40  && element.discount <= 50) {
+    //      arr1.push(element);
+    //   }
+    // });
 
   
     scjsgrid1.innerHTML = "";
-    displayProduct(arr1);
+    displayProduct(data50);
   } else {
     coun40to50++;
     scjsgrid1.innerHTML = "";
@@ -876,39 +1114,137 @@ let  under40to50= (data) => {
 }
  
 let coun50to80 = 0;
-let  under50to80= (data) => {
- 
+async function under50to80(data){
+  let data80 = await under80api(data[0].gender, data[0].producttype);
   if (coun50to80 % 2 == 0) {
     coun50to80++;
-    data.sort((a, b) => a.discount - b.discount);
-    let arr1 = [];
-    data.forEach((element) => {
-      if (element.discount >50  && element.discount <= 80) {
-         arr1.push(element);
-      }
-    });
+    // data.sort((a, b) => a.discount - b.discount);
+    // let arr1 = [];
+    // data.forEach((element) => {
+    //   if (element.discount >50  && element.discount <= 80) {
+    //      arr1.push(element);
+    //   }
+    // });
     scjsgrid1.innerHTML = "";
-    displayProduct(arr1);
+    displayProduct(data80);
   } else {
     coun50to80++;
     scjsgrid1.innerHTML = "";
     displayProduct(datawhatsnew);
   }
- }
-//filter by brand
-let john1 = 0;
-let  john= (data) => {
+}
  
+
+
+
+//filter by brand
+//filter api function for the brand filters
+//brand 1 api
+async function brand1api(gender,type) {
+  try {
+    const underapi = await fetch(`http://localhost:2222/filterbybrand/${gender}/${type}/JOHNPLAYERS`);
+
+    const dataapibrand1 = await underapi.json();
+    
+    return dataapibrand1;
+  }
+  catch (err) {
+    console.log(err.message);
+  }
+}
+
+//brand 2 api
+async function brand2api(gender,type) {
+  try {
+    const underapi = await fetch(`http://localhost:2222/filterbybrand/${gender}/${type}/CampusSutra`);
+
+    const dataapibrand2 = await underapi.json();
+    
+    return dataapibrand2;
+  }
+  catch (err) {
+    console.log(err.message);
+  }
+}
+
+//brand 3 api
+async function brand3api(gender,type) {
+  try {
+    const underapi = await fetch(`http://localhost:2222/filterbybrand/${gender}/${type}/U.S.PoloAssn.`);
+
+    const dataapibrand3 = await underapi.json();
+    
+    return dataapibrand3;
+  }
+  catch (err) {
+    console.log(err.message);
+  }
+}
+
+
+
+//brand 4 api
+async function brand4api(gender,type) {
+  try {
+    const underapi = await fetch(`http://localhost:2222/filterbybrand/${gender}/${type}/T-Base`);
+
+    const dataapibrand4 = await underapi.json();
+    
+    return dataapibrand4;
+  }
+  catch (err) {
+    console.log(err.message);
+  }
+}
+
+
+//brand 5 api
+async function brand5api(gender,type) {
+  try {
+    const underapi = await fetch(`http://localhost:2222/filterbybrand/${gender}/${type}/Columbia`);
+
+    const dataapibrand5 = await underapi.json();
+    
+    return dataapibrand5;
+  }
+  catch (err) {
+    console.log(err.message);
+  }
+}
+
+
+
+//brand 6 api
+async function brand6api(gender,type) {
+  try {
+    const underapi = await fetch(`http://localhost:2222/filterbybrand/${gender}/${type}/NIKE`);
+
+    const dataapibrand6 = await underapi.json();
+    
+    return dataapibrand6;
+  }
+  catch (err) {
+    console.log(err.message);
+  }
+}
+
+
+
+
+// brand 1
+let john1 = 0;
+async function john (data){
+  let databrand1 = await brand1api(data[0].gender, data[0].producttype);
   if (john1 % 2 == 0) {
     john1++;
-    let arr1 = [];
-    data.forEach((element) => {
-      if (element.brand ==="JOHN PLAYERS" ) {
-         arr1.push(element);
-      }
-    });
+    // let arr1 = [];
+    // data.forEach((element) => {
+    //   if (element.brand ==="LEVIS") {
+    //      arr1.push(element);
+    //   }
+    // });
     scjsgrid1.innerHTML = "";
-    displayProduct(arr1);
+    displayProduct(databrand1);
   } else {
     john1++;
     scjsgrid1.innerHTML = "";
@@ -916,19 +1252,20 @@ let  john= (data) => {
   }
 }
  
+//brand 2
 let campus1 = 0;
-let  campus= (data) => {
- 
+async function campus(data) {
+  let databrand2 = await brand2api(data[0].gender, data[0].producttype);
   if (campus1 % 2 == 0) {
     campus1++;
-    let arr1 = [];
-    data.forEach((element) => {
-      if (element.brand ==="Campus Sutra") {
-         arr1.push(element);
-      }
-    });
+    // let arr1 = [];
+    // data.forEach((element) => {
+    //   if (element.brand ==="Outryt") {
+    //      arr1.push(element);
+    //   }
+    // });
     scjsgrid1.innerHTML = "";
-    displayProduct(arr1);
+    displayProduct(databrand2);
   } else {
     campus1++;
     scjsgrid1.innerHTML = "";
@@ -936,38 +1273,42 @@ let  campus= (data) => {
   }
 }
  
+
+//brand 3
 let us1 = 0;
-let  us= (data) => {
- 
+async function us (data)  {
+  let databrand3 = await brand3api(data[0].gender, data[0].producttype);
   if (us1 % 2 == 0) {
     us1++;
-    let arr1 = [];
-    data.forEach((element) => {
-      if (element.brand ==="U.S. Polo Assn.") {
-         arr1.push(element);
-      }
-    });
+    // let arr1 = [];
+    // data.forEach((element) => {
+    //   if (element.brand ==="DNMX" ) {
+    //      arr1.push(element);
+    //   }
+    // });
     scjsgrid1.innerHTML = "";
-    displayProduct(arr1);
+    displayProduct(databrand3);
   } else {
     us1++;
     scjsgrid1.innerHTML = "";
     displayProduct(datawhatsnew);
   }
- }
-let tbase1 = 0;
-let  tbase= (data) => {
+}
  
+// brand 4
+let tbase1 = 0;
+async function tbase (data){
+  let databrand4 = await brand4api(data[0].gender, data[0].producttype); 
   if (tbase1 % 2 == 0) {
     tbase1++;
-    let arr1 = [];
-    data.forEach((element) => {
-      if (element.brand ==="T-Base") {
-         arr1.push(element);
-      }
-    });
+    // let arr1 = [];
+    // data.forEach((element) => {
+    //   if (element.brand ==="ORCHID BLUES") {
+    //      arr1.push(element);
+    //   }
+    // });
     scjsgrid1.innerHTML = "";
-    displayProduct(arr1);
+    displayProduct(databrand4);
   } else {
     tbase1++;
     scjsgrid1.innerHTML = "";
@@ -975,19 +1316,21 @@ let  tbase= (data) => {
   }
 }
  
+
+// brand 5 
 let columbia1 = 0;
-let  columbia= (data) => {
- 
+async function columbia (data){
+  let databrand5 = await brand5api(data[0].gender, data[0].producttype);
   if (columbia1 % 2 == 0) {
     columbia1++;
-    let arr1 = [];
-    data.forEach((element) => {
-      if (element.brand ==="Columbia") {
-         arr1.push(element);
-      }
-    });
+    // let arr1 = [];
+    // data.forEach((element) => {
+    //   if (element.brand ==="DENIZEN WOMENS") {
+    //      arr1.push(element);
+    //   }
+    // });
     scjsgrid1.innerHTML = "";
-    displayProduct(arr1);
+    displayProduct(databrand5);
   } else {
     columbia1++;
     scjsgrid1.innerHTML = "";
@@ -995,19 +1338,21 @@ let  columbia= (data) => {
   }
  }
 
+
+ //brand 6 
  let nike1 = 0;
-let  nike= (data) => {
- 
+async function  nike (data){
+  let databrand6 = await brand6api(data[0].gender, data[0].producttype);
   if (nike1 % 2 == 0) {
     nike1++;
-    let arr1 = [];
-    data.forEach((element) => {
-      if (element.brand ==="NIKE") {
-         arr1.push(element);
-      }
-    });
+    // let arr1 = [];
+    // data.forEach((element) => {
+    //   if (element.brand ==="Dolce Crudo" ) {
+    //      arr1.push(element);
+    //   }
+    // });
     scjsgrid1.innerHTML = "";
-    displayProduct(arr1);
+    displayProduct(databrand6);
   } else {
     nike1++;
     scjsgrid1.innerHTML = "";

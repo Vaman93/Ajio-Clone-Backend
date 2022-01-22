@@ -134,7 +134,7 @@ router.get("/:gender/:type/Teamspirit", async (req, res) => {
 });
 
 //brand 4 ARMANI EXCHANGE
-
+                           
 router.get("/:gender/:type/ARMANIEXCHANGE", async (req, res) => {
     console.log(req.params.men);
     try {
