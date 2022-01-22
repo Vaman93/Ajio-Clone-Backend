@@ -19,7 +19,7 @@ const Sort = require('./router/product.sort');
 const Mybag = require('./router/mybag')
 const Closte = require('./router/closte')
 const Payment = require('./router/payment')
-const OtherPages = require('./router/otherages')
+const OtherPages = require('./router/otherpages')
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -58,4 +58,6 @@ app.use("/closte" , Closte)
 app.use("/usercheck", Mybag)
 app.use("/payment" , Payment)
 app.use("/about" , OtherPages)
+
+
 module.exports = app;
