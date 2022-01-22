@@ -2,7 +2,7 @@ userid();
 
 async function userid() {
   try {
-    let userdata = await fetch("http://localhost:2222/user/cooke");
+    let userdata = await fetch("https://ajio-clone-full.herokuapp.com/user/cooke");
     let usermon = await userdata.json();
     getAllAmount(usermon._id);
   } catch (e) {
@@ -13,7 +13,7 @@ async function userid() {
 async function getAllAmount(id) {
   try {
 
-    const billdata = await fetch(`http://localhost:2222/payment/payment/bill/${id}`)
+    const billdata = await fetch(`https://ajio-clone-full.herokuapp.com/payment/payment/bill/${id}`)
 
     const billamount = await billdata.json() 
 

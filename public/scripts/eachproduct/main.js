@@ -15,7 +15,7 @@ $('.responsive').slick({
 
 async function userdatalogin (){
     try{
-      let userdata = await fetch("http://localhost:2222/user/cooke")
+      let userdata = await fetch("https://ajio-clone-full.herokuapp.com/user/cooke")
       let usermon = await userdata.json();
 
       return usermon
@@ -43,7 +43,7 @@ async function userdatalogin (){
 async function addtobag(userid, productid){
     productid = JSON.parse(productid)
     try{
-        const addbagapi = await fetch(`http://localhost:2222/bagproduct/${userid}/${productid}`)
+        const addbagapi = await fetch(`https://ajio-clone-full.herokuapp.com/bagproduct/${userid}/${productid}`)
 
         const addbagdata = await addbagapi.json()
 
@@ -71,7 +71,7 @@ async function addtocloste (cloid){
 
 async function addtoclostearr(useridc , procid){
           try{
-        const addclosteapi = await fetch(`http://localhost:2222/closte/${useridc}/${procid}`)
+        const addclosteapi = await fetch(`https://ajio-clone-full.herokuapp.com/closte/${useridc}/${procid}`)
 
         const addclsotedata = await addclosteapi.json()
 

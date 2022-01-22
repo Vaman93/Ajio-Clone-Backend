@@ -21,7 +21,7 @@ async function  addtobagApi(userid){
   } else {
   try{
 
-    const p = await fetch(`http://localhost:2222/usercheck/product/${userid._id}`)
+    const p = await fetch(`https://ajio-clone-full.herokuapp.com/usercheck/product/${userid._id}`)
 
     const product_arr = await p.json()
 
@@ -30,7 +30,8 @@ async function  addtobagApi(userid){
       hidebag[0].style.display = "none"
       hidebag[2].style.display = "none"
       hidebag[3].style.display = "none"
-      hidebag[1].style.display = "none"
+      hidebag[1].style.display = "none";
+      break;
   }
 
     let bag_div_li = document.querySelector(".showthe_all_produtTo_bag")
@@ -105,7 +106,7 @@ userdatalogin()
 
 async function userdatalogin (){
     try{
-      let userdata = await fetch("http://localhost:2222/user/cooke")
+      let userdata = await fetch("https://ajio-clone-full.herokuapp.com/user/cooke")
       let usermon = await userdata.json();
       userlogingornot(usermon)
       closeia(usermon)
@@ -136,7 +137,7 @@ let logOut = document.querySelector(".Log_out")
 
 logOut.addEventListener("click",async ()=>{
   try{
-    let userdata = await fetch("http://localhost:2222/user/logout")
+    let userdata = await fetch("https://ajio-clone-full.herokuapp.com/user/logout")
     let usermon = await userdata.json();
     userlogingornot(usermon)
   }

@@ -5,7 +5,7 @@ forcheckout()
 
 async function forcheckout (){
     try{
-      let userdata = await fetch("http://localhost:2222/user/cooke")
+      let userdata = await fetch("https://ajio-clone-full.herokuapp.com/user/cooke")
       let usermon = await userdata.json();
       apidata(usermon)
     }
@@ -18,7 +18,7 @@ async function forcheckout (){
 async function apidata(bid){
     // console.log(bid);
     try{
-        const api =await fetch(`http://localhost:2222/usercheck/product/${bid._id}`);
+        const api =await fetch(`https://ajio-clone-full.herokuapp.com/usercheck/product/${bid._id}`);
         const dataapi=await api.json();
         display(dataapi , bid);
         productsum(dataapi,bid)
@@ -96,7 +96,7 @@ async function deletedproduct(elidpro , useridele){
 
     try{
 
-        const productdelete = await fetch(`http://localhost:2222/usercheck/productdelete/${useridele}/${elidpro}` ,  { method: 'DELETE' })
+        const productdelete = await fetch(`https://ajio-clone-full.herokuapp.com/usercheck/productdelete/${useridele}/${elidpro}` ,  { method: 'DELETE' })
 
         const delectproduct = await productdelete.json()
         
@@ -181,7 +181,7 @@ function bill(bid,originalprice,bagdiscount,totalamount){
 
 async function gotopagenextpage(bid,o,b,t){
  try{
-    const billapi = await fetch(`http://localhost:2222/payment/user/payment/bill/add/${bid}/${o}/${b}/${t}`)
+    const billapi = await fetch(`https://ajio-clone-full.herokuapp.com/payment/user/payment/bill/add/${bid}/${o}/${b}/${t}`)
 
     const billmessage = await billapi.json()
     

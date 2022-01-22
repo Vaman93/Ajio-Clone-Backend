@@ -2,7 +2,7 @@ userid();
 
 async function userid() {
   try {
-    let userdata = await fetch("http://localhost:2222/user/cooke");
+    let userdata = await fetch("https://ajio-clone-full.herokuapp.com/user/cooke");
     let usermon = await userdata.json();
     getAllAmount(usermon._id);
   } catch (e) {
@@ -13,7 +13,7 @@ async function userid() {
 async function getAllAmount(id) {
   try {
     const billdata = await fetch(
-      `http://localhost:2222/payment/payment/bill/${id}`
+      `https://ajio-clone-full.herokuapp.com/payment/payment/bill/${id}`
     );
 
     const billamount = await billdata.json();
@@ -52,7 +52,7 @@ function paymentsucees(e) {
 
 async function paymentDone() {
   try {
-    let userdata = await fetch("http://localhost:2222/user/cooke");
+    let userdata = await fetch("https://ajio-clone-full.herokuapp.com/user/cooke");
     let usermon = await userdata.json();
     paymentDonegobackhome(usermon);
   } catch (e) {
@@ -63,7 +63,7 @@ async function paymentDone() {
 async function paymentDonegobackhome({ _id }) {
   try {
 
-    const payeentapi = await fetch(`http://localhost:2222/payment/deletbillandcheckout/${_id}`)  
+    const payeentapi = await fetch(`https://ajio-clone-full.herokuapp.com/payment/deletbillandcheckout/${_id}`)  
 
     const paymentdone = await payeentapi.json()
 

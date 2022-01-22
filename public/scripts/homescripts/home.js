@@ -58,10 +58,10 @@ heding_img_arr.forEach((d)=>{
 
 
 function gotowoen() {
-  window.location.href = "../product page/productwomenjeans.html"
+  window.location.href = "/product/womenjeans"
 }
 
 
 function gotomen(){
-  window.location.href = "../product page/productjackets.html"
+  window.location.href = "/product/menjackets"
 }

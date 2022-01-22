@@ -38,7 +38,7 @@ var scjsgrid1 = document.getElementById("scjsgrid");
 //sort by latest
 async function latestapi(gender,type) {
   try {
-    const underapi = await fetch(`http://localhost:2222/sort/${gender}/${type}/latest`);
+    const underapi = await fetch(`https://ajio-clone-full.herokuapp.com/sort/${gender}/${type}/latest`);
 
     const dataapilatest= await underapi.json();
     
@@ -53,7 +53,7 @@ async function latestapi(gender,type) {
 //sort by alphabetical
 async function alphabeticalbybrandapi(gender,type) {
   try {
-    const underapi = await fetch(`http://localhost:2222/sort/${gender}/${type}/alphabeticalbybrand`);
+    const underapi = await fetch(`https://ajio-clone-full.herokuapp.com/sort/${gender}/${type}/alphabeticalbybrand`);
 
     const dataapialphabeticalbybrand= await underapi.json();
     
@@ -71,7 +71,7 @@ async function alphabeticalbybrandapi(gender,type) {
 
 async function discountapi(gender,type) {
   try {
-    const underapi = await fetch(`http://localhost:2222/sort/${gender}/${type}/discount`);
+    const underapi = await fetch(`https://ajio-clone-full.herokuapp.com/sort/${gender}/${type}/discount`);
 
     const dataapidiscount = await underapi.json();
     
@@ -89,7 +89,7 @@ async function discountapi(gender,type) {
 
 async function pricehightolow(gender,type) {
   try {
-    const underapi = await fetch(`http://localhost:2222/sort/${gender}/${type}/pricehightolow`);
+    const underapi = await fetch(`https://ajio-clone-full.herokuapp.com/sort/${gender}/${type}/pricehightolow`);
 
     const dataapipricehightolow = await underapi.json();
     
@@ -105,7 +105,7 @@ async function pricehightolow(gender,type) {
 
 async function pricelowtohigh(gender,type) {
   try {
-    const underapi = await fetch(`http://localhost:2222/sort/${gender}/${type}/pricelowtohigh`);
+    const underapi = await fetch(`https://ajio-clone-full.herokuapp.com/sort/${gender}/${type}/pricelowtohigh`);
 
     const dataapipricelowtohigh = await underapi.json();
     
@@ -789,7 +789,7 @@ var refine = () => {
   //under1000api
 async function under1000api(gender,type) {
   try {
-    const underapi = await fetch(`http://localhost:2222/filterbyprice/under1000/${gender}/${type}`);
+    const underapi = await fetch(`https://ajio-clone-full.herokuapp.com/filterbyprice/under1000/${gender}/${type}`);
 
     const dataapiunder1000 = await underapi.json();
     
@@ -802,7 +802,7 @@ async function under1000api(gender,type) {
 ///between1001to1500
 async function under1000to1500api(gender,type) {
   try {
-    const underapi = await fetch(`http://localhost:2222/filterbyprice/between1001to1500/${gender}/${type}`);
+    const underapi = await fetch(`https://ajio-clone-full.herokuapp.com/filterbyprice/between1001to1500/${gender}/${type}`);
 
     const between1001to1500 = await underapi.json();
     
@@ -816,7 +816,7 @@ async function under1000to1500api(gender,type) {
 ///between1501to2000
 async function between1501to2000api(gender,type) {
   try {
-    const underapi = await fetch(`http://localhost:2222/filterbyprice/between1501to2000/${gender}/${type}`);
+    const underapi = await fetch(`https://ajio-clone-full.herokuapp.com/filterbyprice/between1501to2000/${gender}/${type}`);
 
     const between1501to2000 = await underapi.json();
     
@@ -830,7 +830,7 @@ async function between1501to2000api(gender,type) {
 ///above2000
 async function above2000api(gender,type) {
   try {
-    const underapi = await fetch(`http://localhost:2222/filterbyprice/above2000/${gender}/${type}`);
+    const underapi = await fetch(`https://ajio-clone-full.herokuapp.com/filterbyprice/above2000/${gender}/${type}`);
 
     const above2000 = await underapi.json();
     
@@ -942,7 +942,7 @@ async function under1000(data) {
 
    async function under20api(gender,type) {
     try {
-      const underapi = await fetch(`http://localhost:2222/filterbydiscount/0to20percent/${gender}/${type}`);
+      const underapi = await fetch(`https://ajio-clone-full.herokuapp.com/filterbydiscount/0to20percent/${gender}/${type}`);
   
       const dataapiunder20 = await underapi.json();
       
@@ -959,7 +959,7 @@ async function under1000(data) {
 
 async function under30api(gender,type) {
   try {
-    const underapi = await fetch(`http://localhost:2222/filterbydiscount/21to30percent/${gender}/${type}`);
+    const underapi = await fetch(`https://ajio-clone-full.herokuapp.com/filterbydiscount/21to30percent/${gender}/${type}`);
 
     const dataapiunder30 = await underapi.json();
     
@@ -976,7 +976,7 @@ async function under30api(gender,type) {
 
 async function under40api(gender,type) {
   try {
-    const underapi = await fetch(`http://localhost:2222/filterbydiscount/31to40percent/${gender}/${type}`);
+    const underapi = await fetch(`https://ajio-clone-full.herokuapp.com/filterbydiscount/31to40percent/${gender}/${type}`);
 
     const dataapiunder40 = await underapi.json();
     
@@ -993,7 +993,7 @@ async function under40api(gender,type) {
 
 async function under50api(gender,type) {
   try {
-    const underapi = await fetch(`http://localhost:2222/filterbydiscount/41to50percent/${gender}/${type}`);
+    const underapi = await fetch(`https://ajio-clone-full.herokuapp.com/filterbydiscount/41to50percent/${gender}/${type}`);
 
     const dataapiunder50 = await underapi.json();
     
@@ -1010,7 +1010,7 @@ async function under50api(gender,type) {
 
 async function under80api(gender,type) {
   try {
-    const underapi = await fetch(`http://localhost:2222/filterbydiscount/51to80percent/${gender}/${type}`);
+    const underapi = await fetch(`https://ajio-clone-full.herokuapp.com/filterbydiscount/51to80percent/${gender}/${type}`);
 
     const dataapiunder80 = await underapi.json();
     
@@ -1148,7 +1148,7 @@ async function under50to80(data){
 //brand 1 api
 async function brand1api(gender,type) {
   try {
-    const underapi = await fetch(`http://localhost:2222/filterbybrand/${gender}/${type}/LEVIS`);
+    const underapi = await fetch(`https://ajio-clone-full.herokuapp.com/filterbybrand/${gender}/${type}/LEVIS`);
 
     const dataapibrand1 = await underapi.json();
     
@@ -1162,7 +1162,7 @@ async function brand1api(gender,type) {
 //brand 2 api
 async function brand2api(gender,type) {
   try {
-    const underapi = await fetch(`http://localhost:2222/filterbybrand/${gender}/${type}/Outryt`);
+    const underapi = await fetch(`https://ajio-clone-full.herokuapp.com/filterbybrand/${gender}/${type}/Outryt`);
 
     const dataapibrand2 = await underapi.json();
     
@@ -1176,7 +1176,7 @@ async function brand2api(gender,type) {
 //brand 3 api
 async function brand3api(gender,type) {
   try {
-    const underapi = await fetch(`http://localhost:2222/filterbybrand/${gender}/${type}/DNMX`);
+    const underapi = await fetch(`https://ajio-clone-full.herokuapp.com/filterbybrand/${gender}/${type}/DNMX`);
 
     const dataapibrand3 = await underapi.json();
     
@@ -1192,7 +1192,7 @@ async function brand3api(gender,type) {
 //brand 4 api
 async function brand4api(gender,type) {
   try {
-    const underapi = await fetch(`http://localhost:2222/filterbybrand/${gender}/${type}/ORCHIDBLUES`);
+    const underapi = await fetch(`https://ajio-clone-full.herokuapp.com/filterbybrand/${gender}/${type}/ORCHIDBLUES`);
 
     const dataapibrand4 = await underapi.json();
     
@@ -1207,7 +1207,7 @@ async function brand4api(gender,type) {
 //brand 5 api
 async function brand5api(gender,type) {
   try {
-    const underapi = await fetch(`http://localhost:2222/filterbybrand/${gender}/${type}/DENIZENWOMENS`);
+    const underapi = await fetch(`https://ajio-clone-full.herokuapp.com/filterbybrand/${gender}/${type}/DENIZENWOMENS`);
 
     const dataapibrand5 = await underapi.json();
     
@@ -1223,7 +1223,7 @@ async function brand5api(gender,type) {
 //brand 6 api
 async function brand6api(gender,type) {
   try {
-    const underapi = await fetch(`http://localhost:2222/filterbybrand/${gender}/${type}/DolceCrudo`);
+    const underapi = await fetch(`https://ajio-clone-full.herokuapp.com/filterbybrand/${gender}/${type}/DolceCrudo`);
 
     const dataapibrand6 = await underapi.json();
     

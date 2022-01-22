@@ -2,7 +2,7 @@ userlogin()
 
 async function userlogin (){
     try{
-      let userdata = await fetch("http://localhost:2222/user/cooke")
+      let userdata = await fetch("https://ajio-clone-full.herokuapp.com/user/cooke")
       let usermon = await userdata.json();
       clostedata(usermon._id)
     }
@@ -15,7 +15,7 @@ async function userlogin (){
 async function clostedata(cloid){
 
     try{
-        const closte = await fetch(`http://localhost:2222/closte/clsotepro/data/product/${cloid}`)
+        const closte = await fetch(`https://ajio-clone-full.herokuapp.com/closte/clsotepro/data/product/${cloid}`)
 
         const closteuserdata = await closte.json()
 

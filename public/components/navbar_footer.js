@@ -139,7 +139,7 @@ let navbarCom = () => {
       <div class="icon_hanger icon-bag-hang">
         <img width="6%" src="/Images/svg logo/imgonline-com-ua-ReplaceColor-GtXPguqsY2C-removebg-preview.png" alt="">
         <div class="showthehangerdiv">
-         <a href="../Signup&Login/signup.html"><button id="hanger-button-sign">SIGN IN</button></a> 
+         <a href="/user/signup"><button id="hanger-button-sign">SIGN IN</button></a> 
           <p>To add or view item(s) part of your closet</p>
         </div>
       </div>
@@ -181,10 +181,10 @@ let footershow = () => {
   return `<div class="main_footer_div">
   <div class="div_footer">
    <ul> <p>Ajio</p> 
-   <a href="/About US/we.html"><li> Who We Are</li></a>
+   <a href="/about"><li> Who We Are</li></a>
    <a href=""><li> Join Our Team</li></a>
    <a href=""><li> Terms & Conditions</li></a>
-   <a href="/privacy/privacy.html"><li> We Respect Your Privacy</li></a>
+   <a href="/about/privacy"><li> We Respect Your Privacy</li></a>
    <a href=""><li> Fees & Payments</li></a>
    <a href=""><li> Returns & Refunds Policy</li></a>
    <a href=""><li> Promotions Terms & Conditions</li></a>
