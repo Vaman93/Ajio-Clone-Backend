@@ -13,6 +13,9 @@ const ProductAPI = require('./router/product.api')
 const EachProduct = require('./router/each.product')
 const AddtoBagProduct = require('./router/bag.product')
 const Filter = require('./router/product.filter.price');
+const Discount = require('./router/product.filter.discount');
+const Brand = require('./router/product.filter.brand');
+const Sort = require('./router/product.sort');
 const Mybag = require('./router/mybag')
 const Closte = require('./router/closte')
 
@@ -42,6 +45,11 @@ app.use("/bagproduct" , AddtoBagProduct)
 app.use("/yourproduct" , EachProduct)
 app.use("/user", User);
 app.use("/filterbyprice", Filter);
+app.use("/filterbydiscount", Discount);
+app.use("/filterbybrand", Brand);
+app.use("/sort", Sort);
+
+
 app.use("/product" , Product)
 app.use("/closte" , Closte)
 app.use("/usercheck", Mybag)
