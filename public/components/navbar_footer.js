@@ -216,7 +216,7 @@ let footershow = () => {
 
    <div class="div_footer">
    <ul> <p>Follow us</p> 
-    <a href=""><li>Facrbook</li></a>
+    <a href=""><li>Facebook</li></a>
     <a href=""><li>Instagram</li></a>
     <a href=""><li>Twitter</li></a>
     <a href=""><li>Pinterest</li></a>
