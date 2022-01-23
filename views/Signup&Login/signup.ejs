@@ -64,7 +64,7 @@
            <!-- submit Button -->
            <div id = "btn1">
             <button  onclick="signUp()" id = "btn">CONTINUE</button>
-            <a href="/user/login"><button id = "btn">LOG-IN</button></a>
+            <a onclick="LoginUp()"><button id = "btn">LOG-IN</button></a>
            </div>
            <!-- <button  onclick="signUp()" id = "btn">CONTINUE</button> -->
 
@@ -121,4 +121,22 @@ async function signUp(){
     
 
 }
+
+
+function LoginUp() {
+    let name= document.getElementById("name").value
+        let email= document.getElementById("email").value
+        let password= document.getElementById("password").value
+        let mobile= document.getElementById("mobile").value
+
+        if(name.length === 0 && email.length === 0) {
+            window.location.href = "/user/login"
+        }else {
+            signUp()
+        }
+       
+        
+}
+
+
 </script>
