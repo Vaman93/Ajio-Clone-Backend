@@ -79,7 +79,7 @@
 
 
 ### How To Use 	📌
-Users can log in into Ajio by clicking the login button and fill in the right credentials, 
+Users can log into Ajio by clicking the login button and fill in the right credentials, 
 new users can register themself by clicking on the register button and fill a simple form, after successful. 
 login user can start shopping, they can choose the category that they like also they can sort the product 
 according to their choice, after choosing a product they can add it to the bag or keep it on the Closet.
