@@ -30,7 +30,7 @@
 ---
 
 - *Home Page*
-##### here is the landing page of Ajio clone
+##### Here is the landing page of Ajio clone
 ![Landing Page](https://github.com/Vaman93/Ajio-Clone/blob/main/public/Images/ReadmeImg/home%20page.png)
 
 ---
